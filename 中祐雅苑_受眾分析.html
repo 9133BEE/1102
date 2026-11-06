@@ -376,6 +376,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft Jheng
   <div id="main-aud-grid-b2" class="aud-grid-2"></div>
 </div>
 
+<div class="section">
+  <div class="sec-title">建議嘗試受眾（20組）· 更新 2026-11-06</div>
+  <div class="note-bar">近期成效轉差，依6組實測有效受眾延伸（A廚房家務／B農企業／C通勤傳統文化／D登山釣魚名車／E工商自營／F傳產首購）：前10組單一DNA深化、後10組兩兩排列組合。地標只用有效組的新港老街／大埔美／大林鎮／民雄／斗南斗六／南笨港／國3大林交流道與古坑服務區，避開無效組的大學地標、雲林路三段與太平老街。標籤避開退休、學術政治、股票工具機、零售電商行銷等無效方向。價格依591實登13筆：27–29.6萬/坪、總價1,220–1,465萬。</div>
+  <div id="main-aud-grid-b3" class="aud-grid-2"></div>
+</div>
+
 <!-- ── 受眾排行 ── -->
 <div class="section">
   <div class="sec-title">成果受眾排行（2025/10–2026/05）· 訊息數排序</div>
@@ -750,6 +756,108 @@ const MAIN_G3=[
    tags:[['Installation and repair','行業類別：安裝與維修服務'],['Electrician','水電工程'],['Plumbing','水管配管'],['Air conditioning','冷氣'],['Electrical distribution','配電系統'],['Hardware store','五金行（零售業者）'],['Power tools','電動工具'],['Makita','Makita 牧田'],['DIY','DIY 手作'],['Home improvement','居家裝修（家居和園藝用品）'],['Construction','建築工程'],['Interior design','室內設計（設計）'],['Bathroom','衛浴'],['Kitchen','廚房（家居和園藝用品）'],['Home appliances','家電（消費電子產品）'],['Solar energy','太陽能'],['Smart home','智慧家庭'],['Pickup truck','小貨車'],['Self-employment','自僱（工作機會）'],['Townhouse','連棟住宅（建築）'],['Recreational fishing','休閒釣魚（釣魚）'],['Barbecue','燒烤'],['Chinese cuisine','中式料理（美食和餐飲）'],['Saving','儲蓄'],['Insurance','一般保險（保險）'],['Personal finance','個人理財（銀行業）']]}
 ];
 (function(){const g=document.getElementById('main-aud-grid-b2');if(g){g.innerHTML=MAIN_G3.map((x,i)=>buildAudCard(x,i+100)).join('');g.querySelectorAll('.aud-num').forEach((e,i)=>e.textContent=i+1);}})();
+const MAIN_G4=[
+  {n:'28-55 / 新港老街+大埔美+大林 / 家常料理×食譜',sub:'單一深化｜延伸A廚房家務DNA·從廚具往「每天煮什麼」深挖',
+   logic:'家庭主婦是本案最穩的買單者，真正決定要不要去看房的常是每天掌廚的人。前批鎖烘焙點心，這組回到三餐：家常菜、電鍋、調味料。素材可接4房大廚房與欣寬廚具。',
+   lm:['新港老街（+5 公里）','大埔美園區（+5 公里）','嘉義縣大林鎮（+5 公里）'],
+   tags:[['Cooking','烹飪'],['Recipes','食譜'],['Chinese cuisine','中式料理'],['Taiwanese cuisine','台灣料理'],['Home cooking','家常菜'],['Soup','湯品'],['Stew','燉煮料理'],['Rice cooker','電鍋'],['Tatung','大同'],['Cookware','廚具'],['Cast-iron cookware','鑄鐵鍋'],['Wok','炒鍋'],['Soy sauce','醬油'],['Kikkoman','龜甲萬'],['Seasoning','調味料'],['Cooking oil','食用油'],['Food safety','食品安全'],['Organic food','有機食品'],['Vegetable','蔬菜'],['Seafood','海鮮'],['Supermarket','超市'],['PX Mart','全聯福利中心'],['Housekeeping','家務'],['Coupon','優惠券'],['Parenting','親子教育'],['Home buying','購屋'],['591 Housing','591房屋交易網']]},
+
+  {n:'28-55 / 新港老街+大林+民雄車站 / 居家清潔×家事家電',sub:'單一深化｜延伸A廚房家務DNA·同一位持家者換清潔家電消費',
+   logic:'44–49坪三層透天，打掃是持家者看房時一定會想到的事。會研究掃地機器人、除濕機的人重視居家品質，也有預算。與前批收納整理區隔：這組看的是清潔與家電添購。',
+   lm:['新港老街（+5 公里）','嘉義縣大林鎮（+5 公里）','民雄車站（+3 公里）'],
+   tags:[['Cleaning','清潔'],['Housekeeping','家務'],['Laundry','洗衣'],['Washing machine','洗衣機'],['Dishwasher','洗碗機'],['Robotic vacuum cleaner','掃地機器人'],['Dyson','Dyson'],['Dehumidifier','除濕機'],['Air purifier','空氣清淨機'],['Water filter','淨水器'],['Panasonic','Panasonic 國際牌'],['Hitachi','日立'],['Home appliances','家電'],['Detergent','洗衣精'],['Household goods','生活用品'],['Bedding','寢具'],['Bed sheet','床單'],['Towel','毛巾'],['Kitchen','廚房'],['Home improvement','居家裝修'],['Momo Shopping','momo購物網'],['Shopee','蝦皮購物'],['Parenting','親子教育'],['Coupon','優惠券'],['Personal finance','個人理財'],['Financial planning','財務規劃']]},
+
+  {n:'30-58 / 新港老街+大埔美+大林 / 婦女保健×中藥燉補',sub:'單一深化｜延伸A廚房家務DNA·掌廚者照顧全家健康的消費面',
+   logic:'同一位掌廚者也管全家的保健與燉補。這群人的年齡與消費力比首購族高一階，較符合1,200萬以上透天的換屋客層。素材可接大林慈濟、全聯等生活機能。',
+   lm:['新港老街（+5 公里）','大埔美園區（+5 公里）','嘉義縣大林鎮（+5 公里）'],
+   tags:[['Dietary supplement','保健食品'],['Traditional Chinese medicine','中醫'],['Herbal medicine','中藥草本'],['Collagen','膠原蛋白'],['Probiotic','益生菌'],['Vitamin','維他命'],['Nutrition','營養'],['Healthy diet','健康飲食'],['Essence of chicken','雞精'],['Women health','女性健康'],['Skin care','保養'],['Beauty','美容'],['Yoga','瑜伽'],['Walking','健走'],['Massage','按摩'],['Sleep','睡眠'],['Dental care','牙齒保健'],['Pharmacy','藥局'],['Watsons','屈臣氏'],['Cosmed','康是美'],['Health insurance','健康保險'],['Cooking','烹飪'],['Chinese cuisine','中式料理'],['Household goods','生活用品'],['Coupon','優惠券'],['Personal finance','個人理財']]},
+
+  {n:'28-55 / 新港老街+民雄車站+南笨港+斗南 / 果農×青果產銷',sub:'單一深化｜延伸B農企業DNA·從泛農業收斂到果園經營者',
+   logic:'農企業組已驗證農業背景會回應，但無效組是把農業和退休綁在一起。這組不碰退休，只抓正在經營果園、有現金收入的果農。素材可講前院停車與零公設的實用性。',
+   lm:['新港老街（+3 公里）','民雄車站（+3 公里）','南笨港休閒農業區（+3 公里）','嘉義縣大林鎮（+5 公里）','斗南車站（+3 公里）'],
+   tags:[['Fruit','水果'],['Orchard','果園'],['Pineapple','鳳梨'],['Citrus','柑橘'],['Mango','芒果'],['Lychee','荔枝'],['Agriculture','農業'],['Agribusiness','農企業'],['Horticulture','園藝'],['Fertilizer','肥料'],['Pesticide','農藥'],['Organic farming','有機農業'],['Greenhouse','溫室'],['Farmers market','農夫市集'],['Weather forecast','天氣預報'],['Irrigation','灌溉'],['Harvest','採收'],['Fresh produce','生鮮農產'],['Pickup truck','小貨車'],['Townhouse','連棟住宅'],['Residential area','住宅區'],['Chinese cuisine','中式料理'],['Saving','儲蓄'],['Insurance','一般保險'],['Home buying','購屋'],['Field','田地']]},
+
+  {n:'28-55 / 新港老街+民雄車站+南笨港+斗南 / 稻米雜糧×田間作業',sub:'單一深化｜延伸B農企業DNA·大林新港主力的稻作雜糧圈',
+   logic:'嘉南平原以稻作雜糧為主，比果樹更貼近大林新港在地。成效紀錄已建議測試稻米細分標籤。這群人習慣透天生活，會在意停車與放農具的空間。',
+   lm:['新港老街（+3 公里）','民雄車站（+3 公里）','南笨港休閒農業區（+3 公里）','嘉義縣大林鎮（+5 公里）','斗南車站（+3 公里）'],
+   tags:[['Rice','稻米'],['Paddy field','稻田'],['Soybean','黃豆'],['Corn','玉米'],['Peanut','花生'],['Sugarcane','甘蔗'],['Agricultural machinery','農業機械'],['Tractor','曳引機'],['Kubota','久保田'],['Yanmar','洋馬'],['Agricultural news','農業新聞'],['Agricultural services','農業服務'],['Drone','無人機'],['Smart farming','智慧農業'],['Food preservation','食品保存'],['Weather forecast','天氣預報'],['Fertilizer','肥料'],['Field','田地'],['Government agency','政府機關'],['Agribusiness','農企業'],['Rice cooker','電子鍋'],['Villa','別墅'],['Townhouse','連棟住宅'],['Personal finance','個人理財'],['Insurance','一般保險'],['Residential area','住宅區']]},
+
+  {n:'28-55 / 大埔美+斗南車站+斗六車站 / 傳統工藝×文資老街',sub:'單一深化｜延伸C通勤傳統文化DNA·往文化興趣深挖',
+   logic:'有效的通勤傳統文化組含文化遺產、民俗學與節慶，早期傳統工藝組也有訊息。這群人認同在地、願意留在雲嘉生活，適合談大林的生活感，而不是投資價值。',
+   lm:['大埔美園區（+5 公里）','斗南車站（+5 公里）','斗六車站（+5 公里）'],
+   tags:[['Cultural heritage','文化遺產'],['Folklore','民俗學'],['Handicraft','手工藝'],['Pottery','陶藝'],['Woodworking','木工'],['Calligraphy','書法'],['Taiwanese culture','台灣文化'],['Taiwanese opera','歌仔戲'],['Glove puppetry','布袋戲'],['History','歷史'],['Museum','博物館'],['Historic site','古蹟'],['Festival','節慶'],['Lantern festival','元宵花燈'],['Tea','茶葉'],['Photography','攝影'],['Google Maps','Google地圖'],['Mobile app','行動應用程式'],['Frugal living','節儉生活'],['Hardware store','五金行'],['Villa','別墅'],['Townhouse','連棟住宅'],['Commuting','行為：通勤者'],['Tourist attraction','旅遊景點和活動'],['Insurance','一般保險'],['Saving','儲蓄']]},
+
+  {n:'28-52 / 大埔美+斗南車站+斗六車站 / 通勤族×行動支付生活',sub:'單一深化｜延伸C通勤傳統文化DNA·往通勤者日常消費深挖',
+   logic:'有效組的核心行為是通勤者加Google地圖與行動App。這組抓雲嘉間通勤、日常都用手機處理的受薪族。素材可接國道3號與大林火車站的通勤動線。',
+   lm:['大埔美園區（+5 公里）','斗南車站（+5 公里）','斗六車站（+5 公里）'],
+   tags:[['Commuting','行為：通勤者'],['Google Maps','Google地圖'],['Mobile app','行動應用程式'],['LINE Pay','LINE Pay'],['JKOPay','街口支付'],['Mobile payment','行動支付'],['Credit card','信用卡'],['Cashback','現金回饋'],['Frugal living','節儉生活'],['7-Eleven','7-ELEVEN'],['FamilyMart','全家便利商店'],['City Cafe','CITY CAFE'],['Taiwan Railways','台鐵'],['Motorcycle','機車'],['Car insurance','汽車保險'],['Podcast','Podcast'],['YouTube','YouTube'],['Smartphone','智慧型手機'],['Mobile game','手機遊戲'],['Shopee','蝦皮購物'],['Installation and repair','行業類別：安裝與維修服務'],['Government employees','政府員工'],['Personal finance','個人理財'],['Saving','儲蓄'],['Home buying','購屋'],['New home','新成屋']]},
+
+  {n:'35-60 / 新港老街+民雄工業區+大埔美+大林 / 名車車主×高爾夫',sub:'單一深化｜延伸D登山釣魚名車DNA·往名車消費力深挖',
+   logic:'有效的戶外組中有賓士與Lexus，代表在地有實力的車主會回應。1,400萬上下的總價，這群人付得起，也會在意前院停車和別墅感。前批廠主組走釣魚，這組走高爾夫與車。',
+   lm:['新港老街（+5 公里）','民雄工業區（+5 公里）','大埔美園區（+5 公里）','嘉義縣大林鎮（+5 公里）'],
+   tags:[['Golf','高爾夫'],['Golf course','高爾夫球場'],['Golf club','高爾夫球桿'],['Callaway','Callaway'],['Titleist','Titleist'],['Mercedes-Benz','賓士'],['Lexus','Lexus 汽車'],['BMW','BMW'],['Luxury vehicle','豪華車'],['SUV','休旅車'],['Car wash','洗車美容'],['Watch','手錶'],['Villa','別墅'],['Detached house','獨立式洋房'],['Landscape design','景觀設計'],['Patio furniture','庭院家具'],['Travel','旅遊'],['Hiking','健行'],['Tea','茶葉'],['Management','管理'],['Self-employment','自僱'],['Small business owners','行為：小型企業主'],['Return on investment','投資報酬率'],['Financial planning','財務規劃'],['Insurance','一般保險'],['Wine','葡萄酒']]},
+
+  {n:'30-55 / 民雄工業區+大林交流道+古坑服務區 / 土木營造×工程承包',sub:'單一深化｜延伸E工商自營DNA·往營造工班老闆深挖',
+   logic:'國3沿線工商組含建築工程與自僱。土木工班老闆現金流好，也懂RC結構，看房時看得懂本案的工法與地坪。沿用該組有效的交流道地標。',
+   lm:['民雄工業區（+2 公里）','國道三號 大林交流道（+3 公里）','國道三號古坑服務區（+3 公里）'],
+   tags:[['Construction','建築工程'],['Civil engineering','土木工程'],['General contractor','營造承包'],['Excavator','挖土機'],['Concrete','混凝土'],['Steel structure','鋼構'],['Caterpillar','Caterpillar'],['Komatsu','小松'],['Architecture','建築'],['Building materials','建材'],['Surveying','測量'],['Government tender','政府標案'],['Self-employment','自僱'],['Small business owners','行為：小型企業主'],['Management','管理'],['Business model','商業模式'],['Return on investment','投資報酬率'],['Market trends','市場趨勢'],['Pickup truck','小貨車'],['Toyota Hilux','Toyota Hilux'],['Townhouse','連棟住宅'],['Villa','別墅'],['Recreational fishing','休閒釣魚'],['Barbecue','燒烤'],['Insurance','一般保險'],['Financial planning','財務規劃']]},
+
+  {n:'28-45 / 民雄工業區+大林 / 傳產首購×婚紗成家',sub:'單一深化｜延伸F傳產首購DNA·往成家消費深挖',
+   logic:'傳產首購組已有反應。這組用婚紗、寢具家具與育兒用品等成家消費，找工業區周邊較年輕的買家。4房能一次到位，不用之後再換屋，是這群人的主要誘因。',
+   lm:['民雄工業區（+4 公里）','嘉義縣大林鎮（+4 公里）'],
+   tags:[['Wedding','婚禮'],['Wedding photography','婚紗攝影'],['Wedding planning','婚禮規劃'],['Engagement ring','鑽戒'],['Honeymoon','蜜月旅行'],['First-time buyer','首次購房者'],['Home buying','購屋'],['New home','新成屋'],['Interior design','室內設計'],['Furniture','家具'],['IKEA','IKEA'],['Home appliances','家電'],['Toyota','Toyota'],['Manufacturing','製造生產服務'],['Food processing','食品加工'],['Glass','玻璃'],['Metal','金屬'],['Transport and moving','行業類別：運輸與搬運'],['Baby products','嬰幼兒用品'],['Pregnancy','懷孕'],['Saving','儲蓄'],['Insurance','一般保險'],['591 Housing','591房屋交易網'],['Personal finance','個人理財'],['Japan travel','日本旅遊'],['Electric motorcycle','電動機車']]},
+
+  {n:'28-58 / 新港老街+大埔美+大林 / 傳統市場×節慶料理',sub:'排列組合｜A廚房家務 × C節慶民俗',
+   logic:'A組會掌廚，C組重節慶與民俗，兩者交集就是逢年過節要張羅一桌菜的人。這類買家在意廚房大小與家人回來住得下，正好對應4房透天。',
+   lm:['新港老街（+5 公里）','大埔美園區（+5 公里）','嘉義縣大林鎮（+5 公里）'],
+   tags:[['Traditional market','傳統市場'],['Festival','節慶'],['Lunar New Year','農曆新年'],['Reunion dinner','年菜'],['Zongzi','粽子'],['Mid-Autumn Festival','中秋節'],['Mooncake','月餅'],['Folklore','民俗學'],['Chinese cuisine','中式料理'],['Cooking','烹飪'],['Kitchen','廚房'],['Tableware','餐具'],['Vacuum packing','真空包裝'],['Tea','茶葉'],['Dried food','乾貨'],['Pickling','醃漬食品'],['Frugal living','節儉生活'],['Supermarket','超市'],['Google Maps','Google地圖'],['Housekeeping','家務'],['Taiwanese cuisine','台灣料理'],['Seafood','海鮮'],['Household goods','生活用品'],['Saving','儲蓄'],['Insurance','一般保險'],['Coupon','優惠券']]},
+
+  {n:'30-58 / 民雄工業區+大林交流道+新港老街 / 小吃店×餐飲自營',sub:'排列組合｜A中式料理 × E自僱工商',
+   logic:'把會做菜（A）和自己當老闆（E）合起來，就是早餐店、小吃店老闆。成效紀錄列過在地生意人方向，但還沒測餐飲這一塊。無管理費、前院好停車，對他們是實際的賣點。',
+   lm:['民雄工業區（+2 公里）','國道三號 大林交流道（+3 公里）','新港老街（+5 公里）'],
+   tags:[['Restaurant','餐廳'],['Street food','小吃'],['Food stall','攤販'],['Catering','外燴'],['Foodservice','餐飲業'],['Breakfast','早餐'],['Noodle','麵食'],['Bento','便當'],['Bubble tea','手搖飲'],['Point of sale','POS收銀系統'],['Foodpanda','foodpanda'],['Uber Eats','Uber Eats'],['Chinese cuisine','中式料理'],['Cookware','廚具'],['Freezer','冷凍櫃'],['Wholesale','批發'],['Self-employment','自僱'],['Small business owners','行為：小型企業主'],['Management','管理'],['Accounting','會計'],['Return on investment','投資報酬率'],['Cash flow','現金流'],['Pickup truck','小貨車'],['Insurance','一般保險'],['Townhouse','連棟住宅'],['Personal finance','個人理財']]},
+
+  {n:'30-50 / 民雄工業區+大林 / 傳產雙薪×量販採買',sub:'排列組合｜F傳產首購 × A超市持家',
+   logic:'工業區周邊的雙薪家庭，週末會一起去量販店採買，這種客人多半夫妻同時出現在購屋決策中。素材可談全聯、美廉社等機能，以及前院卸貨方便。',
+   lm:['民雄工業區（+4 公里）','嘉義縣大林鎮（+4 公里）'],
+   tags:[['Costco','Costco 好市多'],['Carrefour','家樂福'],['RT-Mart','大潤發'],['Hypermarket','量販店'],['Supermarket','超市'],['Group buying','團購'],['Diaper','尿布'],['Snack','零食'],['Frozen food','冷凍食品'],['Manufacturing','製造生產服務'],['Transport and moving','行業類別：運輸與搬運'],['Home appliances','家電'],['Kitchen','廚房'],['Tableware','餐具'],['Coupon','優惠券'],['Credit card','信用卡'],['Toyota','Toyota'],['Childcare','育兒'],['Parenting','親子教育'],['Household goods','生活用品'],['Shopee','蝦皮購物'],['Insurance','一般保險'],['Personal finance','個人理財'],['Townhouse','連棟住宅'],['Villa','別墅'],['First-time buyer','首次購房者']]},
+
+  {n:'30-60 / 新港老街+民雄車站+南笨港+大林 / 農友×休旅戶外',sub:'排列組合｜B農企業 × D登山休旅',
+   logic:'農忙之外也會開休旅車出遊的農友，通常比單純務農的人更有餘裕。B、D兩組都有回應，但還沒交叉測過。素材可接前院停車與近國道3號，方便出遊。',
+   lm:['新港老街（+3 公里）','民雄車站（+3 公里）','南笨港休閒農業區（+3 公里）','嘉義縣大林鎮（+5 公里）'],
+   tags:[['Agriculture','農業'],['Agribusiness','農企業'],['Organic farming','有機農業'],['Farmers market','農夫市集'],['Gardening','園藝'],['SUV','休旅車'],['Toyota RAV4','Toyota RAV4'],['Nissan X-Trail','Nissan X-Trail'],['Camping','露營'],['Hiking','健行'],['Mountaineering','登山'],['Hot spring','溫泉'],['Hiking trail','登山步道'],['Recreational fishing','休閒釣魚'],['Fishing tackle','漁具'],['Barbecue','燒烤'],['Landscape design','景觀設計'],['Patio furniture','庭院家具'],['Detached house','獨立式洋房'],['Villa','別墅'],['Travel','旅遊'],['Weather forecast','天氣預報'],['Tea','茶葉'],['Insurance','一般保險'],['Saving','儲蓄'],['Agricultural machinery','農業機械']]},
+
+  {n:'30-58 / 民雄工業區+大林交流道+古坑服務區 / 農產批發×冷鏈出口',sub:'排列組合｜B農企業 × E批發物流',
+   logic:'B組含出口貿易與物流，E組也有批發和物流，交集是做農產批發、冷鏈的盤商。他們比一般農友更有資本，動線也常走國道3號。不使用無效組的零售、經銷、電商標籤。',
+   lm:['民雄工業區（+2 公里）','國道三號 大林交流道（+3 公里）','國道三號古坑服務區（+3 公里）'],
+   tags:[['Wholesale','批發'],['Export','出口貿易'],['Logistics','物流'],['Cold chain','冷鏈'],['Cold storage','冷藏倉儲'],['Agricultural news','農業新聞'],['Agricultural services','農業服務'],['Vegetable','蔬菜'],['Fruit','水果'],['Packaging','包裝'],['Food safety','食品安全'],['Self-employment','自僱'],['Small business owners','行為：小型企業主'],['Business model','商業模式'],['Market trends','市場趨勢'],['Management','管理'],['Forklift','堆高機'],['Truck','貨車'],['Pickup truck','小貨車'],['Return on investment','投資報酬率'],['Accounting','會計'],['Insurance','一般保險'],['Townhouse','連棟住宅'],['Villa','別墅'],['Chinese cuisine','中式料理'],['Food preservation','食品保存']]},
+
+  {n:'30-55 / 民雄工業區+大林交流道+古坑服務區 / 包裝印刷×代工廠',sub:'排列組合｜C印刷代工真空包裝 × E工廠自營',
+   logic:'C組的印刷、代工、真空包裝與E組的工廠是同一條產業鏈。嘉義雲林有不少中小型代工廠，老闆和幹部多半想就近住。賣點是離廠近、不用通勤太久。',
+   lm:['民雄工業區（+2 公里）','國道三號 大林交流道（+3 公里）','國道三號古坑服務區（+3 公里）'],
+   tags:[['Printing','印刷'],['Packaging','包裝'],['Vacuum packing','真空包裝'],['OEM','代工生產'],['Factory','工廠'],['Machining','機械加工'],['Corrugated box','紙箱'],['Paper industry','造紙業'],['Label','標籤貼紙'],['Commuting','行為：通勤者'],['Installation and repair','行業類別：安裝與維修服務'],['Electrical distribution','配電系統'],['Hardware store','五金行'],['Frugal living','節儉生活'],['Self-employment','自僱'],['Small business owners','行為：小型企業主'],['Management','管理'],['Strategic management','策略管理'],['Market trends','市場趨勢'],['Google Maps','Google地圖'],['Townhouse','連棟住宅'],['Villa','別墅'],['Recreational fishing','休閒釣魚'],['Tea','茶葉'],['Insurance','一般保險'],['Personal finance','個人理財']]},
+
+  {n:'28-52 / 大埔美+斗南車站+斗六車站 / 通勤族×單車騎行',sub:'排列組合｜C通勤者 × D戶外運動',
+   logic:'受薪通勤族中，週末騎車運動的人健康意識較高，也偏重生活品質。C組的地標和D組的戶外興趣交叉，能看出這群人是否能帶進較年輕的客層。素材可接大林運動公園。',
+   lm:['大埔美園區（+5 公里）','斗南車站（+5 公里）','斗六車站（+5 公里）'],
+   tags:[['Cycling','自行車'],['Road bicycle','公路車'],['Giant Bicycles','捷安特'],['Merida Bikes','美利達'],['Mountain biking','登山車'],['Triathlon','三鐵'],['Strava','Strava'],['Garmin','Garmin'],['Decathlon','迪卡儂'],['Commuting','行為：通勤者'],['Google Maps','Google地圖'],['Mobile app','行動應用程式'],['Hiking','健行'],['Running','路跑'],['Sportswear','運動服飾'],['Cultural heritage','文化遺產'],['Travel','旅遊'],['Tourist attraction','旅遊景點和活動'],['Healthy diet','健康飲食'],['Frugal living','節儉生活'],['Townhouse','連棟住宅'],['Villa','別墅'],['Government employees','政府員工'],['Insurance','一般保險'],['Personal finance','個人理財'],['Saving','儲蓄']]},
+
+  {n:'30-55 / 民雄工業區+大林 / 傳產男×小酌聚會',sub:'排列組合｜F酒類釀造 × D釣魚登山名車',
+   logic:'傳產首購組中有酒類零售與釀造廠。這類工廠幹部下班常和同事喝一杯、假日釣魚爬山，對買房的決定權也高。素材可談前院聚會與停車空間。',
+   lm:['民雄工業區（+4 公里）','嘉義縣大林鎮（+4 公里）'],
+   tags:[['Whisky','威士忌'],['Kaoliang','高粱酒'],['Beer','啤酒'],['Taiwan Beer','台灣啤酒'],['Brewery','釀造廠'],['Liquor store','酒類商品零售商'],['Wine','葡萄酒'],['Barbecue','燒烤'],['Seafood','海鮮'],['Karaoke','卡拉OK'],['Manufacturing','製造生產服務'],['Glass','玻璃'],['Metal','金屬'],['Food processing','食品加工'],['Lexus','Lexus 汽車'],['SUV','休旅車'],['Recreational fishing','休閒釣魚'],['Mountaineering','登山'],['Hardware store','五金行'],['First-time buyer','首次購房者'],['Interior design','室內設計'],['Villa','別墅'],['Townhouse','連棟住宅'],['Insurance','一般保險'],['Transport and moving','行業類別：運輸與搬運'],['Personal finance','個人理財']]},
+
+  {n:'28-55 / 新港老街+民雄工業區+大埔美+大林 / 水族寵物×親子透天',sub:'排列組合｜D水族飼養庭院 × A親子教育',
+   logic:'D組含水族飼養與庭院家具，A組含親子教育。有魚缸、養狗、帶小孩的家庭，公寓住不開，透天前院與4房正好解決這個問題。這組是這批裡最偏向測試的方向。',
+   lm:['新港老街（+5 公里）','民雄工業區（+5 公里）','大埔美園區（+5 公里）','嘉義縣大林鎮（+5 公里）'],
+   tags:[['Fishkeeping','水族飼養'],['Aquarium','水族箱'],['Koi','錦鯉'],['Dog','狗'],['Cat','貓'],['Pet food','寵物食品'],['Pet store','寵物店'],['Veterinarian','獸醫'],['Patio furniture','庭院家具'],['Landscape design','景觀設計'],['Gardening','園藝'],['Parenting','親子教育'],['Childcare','育兒'],['Kitchen','廚房'],['Household goods','生活用品'],['Cooking','烹飪'],['Camping','露營'],['Travel','旅遊'],['Detached house','獨立式洋房'],['Townhouse','連棟住宅'],['SUV','休旅車'],['Home improvement','居家裝修'],['Insurance','一般保險'],['Personal finance','個人理財'],['Coupon','優惠券'],['Zoo','動物園']]},
+
+  {n:'30-55 / 民雄工業區+大林交流道+古坑服務區 / 塑膠化工×傳產自營',sub:'排列組合｜E化學工業代工 × F玻璃金屬製造',
+   logic:'E組的化學工業、代工，和F組的玻璃、金屬製造，都指向工業區內的傳產老闆與幹部。刻意不用工具機、金屬加工和零部件標籤，因為這些都出現在無效組。',
+   lm:['民雄工業區（+2 公里）','國道三號 大林交流道（+3 公里）','國道三號古坑服務區（+3 公里）'],
+   tags:[['Chemical industry','化學工業'],['Plastic','塑膠'],['Injection molding','射出成型'],['Mold','模具'],['Rubber','橡膠'],['Paint','塗料'],['Glass','玻璃'],['Metal','金屬'],['Factory','工廠'],['Manufacturing','製造生產服務'],['OEM','代工生產'],['Machining','機械加工'],['Wholesale','批發'],['Self-employment','自僱'],['Small business owners','行為：小型企業主'],['Management','管理'],['Market trends','市場趨勢'],['Business model','商業模式'],['Lexus','Lexus 汽車'],['Transport and moving','行業類別：運輸與搬運'],['First-time buyer','首次購房者'],['Interior design','室內設計'],['Townhouse','連棟住宅'],['Villa','別墅'],['Insurance','一般保險'],['Financial planning','財務規劃']]}
+];
+(function(){const g=document.getElementById('main-aud-grid-b3');if(g){g.innerHTML=MAIN_G4.map((x,i)=>buildAudCard(x,i+200)).join('');g.querySelectorAll('.aud-num').forEach((e,i)=>e.textContent=i+1);}})();
 </script>
 <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
 <script>window.addEventListener('scroll',()=>document.getElementById('btt').classList.toggle('show',window.scrollY>300))</script>
