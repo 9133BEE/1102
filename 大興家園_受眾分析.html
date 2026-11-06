@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>大興家園｜受眾分析報告</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#7a5a8a;--accent-dark:#5a3a6a;--accent-light:#ede8f4;--accent-border:#b89fcc;
+  --bg:#f2f3f1;--s:#ffffff;--bd:#e4e5e2;--tx:#2e2c29;--sub:#7d7870;--sub2:#a8a199;
+  --good:#1e6e3f;--goodl:#e6f4ea;--warn:#c05c00;
+  --radius:12px;--shadow-xs:0 1px 3px rgba(0,0,0,.05);--shadow-sm:0 2px 8px rgba(0,0,0,.07);--shadow-card:0 2px 10px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);font-size:14px;line-height:1.6;min-height:100vh}
+.page-header{background:linear-gradient(180deg,#0d1824 0%,#091218 100%);padding:0 40px;height:56px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 1px 0 rgba(255,255,255,.04),0 4px 20px rgba(0,0,0,.35);border-bottom:1px solid rgba(255,255,255,.06)}
+.ph-logo{width:30px;height:30px;background:linear-gradient(135deg,#9a7aaa,var(--accent-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0}
+.ph-title{font-size:14px;font-weight:700;color:#e8f5ea;letter-spacing:-.2px}
+.ph-sub{font-size:11px;color:#3a5a3e;margin-left:2px}
+.ph-nav{margin-left:auto;display:flex;gap:8px;align-items:center}
+.ph-nav a{font-size:12px;color:#b89fcc;text-decoration:none;padding:5px 13px;border-radius:6px;border:1px solid rgba(122,90,138,.25);background:rgba(122,90,138,.12);font-weight:500}
+.ph-nav a:hover{background:rgba(122,90,138,.22);color:#b8d8be}
+#btt{position:fixed;right:24px;bottom:28px;width:38px;height:38px;border-radius:50%;background:rgba(15,20,15,.75);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:15px;cursor:pointer;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.3);font-family:inherit}
+#btt.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#btt:hover{background:rgba(25,45,25,.9);transform:translateY(-2px)}
+.wrap{max-width:1200px;margin:0 auto;padding:32px 40px 48px}
+.case-header{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:20px 24px;margin-bottom:10px;display:flex;align-items:center;gap:18px;box-shadow:var(--shadow-card)}
+.case-logo{width:44px;height:44px;background:linear-gradient(135deg,#9a7aaa,var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff;flex-shrink:0}
+.case-info h2{font-size:17px;font-weight:700;color:var(--tx);letter-spacing:-.3px}
+.case-info p{font-size:12px;color:var(--sub);margin-top:3px;line-height:1.5}
+.case-stats{margin-left:auto;display:flex;gap:28px;flex-shrink:0}
+.stat{text-align:right}
+.stat-n{font-size:24px;font-weight:800;color:var(--accent);line-height:1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.stat-l{font-size:10px;color:var(--sub2);margin-top:3px;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--accent);text-decoration:none;margin-bottom:16px;padding:5px 12px;background:var(--accent-light);border-radius:20px;border:1px solid var(--accent-border);transition:all .15s}
+.back-link:hover{filter:brightness(.95);color:var(--accent-dark)}
+.sec-title{font-size:12px;font-weight:700;color:var(--sub);margin-bottom:14px;display:flex;align-items:center;gap:10px;letter-spacing:.4px;text-transform:uppercase}
+.sec-title::before{content:'';display:inline-block;width:3px;height:14px;background:var(--accent);border-radius:2px;flex-shrink:0}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--bd)}
+.section{margin-bottom:28px}
+.creative-section{margin-bottom:32px}
+/* Profiles */
+.profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.profile-card{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-xs);transition:box-shadow .2s,transform .2s}
+.profile-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.profile-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:12px}
+.profile-icon.green{background:var(--accent-light)}
+.profile-icon.amber{background:#fdf0dc}
+.profile-icon.teal{background:#e0eff2}
+.profile-name{font-size:15px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.profile-meta{font-size:12px;color:var(--sub);margin-bottom:10px}
+.profile-tags{font-size:12px;color:#4a5568;margin-bottom:10px;line-height:1.6}
+.profile-behavior{font-size:12px;color:var(--sub);line-height:1.55;margin-bottom:12px}
+.profile-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;margin-top:2px}
+.badge-green{background:var(--accent-light);color:#2a4a2e;border:1px solid var(--accent-border)}
+.badge-amber{background:#fdf0dc;color:#7a5c20;border:1px solid #d4b06a}
+.badge-teal{background:#e0eff2;color:#2f6672;border:1px solid #87b5be}
+/* Tags */
+.tags-row{display:flex;flex-wrap:wrap;gap:8px}
+.core-tag{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:var(--s);border:1.5px solid var(--bd);border-radius:20px;font-size:13px;font-weight:600;color:var(--tx);cursor:pointer;transition:all .15s}
+.core-tag:hover{border-color:var(--accent-border);background:var(--accent-light);color:#2a4a2e}
+.core-tag .arr{font-size:11px;color:var(--accent-border)}
+/* Tips */
+.tips{display:flex;flex-direction:column;gap:10px}
+.tip{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:16px 18px;display:flex;gap:16px;align-items:flex-start;cursor:pointer;transition:border-color .15s,box-shadow .15s;box-shadow:var(--shadow-xs)}
+.tip:hover{border-color:var(--accent-border);box-shadow:var(--shadow-sm)}
+.tip-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0;color:#fff}
+.c1{background:var(--accent)}.c2{background:#6a8a6a}.c3{background:#8a7a4a}.c4{background:#4a6a8a}.c5{background:#7a5a4a}
+.tip-body{flex:1}
+.tip-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:5px;line-height:1.4}
+.tip-desc{font-size:12px;color:var(--sub);line-height:1.65}
+/* Creative timeline */
+.creative-timeline{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.phase-row{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:14px 18px;display:flex;gap:14px;align-items:center;cursor:pointer;transition:box-shadow .15s;box-shadow:var(--shadow-xs)}
+.phase-row:hover{box-shadow:var(--shadow-sm)}
+.phase-label{width:52px;flex-shrink:0;font-size:11px;font-weight:800;text-align:center;padding:6px 4px;border-radius:8px;background:var(--accent-light);color:var(--accent-dark);letter-spacing:-.2px;line-height:1.3}
+.phase-body{flex:1;min-width:0}
+.phase-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.phase-desc{font-size:12px;color:var(--sub);line-height:1.6}
+.phase-stat{text-align:right;flex-shrink:0;min-width:80px}
+.phase-cpl{font-size:16px;font-weight:800;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.phase-cpl-l{font-size:10px;color:var(--sub2);margin-top:3px;font-weight:600}
+/* Insight */
+.insight-box{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow-xs)}
+.insight-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:14px}
+.insight-highlight{background:var(--accent-light);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:13px;color:#1a3a1e;font-weight:600;line-height:1.65}
+.insight-sub{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:10px;margin-top:14px}
+.insight-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.insight-list li{font-size:13px;color:#4a5568;padding-left:18px;position:relative;line-height:1.6}
+.insight-list li::before{content:'→';position:absolute;left:0;color:var(--accent-border);font-size:12px;top:1px}
+/* ── aud-card 展開系統 ── */
+.aud-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
+@media(max-width:760px){.aud-grid-2{grid-template-columns:1fr}}
+.aud-card{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);box-shadow:var(--shadow-xs);overflow:hidden}
+.aud-header{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none;transition:background .15s}
+.aud-header:hover{background:#f0f7f1}
+.aud-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.aud-info{flex:1;min-width:0}
+.aud-name{font-size:13px;font-weight:700;color:var(--tx);line-height:1.35}
+.aud-sub{font-size:11px;color:var(--sub);margin-top:2px;line-height:1.4}
+.aud-arrow{font-size:11px;color:var(--sub2);transition:transform .2s;flex-shrink:0}
+.aud-card.open .aud-arrow{transform:rotate(90deg)}
+.aud-body{display:none;padding:0 16px 16px;border-top:1px solid var(--bd)}
+.aud-card.open .aud-body{display:block}
+.aud-sl{font-size:10px;font-weight:700;color:var(--sub2);letter-spacing:.5px;text-transform:uppercase;margin:12px 0 6px}
+.aud-logic{font-size:12px;color:var(--sub);line-height:1.7;background:#f4f7f4;border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 6px 6px 0}
+.aud-lm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.aud-lm-tag{font-size:11px;font-weight:600;color:#3a5a3e;background:#e4f0e6;padding:3px 10px;border-radius:10px;border:1px solid #b0d4b8}
+.tag-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+.tag-tbl thead tr{background:#f0f4f0}
+.tag-tbl th{padding:5px 8px;text-align:left;font-size:10px;font-weight:700;color:var(--sub2);border-bottom:1px solid var(--bd)}
+.tag-tbl tbody tr{cursor:pointer;transition:background .12s;border-bottom:1px solid #f0f0f0}
+.tag-tbl tbody tr:hover{background:#e8f3e8}
+.tag-tbl tbody tr.flash{background:#c8e8c8}
+.tag-tbl td{padding:5px 8px;color:var(--tx)}
+.tag-tbl td:first-child{color:var(--sub2);font-size:10px;width:24px}
+.copy-all-row{display:flex;justify-content:flex-end;margin-top:8px}
+.copy-all-btn{font-size:11px;font-weight:600;color:#3a5a3e;background:#e4f0e6;border:1px solid #b0d4b8;border-radius:8px;padding:5px 14px;cursor:pointer;transition:all .15s}
+.copy-all-btn:hover{background:#c8e4cc}
+.copy-all-btn.done{background:#d0ecd8;color:#2a6a3a;border-color:#a8d8b8}
+#copy-toast{position:fixed;bottom:72px;left:50%;transform:translateX(-50%) translateY(8px);background:#162016;color:#80c888;font-size:11px;font-weight:600;padding:7px 16px;border-radius:18px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:300;white-space:nowrap}
+#copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* Ranking */
+.rk-row{background:var(--s);border:1px solid var(--bd);border-left:3px solid var(--bd);border-radius:var(--radius);padding:14px 18px 14px 14px;margin-bottom:6px;display:flex;gap:14px;align-items:center;box-shadow:none;transition:border-left-color .15s,box-shadow .15s,transform .15s;cursor:pointer}
+.rk-row:hover{border-left-color:var(--accent);box-shadow:0 2px 12px rgba(0,0,0,.06);transform:translateX(2px)}
+.rk-row.gold{border-left-color:#e6a820;background:linear-gradient(90deg,#fffef0 0%,#fff 70%)}
+.rk-row.silver{border-left-color:#9aa5b4;background:linear-gradient(90deg,#f5f7fa 0%,#fff 70%)}
+.rk-row.bronze{border-left-color:#c47f3a;background:linear-gradient(90deg,#fdf7f0 0%,#fff 70%)}
+.rk-medal{width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rk-rank{width:32px;height:32px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--accent);flex-shrink:0}
+.rk-body{flex:1;min-width:0}
+.rk-name{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px;line-height:1.35}
+.rk-loc{font-size:11px;color:var(--sub2);line-height:1.4;margin-bottom:7px}
+.rk-tags{display:flex;flex-wrap:wrap;gap:4px}
+.rk-tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;line-height:1.5}
+.t-fam{background:#f3e8ff;color:#5b21b6;border:1px solid #c4b5fd}
+.t-agr{background:#e6f4ea;color:#1e6e3f;border:1px solid #8ecba3}
+.t-ind{background:#eceff1;color:#37474f;border:1px solid #b0bec5}
+.t-loc{background:var(--accent-light);color:var(--accent-dark);border:1px solid var(--accent-border)}
+.t-buy{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.t-tour{background:#e0f7f4;color:#00695c;border:1px solid #7cd6cc}
+.rk-stats{display:flex;gap:20px;flex-shrink:0;align-items:center}
+.rk-stat-block{text-align:right}
+.rk-result{font-size:26px;font-weight:900;color:var(--tx);line-height:1;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.rk-result-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.rk-cpl{font-size:16px;font-weight:800;color:var(--warn);line-height:1;font-variant-numeric:tabular-nums}
+.rk-cpl.good-cpl{color:var(--good)}
+.rk-cpl-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.rk-spend{font-size:13px;font-weight:700;color:#6d6560;line-height:1;font-variant-numeric:tabular-nums}
+.rk-spend-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.page-footer{text-align:center;font-size:11px;color:var(--sub2);margin-top:12px;padding-bottom:8px}
+/* ── Tab navigation ── */
+.tab-bar{display:flex;gap:6px;margin-bottom:22px;background:var(--s);border:1px solid var(--bd);border-radius:10px;padding:5px;box-shadow:var(--shadow-xs)}
+.tab-btn{flex:1;padding:8px 14px;border-radius:7px;border:none;background:transparent;font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;transition:all .15s;text-align:center}
+.tab-btn.active{background:#7a5a8a;color:#fff;box-shadow:0 2px 6px rgba(122,90,138,.3)}
+.tab-bar .tab-btn:nth-child(2).active{background:#607d96;color:#fff;box-shadow:0 2px 6px rgba(96,125,150,.3)}
+.tab-bar .tab-btn:nth-child(3).active{background:#4a6a5a;color:#fff;box-shadow:0 2px 6px rgba(74,106,90,.3)}
+.tab-btn:hover:not(.active){background:#f0edf5;color:#5a3a6a}
+.tab-pane{display:none}
+.tab-pane.show{display:block}
+
+/* 帳號配色統一（主粉專=紫 #7a5a8a／1510=藍 #607d96，比照富宇玥和） */
+.page-banner,.page-banner.main,.page-banner.main-banner{background:linear-gradient(135deg,#5a3a6a,#7a5a8a)!important;color:#fff}.tab-btn.active{background:#7a5a8a!important;color:#fff!important;box-shadow:0 2px 6px rgba(122,90,138,.3)!important}.tab-btn:hover:not(.active){background:#ede8f4;color:#5a3a6a}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="ph-logo">興</div>
+  <span class="ph-title">大興家園｜受眾分析</span>
+  <span class="ph-sub">· 台中太平 · 總價798萬起2房</span>
+  <nav class="ph-nav"><a href="index.html">標籤資料庫</a><a href="hub.html">← 返回總覽</a></nav>
+</header>
+
+<div class="wrap">
+
+<div class="case-header">
+  <div class="case-logo">興</div>
+  <div class="case-info">
+    <h2>大興家園｜台中太平</h2>
+    <p>太平區大興路 · 電梯公寓5層 · 8戶住家＋1戶店面 · 2房16~21坪 · 總價798~888萬 · 實登37.3~37.9萬/坪 · 隨時交屋 · 廣告目標：訊息</p>
+  </div>
+  <div class="case-stats">
+    <div class="stat"><div class="stat-n">6</div><div class="stat-l">有效受眾</div></div>
+    <div class="stat"><div class="stat-n">4</div><div class="stat-l">無效受眾</div></div>
+    <div class="stat"><div class="stat-n">20</div><div class="stat-l">建議受眾組</div></div>
+  </div>
+</div>
+
+<a class="back-link" href="hub.html">← 返回案件總覽</a>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('analysis')">成效分析</button>
+  <button class="tab-btn" onclick="switchTab('aud')">建議受眾</button>
+</div>
+
+<div id="tab-analysis" class="tab-pane show">
+<div class="section">
+  <div class="sec-title">三大核心受眾輪廓</div>
+  <div class="profiles">
+    <div class="profile-card">
+      <div class="profile-icon green">🔧</div>
+      <div class="profile-name">藍領實務小資型</div>
+      <div class="profile-meta">年齡 28–55｜太原 / 逢甲 / 頭家厝</div>
+      <div class="profile-tags">興趣：汽機車維修、學徒、職業教育、儲蓄、保全、工廠</div>
+      <div class="profile-behavior">行為：靠技術或穩定工作領薪，買房看每月付得起多少。798萬起、免帶車位對這群人很實際。有效的儲蓄維修、小資汽機車、司機傳產都屬於這一類。</div>
+      <span class="profile-badge badge-green">三組有效 · 成效數字待補</span>
+    </div>
+    <div class="profile-card">
+      <div class="profile-icon amber">🍲</div>
+      <div class="profile-name">外食串流與年輕自住型</div>
+      <div class="profile-meta">年齡 28–60｜精武路 / 太平運動公園 / 秀泰</div>
+      <div class="profile-tags">興趣：餐廳、甜點、Netflix、美容、網購、行動支付</div>
+      <div class="profile-behavior">行為：生活重心在外食與手機，重視生活機能和自己的小空間。全案訊息量最多的兩組都在這裡，地標選擇對成效影響很大。</div>
+      <span class="profile-badge badge-amber">151訊息 · CPL NT$125–131</span>
+    </div>
+    <div class="profile-card">
+      <div class="profile-icon teal">📈</div>
+      <div class="profile-name">工業區賺錢置產型</div>
+      <div class="profile-meta">年齡 28–60｜大里 / 太平工業區</div>
+      <div class="profile-tags">興趣：金錢、財富、投資、股票、羽球、資訊科技與製造</div>
+      <div class="profile-behavior">行為：離廠區近、收入較穩定，關心錢怎麼變多。總價低的2房可以自住，也可能當第一間置產，適合買低不追高與收租訴求。</div>
+      <span class="profile-badge badge-teal">58訊息 · CPL NT$97 · 成本最低</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">跨受眾必保留的核心標籤</div>
+  <div class="tags-row">
+    <span class="core-tag">汽車技師（汽車）<span class="arr">↗</span></span>
+    <span class="core-tag">儲蓄（銀行業）<span class="arr">↗</span></span>
+    <span class="core-tag">首次購房者（房地產）<span class="arr">↗</span></span>
+    <span class="core-tag">UberEATS<span class="arr">↗</span></span>
+    <span class="core-tag">上班族（流行文化）<span class="arr">↗</span></span>
+    <span class="core-tag">行動支付（貨幣）<span class="arr">↗</span></span>
+    <span class="core-tag">591房屋交易網<span class="arr">↗</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">五大操作建議</div>
+  <div class="tips">
+<div class="tip"><div class="tip-num c1">1</div><div class="tip-body"><div class="tip-title">預算先給科技工業賺錢與餐廳串流</div><div class="tip-desc">這兩組是目前紀錄中成本最低和訊息量最多的組別，也是新20組裡第10、16、17組與第5、6、15組的來源，可優先開這幾組。</div></div></div>
+<div class="tip"><div class="tip-num c2">2</div><div class="tip-body"><div class="tip-title">地標守住太原、頭家厝、精武路、逢甲與工業區</div><div class="tip-desc">年輕自住有效、年輕娛樂無效，兩組標籤幾乎相同，主要差在地標。潭子、洲際、肥佬闆、大坑都不建議再用。</div></div></div>
+<div class="tip"><div class="tip-num c3">3</div><div class="tip-body"><div class="tip-title">小資客層用汽機車和外食切入，不用持家省錢</div><div class="tip-desc">小資汽機車有效，小資家庭無效。折扣、量販、團購、廚房家電這類持家標籤，以及戶外、健康、長輩興趣，都應避開。</div></div></div>
+<div class="tip"><div class="tip-num c4">4</div><div class="tip-body"><div class="tip-title">素材配合受眾：自住談總價，理財族談收租</div><div class="tip-desc">過往有效的稿面是798萬起、買低不追高、精裝2房。F線可配收租與買低不追高，C、E線可配送家具與全室冷氣。優惠內容投放前請先確認是否仍有效。</div></div></div>
+<div class="tip"><div class="tip-num c5">5</div><div class="tip-body"><div class="tip-title">補上完整成效CSV，才能算全案數字</div><div class="tip-desc">目前只有部分組別有訊息與CPL紀錄，也沒有花費。提供受眾與素材CSV後，可補齊總花費、均CPL與素材分析。</div></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">關鍵洞見 · 分析日期 2026-11-06</div>
+  <div class="note-bar">同樣是小資，切汽機車有效、切持家省錢無效。同樣是年輕上班族標籤，太平運動公園、北屯兒童公園、秀泰有效，換到洲際、潭子就無效。戶外、健康、長輩興趣在大坑、太平、十期都表現差。整體看來，這案買的人是務實領薪族，而不是追求退休休閒的客層。</div>
+</div>
+</div>
+
+<div id="tab-aud" class="tab-pane">
+<div class="section">
+  <div class="sec-title">建議嘗試受眾（20組）· 更新 2026-11-06</div>
+  <div class="note-bar">依6組有效受眾延伸（A儲蓄維修／B小資汽機車／C餐廳串流／D司機傳產／E年輕自住／F科技工業賺錢）：前10組單一DNA深化、後10組兩兩排列組合。地標只用有效組的太原車站、好市多二店、逢甲、精武路、頭家厝、大源十九街、太平運動公園、北屯兒童公園、秀泰與大里太平工業區。標籤避開持家省錢、戶外健康、租賃家具、快時尚等無效方向。價格依591：總價798–888萬，實登4筆37.3–37.9萬/坪。</div>
+  <div id="main-aud-grid" class="aud-grid-2"></div>
+</div>
+
+<div class="section">
+  <div class="sec-title">有效受眾排行 · 依你提供的有效清單</div>
+  
+  <div class="rk-row gold">
+    <div class="rk-medal">🥇</div>
+    <div class="rk-body"><div class="rk-name">28-55 / 十期東區 / 餐廳 串流媒體</div><div class="rk-loc">精武路 + 太原車站 + 頭家厝菜市場</div><div class="rk-tags"><span class="rk-tag t-loc">外食</span><span class="rk-tag t-loc">串流</span></div></div>
+    <div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">90</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">$125</div><div class="rk-cpl-l">CPL</div></div></div>
+  </div>
+  <div class="rk-row silver">
+    <div class="rk-medal">🥈</div>
+    <div class="rk-body"><div class="rk-name">28-60 / 大里太平 / 科技工業 賺錢</div><div class="rk-loc">大里工業區 + 軟體園區 + 太平工業區</div><div class="rk-tags"><span class="rk-tag t-loc">金錢</span><span class="rk-tag t-loc">股票</span></div></div>
+    <div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">58</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">$97</div><div class="rk-cpl-l">CPL</div></div></div>
+  </div>
+  <div class="rk-row">
+    <div class="rk-medal">🥉</div>
+    <div class="rk-body"><div class="rk-name">28-60 / 北屯太平東區 / 年輕自住</div><div class="rk-loc">太平運動公園 + 北屯兒童公園 + 秀泰</div><div class="rk-tags"><span class="rk-tag t-loc">美容</span><span class="rk-tag t-loc">網購</span></div></div>
+    <div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">61</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">$131</div><div class="rk-cpl-l">CPL</div></div></div>
+  </div>
+  <div class="rk-row">
+    <div class="rk-medal">4</div>
+    <div class="rk-body"><div class="rk-name">30-55 / 北屯太原 / 儲蓄/維修/傳統</div><div class="rk-loc">太原車站 + 好市多二店</div><div class="rk-tags"><span class="rk-tag t-loc">汽車維修</span><span class="rk-tag t-loc">儲蓄</span></div></div>
+    <div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">—</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">CPL</div></div></div>
+  </div>
+  <div class="rk-row">
+    <div class="rk-medal">5</div>
+    <div class="rk-body"><div class="rk-name">30-55 / 北屯太原逢甲 / 小資/汽機車</div><div class="rk-loc">逢甲 + 太原車站 + 好市多二店</div><div class="rk-tags"><span class="rk-tag t-loc">機車</span><span class="rk-tag t-loc">首購</span></div></div>
+    <div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">—</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">CPL</div></div></div>
+  </div>
+  <div class="rk-row">
+    <div class="rk-medal">6</div>
+    <div class="rk-body"><div class="rk-name">28-55 / 北屯太平 / 司機傳產</div><div class="rk-loc">太原車站 + 頭家厝 + 大源十九街</div><div class="rk-tags"><span class="rk-tag t-loc">司機</span><span class="rk-tag t-loc">工廠</span></div></div>
+    <div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">—</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">CPL</div></div></div>
+  </div>
+  
+</div>
+</div>
+
+<div class="page-footer">資料來源：用戶提供有效/無效受眾、Notion受眾評級、W2會議紀錄、591 · 成效數字未涵蓋全案 · 大興家園 台中太平 · 最後更新 2026-11-06</div>
+
+</div>
+
+<div id="toast" style="position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#2e2c29;color:#fff;font-size:12.5px;padding:10px 20px;border-radius:24px;opacity:0;transition:all .25s;pointer-events:none;z-index:999;white-space:nowrap">📋 已複製 → 貼至 Claude 對話</div>
+<script>
+function switchTab(name){document.querySelectorAll('.tab-btn').forEach((b,i)=>{const names=['analysis','aud'];b.classList.toggle('active',names[i]===name)});document.querySelectorAll('.tab-pane').forEach(p=>{p.classList.remove('show')});document.getElementById('tab-'+name).classList.add('show');window.scrollTo({top:0,behavior:'smooth'})}
+const PROJECT = '大興家園（台中太平・大興路・2房16~21坪・總價798~888萬・電梯公寓・廣告目標訊息）';
+function showToast(){const t=document.getElementById('toast');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)'},2200)}
+function copyPrompt(text){navigator.clipboard.writeText(text).then(showToast).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast()})}
+document.querySelectorAll('.core-tag').forEach(el=>{el.addEventListener('click',()=>{const tag=el.textContent.replace('↗','').trim();copyPrompt(`針對${PROJECT}，請深入分析「${tag}」這個興趣標籤：\n1. 在本案受眾中代表什麼輪廓？\n2. 搭配哪些標籤組合效果最好？\n3. 素材訴求應該怎麼寫？`)})});
+document.querySelectorAll('.tip').forEach(el=>{el.addEventListener('click',()=>{const title=el.querySelector('.tip-title').textContent.trim();const desc=el.querySelector('.tip-desc').textContent.trim();copyPrompt(`針對${PROJECT}，關於這項操作建議：\n「${title}」\n背景：${desc}\n\n請幫我制定具體執行方案，包含受眾設定細節和素材方向。`)})});
+document.querySelectorAll('.phase-row').forEach(el=>{el.style.cursor='pointer';el.addEventListener('click',()=>{const name=el.querySelector('.phase-title');const desc=el.querySelector('.phase-desc');if(!name)return;copyPrompt(`針對${PROJECT}，關於素材方向「${name.textContent.trim()}」：\n${desc?desc.textContent.trim():''}\n\n請幫我製作具體素材文案和視覺建議。`)})});
+document.querySelectorAll('.rk-row').forEach(el=>{el.addEventListener('click',()=>{const name=el.querySelector('.rk-name');if(name)copyPrompt(`針對${PROJECT}，請分析受眾「${name.textContent.trim()}」，給我深度策略建議。`)})});
+/* ── aud-card 系統 ── */
+function showCopyToast(msg){let t=document.getElementById('copy-toast');if(!t){t=document.createElement('div');t.id='copy-toast';document.body.appendChild(t);}t.textContent=msg;t.classList.add('show');clearTimeout(audToastT);audToastT=setTimeout(()=>t.classList.remove('show'),1400);}
+function copyTxt(txt){return navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject();}
+function initAudCard(card){if(card.dataset.cb)return;card.dataset.cb='1';card.querySelectorAll('.tag-tbl tbody tr').forEach(row=>{const en=row.cells[1]?.textContent.trim();if(!en)return;row.addEventListener('click',()=>{copyTxt(en).then(()=>{row.classList.add('flash');setTimeout(()=>row.classList.remove('flash'),600);showCopyToast('已複製：'+en);});});});card.querySelectorAll('.tag-tbl').forEach(tbl=>{const wrap=document.createElement('div');wrap.className='copy-all-row';const btn=document.createElement('button');btn.className='copy-all-btn';btn.innerHTML='⎘ 複製全部30個標籤';btn.addEventListener('click',e=>{e.stopPropagation();const tags=Array.from(tbl.querySelectorAll('tbody tr')).map(r=>r.cells[1]?.textContent.trim()).filter(Boolean).join('\n');copyTxt(tags).then(()=>{btn.classList.add('done');btn.textContent='✓ 已複製30個';showCopyToast('已複製全部30個標籤');setTimeout(()=>{btn.classList.remove('done');btn.innerHTML='⎘ 複製全部30個標籤';},2000);});});wrap.appendChild(btn);tbl.after(wrap);});}
+function toggleAud(id){const c=document.getElementById(id);c.classList.toggle('open');if(c.classList.contains('open'))initAudCard(c);}
+function buildAudCard(g,idx){const id='m'+(idx+1);const rows=g.tags.map((t,i)=>`<tr><td>${i+1}</td><td>${t[0]}</td><td>${t[1]}</td></tr>`).join('');const lmTags=g.lm.map(l=>`<span class="aud-lm-tag">${l}</span>`).join('');return `<div class="aud-card" id="${id}"><div class="aud-header" onclick="toggleAud('${id}')"><div class="aud-num">${idx+1}</div><div class="aud-info"><div class="aud-name">${g.n}</div><div class="aud-sub">${g.sub}</div></div><div class="aud-arrow">▶</div></div><div class="aud-body"><div class="aud-sl">評估邏輯</div><div class="aud-logic">${g.logic}</div><div class="aud-sl">地標定位</div><div class="aud-lm">${lmTags}</div><div class="aud-sl">興趣標籤（點擊列複製單個）</div><table class="tag-tbl"><thead><tr><th>#</th><th>English</th><th>中文</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;}
+const MAIN_G=[
+  {n:'30-55 / 太原車站+好市多 / 汽車保養×鈑烤改裝',sub:'單一深化｜延伸A儲蓄維修DNA·往修車師傅與愛車族深挖',
+   logic:'儲蓄維修組反應的是動手做事、務實存錢的人。修車廠師傅與常跑保養廠的車主，對798萬起的總價算得很清楚。素材可打免帶車位，停車預算不用多算。',
+   lm:['太原車站（+4 公里）','台中costco好市多二店（+4 公里）'],
+   tags:[['Auto mechanic','汽車技師'],['Auto repair shop','汽車維修廠'],['Used car','二手車'],['Car maintenance','汽車保養'],['Engine oil','機油'],['Tire','輪胎'],['Michelin','米其林'],['Bridgestone','普利司通'],['Auto body repair','鈑金烤漆'],['Car tuning','汽車改裝'],['Car accessories','汽車配件'],['Car wash','洗車美容'],['Dashcam','行車紀錄器'],['Toyota','Toyota'],['Nissan','Nissan'],['Workshop','工作坊（製造業）'],['Machine','機器'],['Apprenticeship','學徒'],['Power tools','電動工具'],['Saving','儲蓄（銀行業）'],['Deposit account','存款帳戶（銀行業）'],['Insurance','一般保險（保險）'],['First-time buyer','首次購房者（房地產）'],['Home repair','住家修繕（居家裝修）'],['Variety show','綜藝節目（表演藝術）'],['Uber Eats','UberEATS']]},
+
+  {n:'30-55 / 太原車站+好市多 / 定存保單×穩健理財',sub:'單一深化｜延伸A儲蓄維修DNA·往存錢與保單習慣深挖',
+   logic:'同一群人的另一面是習慣定存、買保單，買房看的是每月付不付得起。適合談總價低、貸款成數75%與隨時可交屋。不使用持家省錢類標籤，那是無效的小資家庭組方向。',
+   lm:['太原車站（+4 公里）','台中costco好市多二店（+4 公里）'],
+   tags:[['Saving','儲蓄（銀行業）'],['Deposit account','存款帳戶（銀行業）'],['Time deposit','定期存款'],['Savings insurance','儲蓄險'],['Life insurance','人壽保險'],['Insurance policy','保單（保險）'],['Insurance','一般保險（保險）'],['Cathay Life','國泰人壽'],['Fubon','富邦'],['Nan Shan Life','南山人壽'],['Chunghwa Post','中華郵政'],['Mobile banking','行動銀行'],['Personal finance','個人理財（銀行業）'],['Budgeting','記帳'],['Tradition','傳統'],['Home repair','住家修繕（居家裝修）'],['Home appliances','家電（消費電子產品）'],['Motorcycle','摩托車（交通工具）'],['Public transport','公共運輸（交通運輸）'],['Variety show','綜藝節目（表演藝術）'],['TVBS','TVBS'],['Lottery','樂透彩券'],['First-time buyer','首次購房者（房地產）'],['Home buying','購屋'],['New home','新成屋'],['Uber Eats','UberEATS']]},
+
+  {n:'30-55 / 逢甲+太原車站+好市多 / 機車族×改裝配件',sub:'單一深化｜延伸B小資汽機車DNA·往機車消費深挖',
+   logic:'小資汽機車組已驗證機車與配件標籤有反應。常騎車的小資族對車位需求低，正好對上本案免帶車位的賣點，能省下一筆停車預算。',
+   lm:['逢甲（+4 公里）','太原車站（+4 公里）','台中costco好市多二店（+4 公里）'],
+   tags:[['Motorcycle','摩托車（交通工具）'],['Motorcycle accessories','摩托車配件（交通工具）'],['Motorcycle helmet','機車安全帽'],['KYMCO','光陽'],['SYM','三陽'],['Yamaha','山葉'],['Gogoro','Gogoro'],['Scooter','速克達'],['Motorcycle tuning','機車改裝'],['Riding gear','騎士裝備'],['Rain gear','雨衣'],['Used goods','二手商品（購物和銷售）'],['Used car','二手車'],['Vehicle sales website','車輛銷售網站（網站）'],['Auto mechanic','汽車技師'],['Hardware store','五金行（零售業者）'],['Apprenticeship','學徒'],['Personal finance','個人理財（銀行業）'],['First-time buyer','首次購房者（房地產）'],['Buy one get one','買一送一（行銷）'],['Local food','在地美食（美食和餐飲）'],['Daiso','大創百貨'],['Car rental','租車（租車和計程車服務）'],['Public transport','公共運輸（交通運輸）'],['House portal','房屋廣告和入口網站（網站）'],['Sports venue','運動場所（體育運動）']]},
+
+  {n:'30-52 / 逢甲+太原車站+好市多 / 技職證照×技術工',sub:'單一深化｜延伸B小資汽機車DNA·往職業教育與學徒深挖',
+   logic:'有效組含職業教育與學徒，代表靠技術吃飯的人對本案有反應。有證照的技術工收入穩定、貸款也好辦，是2房首購的實際買家。',
+   lm:['逢甲（+4 公里）','太原車站（+4 公里）','台中costco好市多二店（+4 公里）'],
+   tags:[['Vocational education','職業教育（進修教育）'],['Apprenticeship','學徒'],['Technician','技術員'],['Technical certification','技術士證照'],['Welding','電焊'],['HVAC','冷凍空調'],['Electrician','水電工程'],['Workforce training','職業訓練'],['Professional development','專業發展（職業訓練）'],['Hardware store','五金行（零售業者）'],['Power tools','電動工具'],['Auto mechanic','汽車技師'],['Motorcycle','摩托車（交通工具）'],['Used car','二手車'],['Public transport','公共運輸（交通運輸）'],['Personal finance','個人理財（銀行業）'],['First-time buyer','首次購房者（房地產）'],['First-time home subsidy','首次購屋補助（房地產）'],['Buy one get one','買一送一（行銷）'],['Local food','在地美食（美食和餐飲）'],['YouTube','YouTube（串流服務）'],['Mobile game','手機遊戲'],['Workshop','工作坊（製造業）'],['Machine','機器'],['Saving','儲蓄（銀行業）'],['House portal','房屋廣告和入口網站（網站）']]},
+
+  {n:'28-50 / 精武路+太原車站+頭家厝 / 韓式燒肉×火鍋聚餐',sub:'單一深化｜延伸C餐廳串流DNA·往外食聚餐深挖',
+   logic:'餐廳串流是訊息量最多的一組。常外食聚餐的上班族在意生活機能勝過坪數，適合談太平到十期、東區的生活圈，以及2房一個人或兩個人住剛好。',
+   lm:['精武路（+2 公里）','太原車站（+3 公里）','頭家厝菜市場（+3 公里）'],
+   tags:[['Korean cuisine','韓式料理（美食和餐飲）'],['Korean BBQ','韓式燒肉'],['Barbecue','燒烤（烹飪）'],['Hot pot','火鍋'],['All-you-can-eat','吃到飽'],['Gourmet','美食家（美食和餐飲）'],['Sushi','壽司（美食和餐飲）'],['Salmon','鮭魚'],['Fast casual restaurant','速食休閒餐廳（餐廳）'],['Casual dining','簡餐館（餐廳）'],['Dessert','甜點（美食和餐飲）'],['Local food','在地美食（美食和餐飲）'],['Bakery','烘培坊（烘焙食品）'],['Food blog','美食部落格'],['Food delivery','外送美食'],['Uber Eats','UberEATS'],['Foodpanda','foodpanda'],['Mobile payment','行動支付（貨幣）'],['LINE Pay','LINE Pay'],['Netflix','Netflix（串流服務）'],['Beer','啤酒（酒精飲料）'],['Soju','燒酒'],['K-pop','韓國流行音樂'],['Instagram','Instagram'],['YouTube','YouTube（串流服務）'],['Office worker','上班族（流行文化）']]},
+
+  {n:'28-50 / 精武路+太原車站+頭家厝 / 追劇串流×宅在家',sub:'單一深化｜延伸C餐廳串流DNA·往影音訂閱深挖',
+   logic:'會付費訂閱影音的人，下班多半待在家，對自己的空間有想法。素材可接送家具、全室冷氣，看房時想像的是一回家就能追劇的小宅。',
+   lm:['精武路（+2 公里）','太原車站（+3 公里）','頭家厝菜市場（+3 公里）'],
+   tags:[['Netflix','Netflix（串流服務）'],['Disney+','Disney+'],['KKTV','KKTV'],['LINE TV','LINE TV'],['Spotify','Spotify（串流服務）'],['Apple Music','Apple Music'],['YouTube','YouTube（串流服務）'],['Korean drama','韓國電視劇（電視節目）'],['Japanese drama','日劇'],['Anime','動畫'],['Movie','電影'],['Reality show','真人實境秀'],['Variety show','綜藝節目（表演藝術）'],['Podcast','Podcast'],['Bluetooth earphones','藍牙耳機'],['AirPods','AirPods'],['Smart TV','智慧電視'],['Projector','投影機'],['Mobile payment','行動支付（貨幣）'],['Uber Eats','UberEATS'],['Foodpanda','foodpanda'],['Fried chicken','炸雞'],['Dessert','甜點（美食和餐飲）'],['Bubble tea','手搖飲'],['Sushi','壽司（美食和餐飲）'],['Office worker','上班族（流行文化）']]},
+
+  {n:'28-55 / 太原車站+頭家厝+大源十九街 / 多元計程車×外送司機',sub:'單一深化｜延伸D司機傳產DNA·往職業駕駛深挖',
+   logic:'司機傳產組的核心是計程車、車隊與Uber標籤。職業駕駛收入看得到、作息自主，有74號快速道路進出市區的需求，對本案地點容易有感。',
+   lm:['太原車站（+3 公里）','頭家厝菜市場（+3 公里）','大源十九街， 台中市（+2 公里）'],
+   tags:[['Taxi driver','計程車司機'],['Taxi','出租車'],['Uber','Uber（公司）'],['Fleet management','車隊管理'],['Ride-hailing','多元計程車'],['Foodpanda','foodpanda'],['Uber Eats','UberEATS'],['Google Maps','Google地圖'],['Dashcam','行車紀錄器'],['Car maintenance','汽車保養'],['Auto repair shop','汽車維修廠'],['Auto mechanic','汽車技師'],['Aftermarket parts','零部件市場'],['Public transport','公共運輸（交通運輸）'],['Used car','二手車'],['Tire','輪胎'],['Car insurance','汽車保險'],['Gas station','加油站'],['Saving','儲蓄（銀行業）'],['Online banking','網路銀行（銀行業）'],['Buy one get one','買一送一（行銷）'],['Protective services','行業類別：保護服務'],['Office worker','上班族（流行文化）'],['Energy drink','能量飲料'],['Convenience store','便利商店'],['Home buying','購屋']]},
+
+  {n:'28-55 / 太原車站+頭家厝+大源十九街 / 保全×機電消防',sub:'單一深化｜延伸D司機傳產DNA·往保全機電職類深挖',
+   logic:'有效組含保全、配電系統與保護服務，Notion的藍領公教職也評優。這群人是穩定領薪的基層技術職，總價800萬上下是他們比較能負擔的新成屋區間。',
+   lm:['太原車站（+3 公里）','頭家厝菜市場（+3 公里）','大源十九街， 台中市（+2 公里）'],
+   tags:[['Security guard','保全'],['Protective services','行業類別：保護服務'],['Electrical distribution','配電系統'],['Fire protection','消防設備'],['Surveillance camera','監視器'],['Building management','大樓管理'],['Elevator','電梯'],['Factory','工廠（製造業）'],['OEM','代工生產'],['Construction and quarrying','行業類別：建築與採石'],['Electrician','水電工程'],['Power tools','電動工具'],['Office worker','上班族（流行文化）'],['Online banking','網路銀行（銀行業）'],['Saving','儲蓄（銀行業）'],['Insurance','一般保險（保險）'],['Public transport','公共運輸（交通運輸）'],['Aftermarket parts','零部件市場'],['Auto mechanic','汽車技師'],['Convenience store','便利商店'],['Lunch box','便當'],['Veterans benefits','退伍軍人福利（軍事）'],['Government employees','行業類別：政府員工'],['Buy one get one','買一送一（行銷）'],['Mobile game','手機遊戲'],['Home buying','購屋']]},
+
+  {n:'28-48 / 太平運動公園+北屯兒童公園+秀泰 / 美妝保養×上班族穿搭',sub:'單一深化｜延伸E年輕自住DNA·往美容消費深挖',
+   logic:'年輕自住組的化妝品、美容標籤在這些地標有效。這類單身或頂客女性上班族有自己買房的意願，2房小宅與送家具能降低她們進場的門檻。沿用有效地標，不用潭子洲際。',
+   lm:['太平運動公園（+3 公里）','台中市北屯兒童公園（+3 公里）','台中秀泰站前s1館（+3 公里）'],
+   tags:[['Office worker','上班族（流行文化）'],['Clothing','服裝（服飾）'],['Shopping mall','購物中心（零售）'],['Beauty','美容（社會觀念）'],['Fashion accessories','時尚配件（飾品配件）'],['Cosmetics','化妝品（個人護理）'],['Skin care','保養'],['Nail art','美甲'],['Hair salon','美髮'],['Perfume','香水'],['Watsons','屈臣氏'],['Cosmed','康是美'],['Sephora','Sephora'],['Shiseido','資生堂'],['Momo','momo購物網'],['Taobao','淘寶網'],['Online shopping','網路購物（零售）'],['Mobile payment','行動支付（貨幣）'],['LINE','LINE'],['Mobile app','行動應用程式（軟體）'],['Pop music','流行音樂（音樂）'],['Trending topics','熱門話題'],['Online banking','網路銀行（銀行業）'],['Personal finance','個人理財（銀行業）'],['591 Housing','591房屋交易網'],['Uber Eats','UberEATS']]},
+
+  {n:'28-60 / 大里工業區+軟體園區+太平工業區+大興十九街 / 存股ETF×被動收入',sub:'單一深化｜延伸F科技工業賺錢DNA·往股利與投資深挖',
+   logic:'科技工業賺錢是每則訊息成本最低的一組，關鍵字是金錢、財富與收入。會存股的人看房也算報酬，適合接買低不追高與收租素材。6月的會議紀錄也提到置產客受眾。',
+   lm:['大里工業區（+3 公里）','台中大里軟體園區（+3 公里）','太平工業區（+3 公里）','大興十九街1巷， 台中市（+3 公里）'],
+   tags:[['Stock','股票（投資）'],['ETF','ETF'],['Dividend','股利'],['Investment','投資（商業與財務）'],['Money','金錢（貨幣）'],['Wealth','財富（經濟）'],['Income','收入（商業與財務）'],['Passive income','被動收入'],['TSMC','台積電'],['Yuanta','元大投信'],['Financial independence','財務自由'],['Business Today','今周刊'],['Business Weekly','商業周刊'],['Car','汽車（交通工具）'],['Badminton','羽球（球拍類運動）'],['E-commerce','電子商務（零售）'],['Alcoholic beverages','酒精飲品（美食和餐飲）'],['Information technology','行業類別：資訊科技和技術服務'],['Manufacturing job','行業類別：製造'],['House','房屋（房地產）'],['591 Housing','591房屋交易網'],['Rakuya','樂屋網'],['Online banking','網路銀行（銀行業）'],['Semiconductor','半導體'],['Electronics','電子產品'],['Personal finance','個人理財（銀行業）']]},
+
+  {n:'30-55 / 太原車站+頭家厝+好市多 / 師傅收工×熱炒宵夜',sub:'排列組合｜A汽車維修 × C在地美食',
+   logic:'把A的修車師傅和C的外食合起來：收工後吃熱炒、喝啤酒的在地技術工。頭家厝市場一帶正是他們的生活圈，訴求是不用離開熟悉的地方也買得到新成屋。',
+   lm:['太原車站（+3 公里）','頭家厝菜市場（+3 公里）','台中costco好市多二店（+4 公里）'],
+   tags:[['Auto mechanic','汽車技師'],['Auto repair shop','汽車維修廠'],['Workshop','工作坊（製造業）'],['Apprenticeship','學徒'],['Stir-fry restaurant','熱炒'],['Local food','在地美食（美食和餐飲）'],['Beer','啤酒（酒精飲料）'],['Barbecue','燒烤（烹飪）'],['Hot pot','火鍋'],['Casual dining','簡餐館（餐廳）'],['Late-night snack','宵夜'],['Lunch box','便當'],['Uber Eats','UberEATS'],['Variety show','綜藝節目（表演藝術）'],['YouTube','YouTube（串流服務）'],['Mobile payment','行動支付（貨幣）'],['Saving','儲蓄（銀行業）'],['Deposit account','存款帳戶（銀行業）'],['Insurance','一般保險（保險）'],['Motorcycle','摩托車（交通工具）'],['Home repair','住家修繕（居家裝修）'],['Home appliances','家電（消費電子產品）'],['First-time buyer','首次購房者（房地產）'],['Used car','二手車'],['Tradition','傳統'],['Public transport','公共運輸（交通運輸）']]},
+
+  {n:'30-55 / 太平工業區+太原車站+好市多 / 技師×存股理財',sub:'排列組合｜A汽車維修儲蓄 × F股票賺錢',
+   logic:'A會存錢，F會投資。手上有現金又開始存股的技師或廠內師傅，是首購之外也可能置產的客人。素材可並列自住和收租兩種用途。',
+   lm:['太平工業區（+3 公里）','太原車站（+4 公里）','台中costco好市多二店（+4 公里）'],
+   tags:[['Auto mechanic','汽車技師'],['Auto repair shop','汽車維修廠'],['Machine','機器'],['Workshop','工作坊（製造業）'],['Stock','股票（投資）'],['Dividend','股利'],['Investment','投資（商業與財務）'],['Saving','儲蓄（銀行業）'],['Deposit account','存款帳戶（銀行業）'],['Insurance','一般保險（保險）'],['Personal finance','個人理財（銀行業）'],['Used car','二手車'],['Home repair','住家修繕（居家裝修）'],['Power tools','電動工具'],['Time deposit','定期存款'],['Savings insurance','儲蓄險'],['591 Housing','591房屋交易網'],['First-time buyer','首次購房者（房地產）'],['Business Weekly','商業周刊'],['Apprenticeship','學徒'],['Technician','技術員'],['Yuanta','元大投信'],['Financial independence','財務自由'],['Car insurance','汽車保險'],['Google Maps','Google地圖'],['Smartphone','智慧型手機']]},
+
+  {n:'28-50 / 逢甲+太原車站+秀泰 / 機車通勤×手機生活',sub:'排列組合｜B機車小資 × E行動App消費',
+   logic:'騎機車上下班、什麼都用手機處理的年輕上班族。B的機車標籤加上E的行動支付與網購，把兩組有效的年輕客層交叉起來，測試量體能否放大。',
+   lm:['逢甲（+4 公里）','太原車站（+4 公里）','台中秀泰站前s1館（+3 公里）'],
+   tags:[['Motorcycle','摩托車（交通工具）'],['Motorcycle accessories','摩托車配件（交通工具）'],['Motorcycle helmet','機車安全帽'],['Scooter','速克達'],['Gogoro','Gogoro'],['LINE','LINE'],['LINE Pay','LINE Pay'],['Mobile payment','行動支付（貨幣）'],['Mobile app','行動應用程式（軟體）'],['Uber Eats','UberEATS'],['Online shopping','網路購物（零售）'],['Momo','momo購物網'],['Taobao','淘寶網'],['Daiso','大創百貨'],['Buy one get one','買一送一（行銷）'],['Local food','在地美食（美食和餐飲）'],['Office worker','上班族（流行文化）'],['Trending topics','熱門話題'],['Pop music','流行音樂（音樂）'],['Online banking','網路銀行（銀行業）'],['Personal finance','個人理財（銀行業）'],['Saving','儲蓄（銀行業）'],['Public transport','公共運輸（交通運輸）'],['First-time buyer','首次購房者（房地產）'],['591 Housing','591房屋交易網'],['Sports venue','運動場所（體育運動）']]},
+
+  {n:'28-52 / 逢甲+軟體園區+太原車站 / 二手網拍×副業收入',sub:'排列組合｜B二手商品 × F電商賺錢',
+   logic:'B有二手商品、車輛網站，F有電商和收入。會買賣二手、兼差賺外快的人對價錢很敏感，也積極想增加收入，適合用798萬起和買低不追高切入。',
+   lm:['逢甲（+4 公里）','台中大里軟體園區（+3 公里）','太原車站（+4 公里）'],
+   tags:[['Used goods','二手商品（購物和銷售）'],['Carousell','旋轉拍賣'],['Shopee','蝦皮購物'],['Ruten','露天拍賣'],['E-commerce','電子商務（零售）'],['Online auction','網路拍賣'],['Side job','副業'],['Income','收入（商業與財務）'],['Money','金錢（貨幣）'],['Wealth','財富（經濟）'],['Passive income','被動收入'],['Investment','投資（商業與財務）'],['Stock','股票（投資）'],['Vehicle sales website','車輛銷售網站（網站）'],['Used car','二手車'],['Car rental','租車（租車和計程車服務）'],['Hardware store','五金行（零售業者）'],['Vocational education','職業教育（進修教育）'],['Personal finance','個人理財（銀行業）'],['First-time buyer','首次購房者（房地產）'],['First-time home subsidy','首次購屋補助（房地產）'],['House portal','房屋廣告和入口網站（網站）'],['Mobile payment','行動支付（貨幣）'],['Smartphone','智慧型手機'],['Information technology','行業類別：資訊科技和技術服務'],['Badminton','羽球（球拍類運動）']]},
+
+  {n:'28-48 / 精武路+秀泰+太原車站 / 上班族×甜點咖啡',sub:'排列組合｜C甜點烘焙 × E上班族購物',
+   logic:'C的甜點烘焙與E的購物美容，交集是下班逛街、假日喝下午茶的上班族。這群人喜歡有質感的小生活，素材要拍出精裝2房的樣子，而不是只講價格。',
+   lm:['精武路（+2 公里）','台中秀泰站前s1館（+3 公里）','太原車站（+3 公里）'],
+   tags:[['Dessert','甜點（美食和餐飲）'],['Bakery','烘培坊（烘焙食品）'],['Afternoon tea','下午茶'],['Coffee','咖啡'],['Starbucks','星巴克'],['Louisa Coffee','路易莎咖啡'],['Bubble tea','手搖飲'],['Gourmet','美食家（美食和餐飲）'],['Sushi','壽司（美食和餐飲）'],['Korean cuisine','韓式料理（美食和餐飲）'],['Office worker','上班族（流行文化）'],['Clothing','服裝（服飾）'],['Shopping mall','購物中心（零售）'],['Beauty','美容（社會觀念）'],['Cosmetics','化妝品（個人護理）'],['Trending topics','熱門話題'],['Pop music','流行音樂（音樂）'],['Spotify','Spotify（串流服務）'],['Netflix','Netflix（串流服務）'],['Instagram','Instagram'],['LINE','LINE'],['Mobile payment','行動支付（貨幣）'],['Uber Eats','UberEATS'],['Momo','momo購物網'],['Personal finance','個人理財（銀行業）'],['591 Housing','591房屋交易網']]},
+
+  {n:'28-55 / 軟體園區+太平工業區+精武路 / 工程師×日料小酌',sub:'排列組合｜C壽司鮭魚 × F科技工業',
+   logic:'F的科技製造業收入較高，C的壽司、鮭魚偏向較有消費力的外食族。交叉後找大里太平廠區的工程師與幹部，他們可能自住，也可能把這裡當第一間置產。',
+   lm:['台中大里軟體園區（+3 公里）','太平工業區（+3 公里）','精武路（+2 公里）'],
+   tags:[['Sushi','壽司（美食和餐飲）'],['Salmon','鮭魚'],['Japanese cuisine','日本料理'],['Izakaya','居酒屋'],['Ramen','拉麵'],['Gourmet','美食家（美食和餐飲）'],['Hot pot','火鍋'],['Barbecue','燒烤（烹飪）'],['Alcoholic beverages','酒精飲品（美食和餐飲）'],['Whisky','威士忌'],['Sake','清酒'],['Badminton','羽球（球拍類運動）'],['Information technology','行業類別：資訊科技和技術服務'],['Manufacturing job','行業類別：製造'],['Semiconductor','半導體'],['Software','軟體'],['Stock','股票（投資）'],['Investment','投資（商業與財務）'],['Wealth','財富（經濟）'],['Income','收入（商業與財務）'],['Car','汽車（交通工具）'],['Netflix','Netflix（串流服務）'],['YouTube','YouTube（串流服務）'],['Apple Music','Apple Music'],['Mobile payment','行動支付（貨幣）'],['Uber Eats','UberEATS']]},
+
+  {n:'28-55 / 太平工業區+大里工業區+大源十九街 / 廠內機電×賺錢理財',sub:'排列組合｜D工廠機電 × F金錢投資',
+   logic:'D的工廠、配電和代工，F的金錢與股票，交集是工業區裡加班賺錢、想讓錢變多的廠內技術人員。離廠近加上總價低，是最容易說服他們的組合。',
+   lm:['太平工業區（+3 公里）','大里工業區（+3 公里）','大源十九街， 台中市（+2 公里）'],
+   tags:[['Factory','工廠（製造業）'],['OEM','代工生產'],['Electrical distribution','配電系統'],['Technician','技術員'],['Automation','自動化'],['Electronics','電子產品'],['Manufacturing job','行業類別：製造'],['Semiconductor','半導體'],['Money','金錢（貨幣）'],['Income','收入（商業與財務）'],['Stock','股票（投資）'],['Saving','儲蓄（銀行業）'],['Online banking','網路銀行（銀行業）'],['Office worker','上班族（流行文化）'],['Car','汽車（交通工具）'],['Auto repair shop','汽車維修廠'],['Aftermarket parts','零部件市場'],['Welding','電焊'],['HVAC','冷凍空調'],['Power tools','電動工具'],['Lunch box','便當'],['Energy drink','能量飲料'],['Insurance','一般保險（保險）'],['House','房屋（房地產）'],['Home buying','購屋'],['Workshop','工作坊（製造業）']]},
+
+  {n:'30-55 / 太原車站+頭家厝+大源十九街 / 工地師傅×住家修繕',sub:'排列組合｜D建築與採石 × A住家修繕',
+   logic:'D的建築與採石行業類別，加上A的住家修繕與學徒。木工、油漆、水電師傅懂房子，也願意買小坪數再自己整理。他們看得懂建材，銷售現場可以直接談施工細節。',
+   lm:['太原車站（+3 公里）','頭家厝菜市場（+3 公里）','大源十九街， 台中市（+2 公里）'],
+   tags:[['Construction and quarrying','行業類別：建築與採石'],['Home repair','住家修繕（居家裝修）'],['Woodworking','木工（興建和維修）'],['House painting','油漆'],['Plumbing','水管配管'],['Tile','磁磚'],['Building materials','建材'],['Hardware store','五金行（零售業者）'],['Power tools','電動工具'],['Makita','Makita 牧田'],['Pickup truck','小貨車'],['Workshop','工作坊（製造業）'],['Apprenticeship','學徒'],['Machine','機器'],['Electrical distribution','配電系統'],['Saving','儲蓄（銀行業）'],['Deposit account','存款帳戶（銀行業）'],['Insurance','一般保險（保險）'],['Online banking','網路銀行（銀行業）'],['Used car','二手車'],['Motorcycle','摩托車（交通工具）'],['Variety show','綜藝節目（表演藝術）'],['Lunch box','便當'],['Tradition','傳統'],['First-time buyer','首次購房者（房地產）'],['Home appliances','家電（消費電子產品）']]},
+
+  {n:'28-50 / 太平運動公園+逢甲+太原車站 / 首購看房×網路比價',sub:'排列組合｜B首購補助 × E房屋平台App',
+   logic:'B有首購補助與房屋入口網站，E有591和行動App，交集是已經在網路上看房的首購族。這是這批離成交最近的一組，素材可直接放總價與新青安。',
+   lm:['太平運動公園（+3 公里）','逢甲（+4 公里）','太原車站（+4 公里）'],
+   tags:[['First-time buyer','首次購房者（房地產）'],['First-time home subsidy','首次購屋補助（房地產）'],['House portal','房屋廣告和入口網站（網站）'],['591 Housing','591房屋交易網'],['Rakuya','樂屋網'],['Home buying','購屋'],['New home','新成屋'],['Interior design','室內設計（設計）'],['Online banking','網路銀行（銀行業）'],['Personal finance','個人理財（銀行業）'],['Saving','儲蓄（銀行業）'],['Mobile app','行動應用程式（軟體）'],['Online shopping','網路購物（零售）'],['IKEA','IKEA'],['Home appliances','家電（消費電子產品）'],['Office worker','上班族（流行文化）'],['Used car','二手車'],['Vehicle sales website','車輛銷售網站（網站）'],['Sports venue','運動場所（體育運動）'],['Momo','momo購物網'],['Home repair','住家修繕（居家裝修）'],['Business Today','今周刊'],['Building materials','建材'],['Mobile banking','行動銀行'],['Google Maps','Google地圖'],['Elevator','電梯']]},
+
+  {n:'28-50 / 逢甲+頭家厝+太原車站 / 小資族×夜市小吃',sub:'排列組合｜B在地美食大創 × C外食消費',
+   logic:'B和C都有在地美食，加上大創與買一送一的小資消費。逢甲和頭家厝都是有效地標，這群人的日常花費不高，但會為了自己的房子存錢。這組測的是小資客層的量體。',
+   lm:['逢甲（+4 公里）','頭家厝菜市場（+3 公里）','太原車站（+3 公里）'],
+   tags:[['Local food','在地美食（美食和餐飲）'],['Night market','夜市'],['Street food','小吃'],['Daiso','大創百貨'],['Buy one get one','買一送一（行銷）'],['Used goods','二手商品（購物和銷售）'],['Fast casual restaurant','速食休閒餐廳（餐廳）'],['Casual dining','簡餐館（餐廳）'],['Dessert','甜點（美食和餐飲）'],['Bakery','烘培坊（烘焙食品）'],['Hot pot','火鍋'],['Bubble tea','手搖飲'],['Fried chicken','炸雞'],['Uber Eats','UberEATS'],['Mobile payment','行動支付（貨幣）'],['Motorcycle','摩托車（交通工具）'],['Motorcycle helmet','機車安全帽'],['Public transport','公共運輸（交通運輸）'],['Car rental','租車（租車和計程車服務）'],['Sports venue','運動場所（體育運動）'],['Personal finance','個人理財（銀行業）'],['First-time buyer','首次購房者（房地產）'],['House portal','房屋廣告和入口網站（網站）'],['YouTube','YouTube（串流服務）'],['Spotify','Spotify（串流服務）'],['Saving','儲蓄（銀行業）']]}
+];
+(function(){const g=document.getElementById('main-aud-grid');if(g)g.innerHTML=MAIN_G.map((x,i)=>buildAudCard(x,i)).join('');})();
+</script>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+<script>window.addEventListener('scroll',()=>document.getElementById('btt').classList.toggle('show',window.scrollY>300))</script>
+</body>
+</html>
