@@ -1,0 +1,2653 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>宜誠日沐｜受眾分析報告</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#7a5a8a;--accent-dark:#5a3a6a;--accent-light:#ede8f4;--accent-border:#b89fcc;
+  --bg:#f2f3f1;--s:#ffffff;--bd:#e4e5e2;--tx:#2e2c29;--sub:#7d7870;--sub2:#a8a199;
+  --good:#1e6e3f;--goodl:#e6f4ea;--warn:#c05c00;
+  --radius:12px;--shadow-xs:0 1px 3px rgba(0,0,0,.05);--shadow-sm:0 2px 8px rgba(0,0,0,.07);--shadow-card:0 2px 10px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);font-size:14px;line-height:1.6;min-height:100vh}
+.page-header{background:linear-gradient(180deg,#0d1824 0%,#091218 100%);padding:0 40px;height:56px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 1px 0 rgba(255,255,255,.04),0 4px 20px rgba(0,0,0,.35);border-bottom:1px solid rgba(255,255,255,.06)}
+.ph-logo{width:30px;height:30px;background:linear-gradient(135deg,#9a7aaa,var(--accent-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0}
+.ph-title{font-size:14px;font-weight:700;color:#e8f5ea;letter-spacing:-.2px}
+.ph-sub{font-size:11px;color:#3a5a3e;margin-left:2px}
+.ph-nav{margin-left:auto;display:flex;gap:8px;align-items:center}
+.ph-nav a{font-size:12px;color:#b89fcc;text-decoration:none;padding:5px 13px;border-radius:6px;border:1px solid rgba(122,90,138,.25);background:rgba(122,90,138,.12);font-weight:500}
+.ph-nav a:hover{background:rgba(122,90,138,.22);color:#b8d8be}
+#btt{position:fixed;right:24px;bottom:28px;width:38px;height:38px;border-radius:50%;background:rgba(15,20,15,.75);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:15px;cursor:pointer;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.3);font-family:inherit}
+#btt.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#btt:hover{background:rgba(25,45,25,.9);transform:translateY(-2px)}
+.wrap{max-width:1200px;margin:0 auto;padding:32px 40px 48px}
+.case-header{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:20px 24px;margin-bottom:10px;display:flex;align-items:center;gap:18px;box-shadow:var(--shadow-card)}
+.case-logo{width:44px;height:44px;background:linear-gradient(135deg,#9a7aaa,var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff;flex-shrink:0}
+.case-info h2{font-size:17px;font-weight:700;color:var(--tx);letter-spacing:-.3px}
+.case-info p{font-size:12px;color:var(--sub);margin-top:3px;line-height:1.5}
+.case-stats{margin-left:auto;display:flex;gap:28px;flex-shrink:0}
+.stat{text-align:right}
+.stat-n{font-size:24px;font-weight:800;color:var(--accent);line-height:1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.stat-l{font-size:10px;color:var(--sub2);margin-top:3px;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--accent);text-decoration:none;margin-bottom:16px;padding:5px 12px;background:var(--accent-light);border-radius:20px;border:1px solid var(--accent-border);transition:all .15s}
+.back-link:hover{filter:brightness(.95);color:var(--accent-dark)}
+.sec-title{font-size:12px;font-weight:700;color:var(--sub);margin-bottom:14px;display:flex;align-items:center;gap:10px;letter-spacing:.4px;text-transform:uppercase}
+.sec-title::before{content:'';display:inline-block;width:3px;height:14px;background:var(--accent);border-radius:2px;flex-shrink:0}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--bd)}
+.section{margin-bottom:28px}
+.creative-section{margin-bottom:32px}
+/* Profiles */
+.profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.profile-card{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-xs);transition:box-shadow .2s,transform .2s}
+.profile-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.profile-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:12px}
+.profile-icon.green{background:var(--accent-light)}
+.profile-icon.amber{background:#fdf0dc}
+.profile-icon.teal{background:#e0eff2}
+.profile-name{font-size:15px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.profile-meta{font-size:12px;color:var(--sub);margin-bottom:10px}
+.profile-tags{font-size:12px;color:#4a5568;margin-bottom:10px;line-height:1.6}
+.profile-behavior{font-size:12px;color:var(--sub);line-height:1.55;margin-bottom:12px}
+.profile-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;margin-top:2px}
+.badge-green{background:var(--accent-light);color:#2a4a2e;border:1px solid var(--accent-border)}
+.badge-amber{background:#fdf0dc;color:#7a5c20;border:1px solid #d4b06a}
+.badge-teal{background:#e0eff2;color:#2f6672;border:1px solid #87b5be}
+/* Tags */
+.tags-row{display:flex;flex-wrap:wrap;gap:8px}
+.core-tag{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:var(--s);border:1.5px solid var(--bd);border-radius:20px;font-size:13px;font-weight:600;color:var(--tx);cursor:pointer;transition:all .15s}
+.core-tag:hover{border-color:var(--accent-border);background:var(--accent-light);color:#2a4a2e}
+.core-tag .arr{font-size:11px;color:var(--accent-border)}
+/* Tips */
+.tips{display:flex;flex-direction:column;gap:10px}
+.tip{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:16px 18px;display:flex;gap:16px;align-items:flex-start;cursor:pointer;transition:border-color .15s,box-shadow .15s;box-shadow:var(--shadow-xs)}
+.tip:hover{border-color:var(--accent-border);box-shadow:var(--shadow-sm)}
+.tip-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0;color:#fff}
+.c1{background:var(--accent)}.c2{background:#6a8a6a}.c3{background:#8a7a4a}.c4{background:#4a6a8a}.c5{background:#7a5a4a}
+.tip-body{flex:1}
+.tip-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:5px;line-height:1.4}
+.tip-desc{font-size:12px;color:var(--sub);line-height:1.65}
+/* Creative timeline */
+.creative-timeline{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.phase-row{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:14px 18px;display:flex;gap:14px;align-items:center;cursor:pointer;transition:box-shadow .15s;box-shadow:var(--shadow-xs)}
+.phase-row:hover{box-shadow:var(--shadow-sm)}
+.phase-label{width:52px;flex-shrink:0;font-size:11px;font-weight:800;text-align:center;padding:6px 4px;border-radius:8px;background:var(--accent-light);color:var(--accent-dark);letter-spacing:-.2px;line-height:1.3}
+.phase-body{flex:1;min-width:0}
+.phase-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.phase-desc{font-size:12px;color:var(--sub);line-height:1.6}
+.phase-stat{text-align:right;flex-shrink:0;min-width:80px}
+.phase-cpl{font-size:16px;font-weight:800;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.phase-cpl-l{font-size:10px;color:var(--sub2);margin-top:3px;font-weight:600}
+/* Insight */
+.insight-box{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow-xs)}
+.insight-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:14px}
+.insight-highlight{background:var(--accent-light);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:13px;color:#1a3a1e;font-weight:600;line-height:1.65}
+.insight-sub{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:10px;margin-top:14px}
+.insight-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.insight-list li{font-size:13px;color:#4a5568;padding-left:18px;position:relative;line-height:1.6}
+.insight-list li::before{content:'→';position:absolute;left:0;color:var(--accent-border);font-size:12px;top:1px}
+/* ── aud-card 展開系統 ── */
+.aud-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
+@media(max-width:760px){.aud-grid-2{grid-template-columns:1fr}}
+.aud-card{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);box-shadow:var(--shadow-xs);overflow:hidden}
+.aud-header{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none;transition:background .15s}
+.aud-header:hover{background:#f0f7f1}
+.aud-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.aud-info{flex:1;min-width:0}
+.aud-name{font-size:13px;font-weight:700;color:var(--tx);line-height:1.35}
+.aud-sub{font-size:11px;color:var(--sub);margin-top:2px;line-height:1.4}
+.aud-arrow{font-size:11px;color:var(--sub2);transition:transform .2s;flex-shrink:0}
+.aud-card.open .aud-arrow{transform:rotate(90deg)}
+.aud-body{display:none;padding:0 16px 16px;border-top:1px solid var(--bd)}
+.aud-card.open .aud-body{display:block}
+.aud-sl{font-size:10px;font-weight:700;color:var(--sub2);letter-spacing:.5px;text-transform:uppercase;margin:12px 0 6px}
+.aud-logic{font-size:12px;color:var(--sub);line-height:1.7;background:#f4f7f4;border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 6px 6px 0}
+.aud-lm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.aud-lm-tag{font-size:11px;font-weight:600;color:#3a5a3e;background:#e4f0e6;padding:3px 10px;border-radius:10px;border:1px solid #b0d4b8}
+.tag-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+.tag-tbl thead tr{background:#f0f4f0}
+.tag-tbl th{padding:5px 8px;text-align:left;font-size:10px;font-weight:700;color:var(--sub2);border-bottom:1px solid var(--bd)}
+.tag-tbl tbody tr{cursor:pointer;transition:background .12s;border-bottom:1px solid #f0f0f0}
+.tag-tbl tbody tr:hover{background:#e8f3e8}
+.tag-tbl tbody tr.flash{background:#c8e8c8}
+.tag-tbl td{padding:5px 8px;color:var(--tx)}
+.tag-tbl td:first-child{color:var(--sub2);font-size:10px;width:24px}
+.copy-all-row{display:flex;justify-content:flex-end;margin-top:8px}
+.copy-all-btn{font-size:11px;font-weight:600;color:#3a5a3e;background:#e4f0e6;border:1px solid #b0d4b8;border-radius:8px;padding:5px 14px;cursor:pointer;transition:all .15s}
+.copy-all-btn:hover{background:#c8e4cc}
+.copy-all-btn.done{background:#d0ecd8;color:#2a6a3a;border-color:#a8d8b8}
+#copy-toast{position:fixed;bottom:72px;left:50%;transform:translateX(-50%) translateY(8px);background:#162016;color:#80c888;font-size:11px;font-weight:600;padding:7px 16px;border-radius:18px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:300;white-space:nowrap}
+#copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* Ranking */
+.rk-row{background:var(--s);border:1px solid var(--bd);border-left:3px solid var(--bd);border-radius:var(--radius);padding:14px 18px 14px 14px;margin-bottom:6px;display:flex;gap:14px;align-items:center;box-shadow:none;transition:border-left-color .15s,box-shadow .15s,transform .15s;cursor:pointer}
+.rk-row:hover{border-left-color:var(--accent);box-shadow:0 2px 12px rgba(0,0,0,.06);transform:translateX(2px)}
+.rk-row.gold{border-left-color:#e6a820;background:linear-gradient(90deg,#fffef0 0%,#fff 70%)}
+.rk-row.silver{border-left-color:#9aa5b4;background:linear-gradient(90deg,#f5f7fa 0%,#fff 70%)}
+.rk-row.bronze{border-left-color:#c47f3a;background:linear-gradient(90deg,#fdf7f0 0%,#fff 70%)}
+.rk-medal{width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rk-rank{width:32px;height:32px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--accent);flex-shrink:0}
+.rk-body{flex:1;min-width:0}
+.rk-name{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px;line-height:1.35}
+.rk-loc{font-size:11px;color:var(--sub2);line-height:1.4;margin-bottom:7px}
+.rk-tags{display:flex;flex-wrap:wrap;gap:4px}
+.rk-tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;line-height:1.5}
+.t-fam{background:#f3e8ff;color:#5b21b6;border:1px solid #c4b5fd}
+.t-agr{background:#e6f4ea;color:#1e6e3f;border:1px solid #8ecba3}
+.t-ind{background:#eceff1;color:#37474f;border:1px solid #b0bec5}
+.t-loc{background:var(--accent-light);color:var(--accent-dark);border:1px solid var(--accent-border)}
+.t-buy{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.t-tour{background:#e0f7f4;color:#00695c;border:1px solid #7cd6cc}
+.rk-stats{display:flex;gap:20px;flex-shrink:0;align-items:center}
+.rk-stat-block{text-align:right}
+.rk-result{font-size:26px;font-weight:900;color:var(--tx);line-height:1;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.rk-result-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.rk-cpl{font-size:16px;font-weight:800;color:var(--warn);line-height:1;font-variant-numeric:tabular-nums}
+.rk-cpl.good-cpl{color:var(--good)}
+.rk-cpl-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.rk-spend{font-size:13px;font-weight:700;color:#6d6560;line-height:1;font-variant-numeric:tabular-nums}
+.rk-spend-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.page-footer{text-align:center;font-size:11px;color:var(--sub2);margin-top:12px;padding-bottom:8px}
+/* ── Tab navigation ── */
+.tab-bar{display:flex;gap:6px;margin-bottom:22px;background:var(--s);border:1px solid var(--bd);border-radius:10px;padding:5px;box-shadow:var(--shadow-xs)}
+.tab-btn{flex:1;padding:8px 14px;border-radius:7px;border:none;background:transparent;font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;transition:all .15s;text-align:center}
+.tab-btn.active{background:#7a5a8a;color:#fff;box-shadow:0 2px 6px rgba(122,90,138,.3)}
+.tab-bar .tab-btn:nth-child(2).active{background:#607d96;color:#fff;box-shadow:0 2px 6px rgba(96,125,150,.3)}
+.tab-bar .tab-btn:nth-child(3).active{background:#4a6a5a;color:#fff;box-shadow:0 2px 6px rgba(74,106,90,.3)}
+.tab-btn:hover:not(.active){background:#f0edf5;color:#5a3a6a}
+.tab-pane{display:none}
+.tab-pane.show{display:block}
+
+/* 帳號配色統一（主粉專=紫 #7a5a8a／1510=藍 #607d96，比照富宇玥和） */
+.page-banner,.page-banner.main,.page-banner.main-banner{background:linear-gradient(135deg,#5a3a6a,#7a5a8a)!important;color:#fff}.tab-btn.active{background:#7a5a8a!important;color:#fff!important;box-shadow:0 2px 6px rgba(122,90,138,.3)!important}.tab-btn:hover:not(.active){background:#ede8f4;color:#5a3a6a}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="ph-logo">沐</div>
+  <span class="ph-title">宜誠日沐｜受眾分析</span>
+  <span class="ph-sub">· 苗栗竹南 · 科學路 2+1～4房</span>
+  <nav class="ph-nav"><a href="index.html">標籤資料庫</a><a href="hub.html">← 返回總覽</a></nav>
+</header>
+
+<div class="wrap">
+
+<div class="case-header">
+  <div class="case-logo">沐</div>
+  <div class="case-info">
+    <h2>宜誠日沐｜苗栗竹南</h2>
+    <p>竹南鎮科學路（大同段699地號）· 富田開發投資／宜誠營造 · 2棟地上15層 · 約142戶住家＋2戶店面 · 2+1房30–31坪／3房34坪／3+1房38–39坪／4房42–43坪 · 591報價36.8–45.8萬/坪 · 樂居實登49.06–53.06萬/坪（7筆）· 車位165–215萬、1:1 · 2027 Q4完工</p>
+  </div>
+  <div class="case-stats">
+    <div class="stat"><div class="stat-n">3</div><div class="stat-l">有效受眾</div></div>
+    <div class="stat"><div class="stat-n">—</div><div class="stat-l">無效受眾</div></div>
+    <div class="stat"><div class="stat-n">20</div><div class="stat-l">建議受眾組</div></div>
+  </div>
+</div>
+
+<a class="back-link" href="hub.html">← 返回案件總覽</a>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('analysis')">成效分析</button>
+  <button class="tab-btn" onclick="switchTab('aud')">建議受眾</button>
+</div>
+
+<div id="tab-analysis" class="tab-pane show">
+<div class="section">
+  <div class="sec-title">三大核心受眾輪廓</div>
+  <div class="profiles">
+    <div class="profile-card">
+      <div class="profile-icon green">🎒</div>
+      <div class="profile-name">重視機能與教育的在地家長</div>
+      <div class="profile-meta">年齡 30–65｜國泰夜市 / 大全聯頭份店 / 君毅高中</div>
+      <div class="profile-tags">興趣：父母、親子教育、私立學校、幼稚園、高中、百貨公司、電影院、交通</div>
+      <div class="profile-behavior">行為：小孩在竹南頭份讀書，換屋看的是學校、購物和交通方便。3房、4房是他們最可能買的房型。</div>
+      <span class="profile-badge badge-green">有效 · 成效數字待補</span>
+    </div>
+    <div class="profile-card">
+      <div class="profile-icon amber">🏪</div>
+      <div class="profile-name">國1沿線在地業主</div>
+      <div class="profile-meta">年齡 28–60｜竹南鎮座標 / 新竹系統交流道</div>
+      <div class="profile-tags">興趣：傳統、批發、量販店、獨資企業、BMW、高等教育、民俗學、小學</div>
+      <div class="profile-behavior">行為：在地做生意、開進口車，買得起總價1,500萬以上的4房，換屋同時也在想資產配置。</div>
+      <span class="profile-badge badge-amber">有效 · 成效數字待補</span>
+    </div>
+    <div class="profile-card">
+      <div class="profile-icon teal">📚</div>
+      <div class="profile-name">科園高教生活族</div>
+      <div class="profile-meta">年齡 28–60｜國衛院 / 尚順 / 獅山親子公園 / 廣源科技園區</div>
+      <div class="profile-tags">興趣：高等教育、語言、外語、航空、旅遊、慢跑、園藝、韓劇、美容、咖啡廳</div>
+      <div class="profile-behavior">行為：學歷高、重視生活品味，會出國旅遊、運動。用興趣來切比窄職稱有效。</div>
+      <span class="profile-badge badge-teal">有效 · 成效數字待補</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">跨受眾必保留的核心標籤</div>
+  <div class="tags-row">
+    <span class="core-tag">591房屋交易網<span class="arr">↗</span></span>
+    <span class="core-tag">私立學校（教育）<span class="arr">↗</span></span>
+    <span class="core-tag">高等教育（教育）<span class="arr">↗</span></span>
+    <span class="core-tag">百貨公司（零售）<span class="arr">↗</span></span>
+    <span class="core-tag">獨資企業（商業與財務）<span class="arr">↗</span></span>
+    <span class="core-tag">量販店（食品零售業者）<span class="arr">↗</span></span>
+    <span class="core-tag">旅遊（旅遊觀光）<span class="arr">↗</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">五大操作建議</div>
+  <div class="tips">
+<div class="tip"><div class="tip-num c1">1</div><div class="tip-body"><div class="tip-title">地標守住三組有效圈</div><div class="tip-desc">國泰夜市／大全聯頭份店／君毅高中、竹南鎮座標＋新竹系統交流道、國衛院／尚順／獅山親子公園／廣源科技園區。新20組只用這些地標重新排列。</div></div></div>
+<div class="tip"><div class="tip-num c2">2</div><div class="tip-body"><div class="tip-title">科技客層用興趣切，不用竹科職稱</div><div class="tip-desc">新竹的案子已經證實，窄的竹科工程師職稱沒有潛客。這次改用高教、語言、網路、工程學院等興趣來找人。</div></div></div>
+<div class="tip"><div class="tip-num c3">3</div><div class="tip-body"><div class="tip-title">總價依實登校準</div><div class="tip-desc">591報價36.8–45.8萬/坪，樂居實登7筆49–53萬/坪。以30–43坪來算，總價大約落在1,500–2,300萬（不含車位），客層是中高收入的換屋族，不是首購小資。</div></div></div>
+<div class="tip"><div class="tip-num c4">4</div><div class="tip-body"><div class="tip-title">素材依族群分開講</div><div class="tip-desc">家長講學區、3–4房和生活機能；業主講交流道、1:1車位、大坪數；科園族講社區環境與生活質感。</div></div></div>
+<div class="tip"><div class="tip-num c5">5</div><div class="tip-body"><div class="tip-title">補上成效CSV</div><div class="tip-desc">目前只有三組有效名單，沒有潛客數、CPL和無效組。提供受眾與素材CSV後，可以補上排行與無效方向。</div></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">關鍵洞見 · 分析日期 2026-11-16</div>
+  <div class="note-bar">三組有效受眾剛好是三種不同的人：重教育的家長、國1沿線的在地業主、科園周邊的高教生活族。共通點是重視生活機能與教育。新受眾依這三條DNA延伸，不另外找沒有數據支撐的冷門方向。</div>
+</div>
+</div>
+
+<div id="tab-aud" class="tab-pane">
+<div class="section">
+  <div class="sec-title">建議嘗試受眾（20組）· 更新 2026-11-16</div>
+  <div class="note-bar">依3組有效受眾延伸（A注重機能教育／B國1在地職業／C竹南教育生活）：前10組是單一DNA深化（A、B各3組，C 4組），後10組是兩兩組合。地標只用有效組的國泰夜市、大全聯頭份店、君毅高中、竹南鎮座標、新竹系統交流道、國衛院、尚順、獅山親子公園、廣源科技園區。不使用窄的竹科職稱，也不加通用房產基礎標籤。價格依591與樂居實登：36.8–53萬/坪，總價約1,500–2,300萬。</div>
+  <div id="main-aud-grid" class="aud-grid-2"></div>
+</div>
+
+<div class="section">
+  <div class="sec-title">有效受眾排行 · 依你提供的有效清單</div>
+  <div class="rk-row gold"><div class="rk-medal">🥇</div><div class="rk-body"><div class="rk-name">30-65 / 竹南 / 注重機能教育</div><div class="rk-loc">國泰夜市 + 大全聯頭份店 + 君毅高中</div><div class="rk-tags"><span class="rk-tag t-loc">親子教育</span><span class="rk-tag t-loc">私立學校</span></div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">—</div><div class="rk-result-l">潛客</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">CPL</div></div></div></div>
+  <div class="rk-row silver"><div class="rk-medal">🥈</div><div class="rk-body"><div class="rk-name">28-60 / 新竹國1 / 在地職業</div><div class="rk-loc">竹南鎮座標 + 新竹系統交流道</div><div class="rk-tags"><span class="rk-tag t-loc">獨資企業</span><span class="rk-tag t-loc">BMW</span></div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">—</div><div class="rk-result-l">潛客</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">CPL</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">🥉</div><div class="rk-body"><div class="rk-name">28-60 / 竹南 / 教育/生活</div><div class="rk-loc">國衛院 + 尚順 + 獅山親子公園 + 廣源科技園區</div><div class="rk-tags"><span class="rk-tag t-loc">高等教育</span><span class="rk-tag t-loc">旅遊</span></div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">—</div><div class="rk-result-l">潛客</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">CPL</div></div></div></div>
+</div>
+</div>
+
+<div class="page-footer">資料來源：用戶提供有效受眾、591新建案、樂居實價登錄 · 成效數字待補 · 宜誠日沐 苗栗竹南 · 最後更新 2026-11-16</div>
+
+</div>
+
+<div id="toast" style="position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#2e2c29;color:#fff;font-size:12.5px;padding:10px 20px;border-radius:24px;opacity:0;transition:all .25s;pointer-events:none;z-index:999;white-space:nowrap">📋 已複製 → 貼至 Claude 對話</div>
+<script>
+function switchTab(name){document.querySelectorAll('.tab-btn').forEach((b,i)=>{const names=['analysis','aud'];b.classList.toggle('active',names[i]===name)});document.querySelectorAll('.tab-pane').forEach(p=>{p.classList.remove('show')});document.getElementById('tab-'+name).classList.add('show');window.scrollTo({top:0,behavior:'smooth'})}
+const PROJECT = '宜誠日沐（苗栗竹南・科學路・2+1房～4房30–43坪・591報價36.8–45.8萬/坪・實登49–53萬/坪）';
+function showToast(){const t=document.getElementById('toast');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)'},2200)}
+function copyPrompt(text){navigator.clipboard.writeText(text).then(showToast).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast()})}
+document.querySelectorAll('.core-tag').forEach(el=>{el.addEventListener('click',()=>{const tag=el.textContent.replace('↗','').trim();copyPrompt(`針對${PROJECT}，請深入分析「${tag}」這個興趣標籤：\n1. 在本案受眾中代表什麼輪廓？\n2. 搭配哪些標籤組合效果最好？\n3. 素材訴求應該怎麼寫？`)})});
+document.querySelectorAll('.tip').forEach(el=>{el.addEventListener('click',()=>{const title=el.querySelector('.tip-title').textContent.trim();const desc=el.querySelector('.tip-desc').textContent.trim();copyPrompt(`針對${PROJECT}，關於這項操作建議：\n「${title}」\n背景：${desc}\n\n請幫我制定具體執行方案，包含受眾設定細節和素材方向。`)})});
+document.querySelectorAll('.phase-row').forEach(el=>{el.style.cursor='pointer';el.addEventListener('click',()=>{const name=el.querySelector('.phase-title');const desc=el.querySelector('.phase-desc');if(!name)return;copyPrompt(`針對${PROJECT}，關於素材方向「${name.textContent.trim()}」：\n${desc?desc.textContent.trim():''}\n\n請幫我製作具體素材文案和視覺建議。`)})});
+document.querySelectorAll('.rk-row').forEach(el=>{el.addEventListener('click',()=>{const name=el.querySelector('.rk-name');if(name)copyPrompt(`針對${PROJECT}，請分析受眾「${name.textContent.trim()}」，給我深度策略建議。`)})});
+/* ── aud-card 系統 ── */
+function showCopyToast(msg){let t=document.getElementById('copy-toast');if(!t){t=document.createElement('div');t.id='copy-toast';document.body.appendChild(t);}t.textContent=msg;t.classList.add('show');clearTimeout(audToastT);audToastT=setTimeout(()=>t.classList.remove('show'),1400);}
+function copyTxt(txt){return navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject();}
+function initAudCard(card){if(card.dataset.cb)return;card.dataset.cb='1';card.querySelectorAll('.tag-tbl tbody tr').forEach(row=>{const en=row.cells[1]?.textContent.trim();if(!en)return;row.addEventListener('click',()=>{copyTxt(en).then(()=>{row.classList.add('flash');setTimeout(()=>row.classList.remove('flash'),600);showCopyToast('已複製：'+en);});});});card.querySelectorAll('.tag-tbl').forEach(tbl=>{const wrap=document.createElement('div');wrap.className='copy-all-row';const btn=document.createElement('button');btn.className='copy-all-btn';btn.innerHTML='⎘ 複製全部30個標籤';btn.addEventListener('click',e=>{e.stopPropagation();const tags=Array.from(tbl.querySelectorAll('tbody tr')).map(r=>r.cells[1]?.textContent.trim()).filter(Boolean).join('\n');copyTxt(tags).then(()=>{btn.classList.add('done');btn.textContent='✓ 已複製30個';showCopyToast('已複製全部30個標籤');setTimeout(()=>{btn.classList.remove('done');btn.innerHTML='⎘ 複製全部30個標籤';},2000);});});wrap.appendChild(btn);tbl.after(wrap);});}
+function toggleAud(id){const c=document.getElementById(id);c.classList.toggle('open');if(c.classList.contains('open'))initAudCard(c);}
+function buildAudCard(g,idx){const id='yc1116_'+(idx+1);const rows=g.tags.map((t,i)=>`<tr><td>${i+1}</td><td>${t[0]}</td><td>${t[1]}</td></tr>`).join('');const lmTags=g.lm.map(l=>`<span class="aud-lm-tag">${l}</span>`).join('');return `<div class="aud-card" id="${id}"><div class="aud-header" onclick="toggleAud('${id}')"><div class="aud-num">${idx+1}</div><div class="aud-info"><div class="aud-name">${g.n}</div><div class="aud-sub">${g.sub}</div></div><div class="aud-arrow">▶</div></div><div class="aud-body"><div class="aud-sl">評估邏輯</div><div class="aud-logic">${g.logic}</div><div class="aud-sl">地標定位</div><div class="aud-lm">${lmTags}</div><div class="aud-sl">興趣標籤（點擊列複製單個）</div><table class="tag-tbl"><thead><tr><th>#</th><th>English</th><th>中文</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;}
+const MAIN_G=[
+{
+"n": "30-65 / 竹南 / 學區親子×才藝",
+"sub": "單一深化｜延伸A注重機能教育·往孩子才藝與學習深挖",
+"logic": "有效的A組是看重學區與生活機能的家長。這裡往孩子下課後的才藝、閱讀與游泳延伸，買3房、4房的動機就是給孩子一間自己的房間，並且離君毅高中、學校都近。",
+"lm": [
+"竹南-國泰夜市（+2 公里）",
+"大全聯頭份店（+2 公里）",
+"君毅高中（+2 公里）"
+],
+"tags": [
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Father",
+"父親（兒童和親子教育）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Kindergarten",
+"幼稚園（小學和中學教育）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"High school",
+"高中（小學和中學教育）"
+],
+[
+"Private school",
+"私立學校（教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Toys",
+"玩具（嗜好和活動）"
+],
+[
+"Swimming",
+"游泳（水上運動）"
+],
+[
+"Piano",
+"鋼琴（樂器）"
+],
+[
+"Reading",
+"閱讀（嗜好和活動）"
+],
+[
+"Library",
+"圖書館（教育）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Restaurants",
+"餐廳（美食和餐飲）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"PX Mart",
+"全聯福利中心"
+],
+[
+"RT-Mart",
+"大潤發"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"New home",
+"新屋（房地產）"
+],
+[
+"Quality of life",
+"生活品質"
+]
+]
+},
+{
+"n": "30-65 / 竹南頭份 / 百貨美食×週末外出",
+"sub": "單一深化｜延伸A注重機能教育·往週末購物娛樂深挖",
+"logic": "A組標籤裡百貨公司、購物、電影院、時尚都有效，代表這群人重視生活機能。這組改用週末帶孩子逛街、吃飯、看電影的場景，地標守住國泰夜市與頭份大全聯。",
+"lm": [
+"竹南-國泰夜市（+2 公里）",
+"大全聯頭份店（+2 公里）",
+"君毅高中（+2 公里）"
+],
+"tags": [
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Fashion",
+"時尚（流行文化）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Retail",
+"零售業（產業）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Restaurants",
+"餐廳（美食和餐飲）"
+],
+[
+"Buffet",
+"自助餐（美食和餐飲）"
+],
+[
+"Desserts",
+"甜點（美食和餐飲）"
+],
+[
+"Night market",
+"夜市（購物）"
+],
+[
+"Uniqlo",
+"優衣庫"
+],
+[
+"IKEA",
+"宜家家居"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"Carrefour",
+"家樂福"
+],
+[
+"Online shopping",
+"網路購物（購物）"
+],
+[
+"Shopee",
+"蝦皮購物"
+],
+[
+"momo購物網",
+"momo購物網"
+],
+[
+"Mobile payment",
+"行動支付（貨幣）"
+],
+[
+"LINE Pay",
+"LINE Pay"
+],
+[
+"Transportation",
+"交通"
+],
+[
+"Car",
+"汽車（交通工具）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Father",
+"父親（兒童和親子教育）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Quality of life",
+"生活品質"
+]
+]
+},
+{
+"n": "30-65 / 竹南 / 通勤交通×教育",
+"sub": "單一深化｜延伸A注重機能教育·往通勤與交通便利深挖",
+"logic": "A組中的交通標籤有效。竹南有火車站、國1、高鐵苗栗站可以通勤，這組鎖定每天開車或搭火車上班、同時重視孩子教育的雙薪家長。",
+"lm": [
+"竹南-國泰夜市（+2 公里）",
+"大全聯頭份店（+2 公里）",
+"君毅高中（+2 公里）"
+],
+"tags": [
+[
+"Transportation",
+"交通"
+],
+[
+"Taiwan High Speed Rail",
+"台灣高鐵"
+],
+[
+"Taiwan Railways Administration",
+"台灣鐵路"
+],
+[
+"Car",
+"汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Honda",
+"本田汽車（交通工具）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Private school",
+"私立學校（教育）"
+],
+[
+"High school",
+"高中（小學和中學教育）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"English language",
+"英語（語言）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"PX Mart",
+"全聯福利中心"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"News",
+"新聞"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"Insurance",
+"保險（商業與財務）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Home buying",
+"購屋（房地產）"
+],
+[
+"New home",
+"新屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 國1竹南 / 在地業主×傳統",
+"sub": "單一深化｜延伸B在地職業·往在地店東與傳統產業深挖",
+"logic": "B組有效的是傳統、獨資企業、批發、民俗學，這是竹南頭份在地做生意的老闆。他們買總價1,500萬以上的4房，是為了換屋升級，也可能順便當資產配置。",
+"lm": [
+"緯度 24.71 經度 120.93 竹南鎮（+4 公里）",
+"新竹系統交流道（+4 公里）"
+],
+"tags": [
+[
+"Tradition",
+"傳統"
+],
+[
+"Folklore",
+"民俗學"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Entrepreneurship",
+"創業（商業與財務）"
+],
+[
+"Business",
+"商業（商業與財務）"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"Retail",
+"零售業（產業）"
+],
+[
+"Manufacturing",
+"製造業（產業）"
+],
+[
+"Construction",
+"建築業（產業）"
+],
+[
+"Logistics",
+"物流（產業）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"BMW",
+"BMW（交通工具）"
+],
+[
+"Mercedes-Benz",
+"賓士（交通工具）"
+],
+[
+"Lexus",
+"凌志（交通工具）"
+],
+[
+"Golf",
+"高爾夫球（運動）"
+],
+[
+"Tea",
+"茶（飲料）"
+],
+[
+"Temple",
+"寺廟（宗教）"
+],
+[
+"Investment",
+"投資（商業與財務）"
+],
+[
+"Stock market",
+"股票市場（投資）"
+],
+[
+"Bank",
+"銀行（銀行業）"
+],
+[
+"Insurance",
+"保險（商業與財務）"
+],
+[
+"Accounting",
+"會計（商業與財務）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 國1竹南 / 車主×商務往來",
+"sub": "單一深化｜延伸B在地職業·往BMW車主與商務深挖",
+"logic": "B組中的BMW標籤有效，表示這群人有一定的消費力。這組往進口車車主和需要常跑客戶、走國1往返新竹的生意人延伸，可以打交流道和1:1車位。",
+"lm": [
+"緯度 24.71 經度 120.93 竹南鎮（+4 公里）",
+"新竹系統交流道（+4 公里）"
+],
+"tags": [
+[
+"BMW",
+"BMW（交通工具）"
+],
+[
+"Mercedes-Benz",
+"賓士（交通工具）"
+],
+[
+"Lexus",
+"凌志（交通工具）"
+],
+[
+"Audi",
+"奧迪（交通工具）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Luxury vehicle",
+"豪華車（交通工具）"
+],
+[
+"Car",
+"汽車（交通工具）"
+],
+[
+"Transportation",
+"交通"
+],
+[
+"Road trip",
+"公路旅行（旅遊觀光）"
+],
+[
+"Business",
+"商業（商業與財務）"
+],
+[
+"Business travel",
+"商務旅行（旅遊觀光）"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"Golf",
+"高爾夫球（運動）"
+],
+[
+"Whisky",
+"威士忌（酒精飲料）"
+],
+[
+"Tea",
+"茶（飲料）"
+],
+[
+"Restaurants",
+"餐廳（美食和餐飲）"
+],
+[
+"Investment",
+"投資（商業與財務）"
+],
+[
+"Stock market",
+"股票市場（投資）"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 國1竹南 / 批發量販×家業採購",
+"sub": "單一深化｜延伸B在地職業·往批發量販採購深挖",
+"logic": "B組中的批發、量販店有效，代表常跑量販大量採購的店家與家業經營者。這組保留傳統與小學這兩個有效的生活面，人設是務實、存得到錢的在地家庭。",
+"lm": [
+"緯度 24.71 經度 120.93 竹南鎮（+4 公里）",
+"新竹系統交流道（+4 公里）"
+],
+"tags": [
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"RT-Mart",
+"大潤發"
+],
+[
+"Carrefour",
+"家樂福"
+],
+[
+"PX Mart",
+"全聯福利中心"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Retail",
+"零售業（產業）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Tradition",
+"傳統"
+],
+[
+"Folklore",
+"民俗學"
+],
+[
+"Temple",
+"寺廟（宗教）"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Manufacturing",
+"製造業（產業）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Bank",
+"銀行（銀行業）"
+],
+[
+"Insurance",
+"保險（商業與財務）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+],
+[
+"New home",
+"新屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 竹南科園 / 高教×語言進修",
+"sub": "單一深化｜延伸C教育生活·往進修與語言學習深挖",
+"logic": "C組有效的是高等教育、語言教育、外語、工程學院，對應國衛院、廣源科技園區上班的研究與專業族。這組不用窄職稱，改用進修與學習興趣來切。",
+"lm": [
+"國家衛生研究院（+2 公里）",
+"尚順購物中心（+2 公里）",
+"竹南獅山親子公園（+2 公里）",
+"廣源科技園區（+2 公里）"
+],
+"tags": [
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"Foreign language",
+"外語"
+],
+[
+"English language",
+"英語（語言）"
+],
+[
+"Japanese language",
+"日語（語言）"
+],
+[
+"Study abroad",
+"留學（教育）"
+],
+[
+"Engineering school",
+"工程和理工學院（教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Science",
+"科學"
+],
+[
+"Research",
+"研究（科學）"
+],
+[
+"Technology",
+"科技"
+],
+[
+"Internet",
+"網路（電腦運算）"
+],
+[
+"Online community",
+"網路社區"
+],
+[
+"Books",
+"書籍（出版）"
+],
+[
+"Reading",
+"閱讀（嗜好和活動）"
+],
+[
+"Podcast",
+"Podcast（數位媒體）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Business model",
+"商業模式（商業和金融業）"
+],
+[
+"Aesthetics",
+"美學（哲學）"
+],
+[
+"Airline",
+"航空公司"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+]
+]
+},
+{
+"n": "28-60 / 竹南科園 / 出國旅遊×航空",
+"sub": "單一深化｜延伸C教育生活·往出國旅遊深挖",
+"logic": "C組中的航空公司、旅遊、旅遊網站有效。這群人一年會出國幾次，重視生活品味，適合用社區環境、採光與生活質感的訴求切入。",
+"lm": [
+"國家衛生研究院（+2 公里）",
+"尚順購物中心（+2 公里）",
+"竹南獅山親子公園（+2 公里）",
+"廣源科技園區（+2 公里）"
+],
+"tags": [
+[
+"Airline",
+"航空公司"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Travel website",
+"旅遊網站（網站）"
+],
+[
+"Hotel",
+"飯店（旅遊觀光）"
+],
+[
+"Backpacking",
+"自助旅行（旅遊觀光）"
+],
+[
+"Japan",
+"日本（旅遊目的地）"
+],
+[
+"South Korea",
+"韓國（旅遊目的地）"
+],
+[
+"Foreign language",
+"外語"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"Photography",
+"攝影（嗜好和活動）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Desserts",
+"甜點（美食和餐飲）"
+],
+[
+"Korean drama",
+"韓國電視劇（電視節目）"
+],
+[
+"K-pop",
+"韓國流行音樂（音樂）"
+],
+[
+"Beauty",
+"美容（社會觀念）"
+],
+[
+"Skin care",
+"護膚（美容）"
+],
+[
+"Online shopping",
+"網路購物（購物）"
+],
+[
+"Internet",
+"網路（電腦運算）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Aesthetics",
+"美學（哲學）"
+],
+[
+"Business model",
+"商業模式（商業和金融業）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+]
+]
+},
+{
+"n": "28-60 / 竹南科園 / 慢跑園藝×健康生活",
+"sub": "單一深化｜延伸C教育生活·往運動與健康深挖",
+"logic": "C組中的慢跑、園藝、超市有效，代表重視日常健康的人。獅山親子公園與科學路一帶適合跑步散步，這組加上醫學、生技等興趣，對應國衛院周邊的客層。",
+"lm": [
+"國家衛生研究院（+2 公里）",
+"尚順購物中心（+2 公里）",
+"竹南獅山親子公園（+2 公里）",
+"廣源科技園區（+2 公里）"
+],
+"tags": [
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Cycling",
+"自行車（運動）"
+],
+[
+"Hiking",
+"健行（戶外活動）"
+],
+[
+"Yoga",
+"瑜伽（健身與保健）"
+],
+[
+"Physical fitness",
+"健身（健身與保健）"
+],
+[
+"Health",
+"健康（健身與保健）"
+],
+[
+"Nutrition",
+"營養（健身與保健）"
+],
+[
+"Gardening",
+"園藝（戶外活動）"
+],
+[
+"Houseplants",
+"室內植物（家居和園藝）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Medicine",
+"醫學（科學）"
+],
+[
+"Biotechnology",
+"生物科技（產業）"
+],
+[
+"Science",
+"科學"
+],
+[
+"Research",
+"研究（科學）"
+],
+[
+"Internet",
+"網路（電腦運算）"
+],
+[
+"Online community",
+"網路社區"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Aesthetics",
+"美學（哲學）"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"New home",
+"新屋（房地產）"
+],
+[
+"Camping",
+"露營（戶外活動）"
+]
+]
+},
+{
+"n": "28-60 / 竹南科園 / 韓劇美容×質感居家",
+"sub": "單一深化｜延伸C教育生活·往女性生活風格深挖",
+"logic": "C組中的韓國電視劇、美容、美學、咖啡廳有效，偏向女性決策者。這組加入居家佈置、無印、IKEA，人設是想把新家布置得有質感的年輕家庭。",
+"lm": [
+"國家衛生研究院（+2 公里）",
+"尚順購物中心（+2 公里）",
+"竹南獅山親子公園（+2 公里）",
+"廣源科技園區（+2 公里）"
+],
+"tags": [
+[
+"Korean drama",
+"韓國電視劇（電視節目）"
+],
+[
+"K-pop",
+"韓國流行音樂（音樂）"
+],
+[
+"Netflix",
+"Netflix"
+],
+[
+"Beauty",
+"美容（社會觀念）"
+],
+[
+"Skin care",
+"護膚（美容）"
+],
+[
+"Cosmetics",
+"化妝品（美容）"
+],
+[
+"Aesthetics",
+"美學（哲學）"
+],
+[
+"Fashion",
+"時尚（流行文化）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Desserts",
+"甜點（美食和餐飲）"
+],
+[
+"Bakery",
+"烘焙坊（美食和餐飲）"
+],
+[
+"Muji",
+"無印良品"
+],
+[
+"IKEA",
+"宜家家居"
+],
+[
+"Interior design",
+"室內設計（家居和園藝）"
+],
+[
+"Home decor",
+"居家裝飾（家居和園藝）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Gardening",
+"園藝（戶外活動）"
+],
+[
+"Houseplants",
+"室內植物（家居和園藝）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Online community",
+"網路社區"
+],
+[
+"Online shopping",
+"網路購物（購物）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+]
+]
+},
+{
+"n": "30-60 / 竹南 / 親子教育×語言旅遊",
+"sub": "組合｜A注重機能教育×C教育生活",
+"logic": "把A組的家長和C組的語言、旅遊結合，人設是重視孩子英語、會帶孩子出國的雙薪家庭。地標用君毅高中、獅山親子公園、尚順購物中心。",
+"lm": [
+"君毅高中（+2 公里）",
+"竹南獅山親子公園（+2 公里）",
+"尚順購物中心（+2 公里）"
+],
+"tags": [
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Father",
+"父親（兒童和親子教育）"
+],
+[
+"Kindergarten",
+"幼稚園（小學和中學教育）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"Private school",
+"私立學校（教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"Foreign language",
+"外語"
+],
+[
+"English language",
+"英語（語言）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Travel website",
+"旅遊網站（網站）"
+],
+[
+"Airline",
+"航空公司"
+],
+[
+"Hotel",
+"飯店（旅遊觀光）"
+],
+[
+"Swimming",
+"游泳（水上運動）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"New home",
+"新屋（房地產）"
+]
+]
+},
+{
+"n": "30-65 / 竹南國1 / 在地業主×學區家長",
+"sub": "組合｜B在地職業×A注重機能教育",
+"logic": "在地做生意的老闆通常也是重視孩子讀私校的家長。這組把B組的獨資企業、批發，和A組的私立學校、百貨結合，適合打換大坪數4房的訴求。",
+"lm": [
+"君毅高中（+2 公里）",
+"大全聯頭份店（+2 公里）",
+"新竹系統交流道（+4 公里）"
+],
+"tags": [
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Business",
+"商業（商業與財務）"
+],
+[
+"Tradition",
+"傳統"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"Retail",
+"零售業（產業）"
+],
+[
+"BMW",
+"BMW（交通工具）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Father",
+"父親（兒童和親子教育）"
+],
+[
+"Private school",
+"私立學校（教育）"
+],
+[
+"High school",
+"高中（小學和中學教育）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"Golf",
+"高爾夫球（運動）"
+],
+[
+"Insurance",
+"保險（商業與財務）"
+],
+[
+"Investment",
+"投資（商業與財務）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 國1科園 / 業主×高教商業模式",
+"sub": "組合｜B在地職業×C教育生活",
+"logic": "B組的獨資企業和C組的商業模式、高等教育交集，人設是學歷高、自己創業或做顧問的專業工作者，會往來新竹與竹南。",
+"lm": [
+"新竹系統交流道（+4 公里）",
+"廣源科技園區（+2 公里）",
+"國家衛生研究院（+2 公里）"
+],
+"tags": [
+[
+"Business model",
+"商業模式（商業和金融業）"
+],
+[
+"Entrepreneurship",
+"創業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Business",
+"商業（商業與財務）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Engineering school",
+"工程和理工學院（教育）"
+],
+[
+"Technology",
+"科技"
+],
+[
+"Internet",
+"網路（電腦運算）"
+],
+[
+"Online community",
+"網路社區"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"BMW",
+"BMW（交通工具）"
+],
+[
+"Lexus",
+"凌志（交通工具）"
+],
+[
+"Golf",
+"高爾夫球（運動）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Airline",
+"航空公司"
+],
+[
+"Business travel",
+"商務旅行（旅遊觀光）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Foreign language",
+"外語"
+],
+[
+"Investment",
+"投資（商業與財務）"
+],
+[
+"Stock market",
+"股票市場（投資）"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"Bank",
+"銀行（銀行業）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "30-60 / 竹南頭份 / 百貨美食×韓劇美容",
+"sub": "組合｜A注重機能教育×C教育生活",
+"logic": "把A組的百貨、時尚、電影院，和C組的韓劇、美容結合，鎖定家裡實際做購屋決定的媽媽。",
+"lm": [
+"尚順購物中心（+2 公里）",
+"大全聯頭份店（+2 公里）",
+"竹南-國泰夜市（+2 公里）"
+],
+"tags": [
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Fashion",
+"時尚（流行文化）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Restaurants",
+"餐廳（美食和餐飲）"
+],
+[
+"Desserts",
+"甜點（美食和餐飲）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Korean drama",
+"韓國電視劇（電視節目）"
+],
+[
+"Netflix",
+"Netflix"
+],
+[
+"Beauty",
+"美容（社會觀念）"
+],
+[
+"Skin care",
+"護膚（美容）"
+],
+[
+"Cosmetics",
+"化妝品（美容）"
+],
+[
+"Aesthetics",
+"美學（哲學）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Online shopping",
+"網路購物（購物）"
+],
+[
+"Shopee",
+"蝦皮購物"
+],
+[
+"Mobile payment",
+"行動支付（貨幣）"
+],
+[
+"Uniqlo",
+"優衣庫"
+],
+[
+"Muji",
+"無印良品"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Quality of life",
+"生活品質"
+]
+]
+},
+{
+"n": "28-60 / 國1竹南 / 車主×旅遊航空",
+"sub": "組合｜B在地職業×C教育生活",
+"logic": "把B組的BMW車主和C組的旅遊、航空結合，人設是假日開車出遊、每年出國的中高收入家庭，可以強調1:1車位和交流道便利。",
+"lm": [
+"新竹系統交流道（+4 公里）",
+"緯度 24.71 經度 120.93 竹南鎮（+4 公里）",
+"尚順購物中心（+2 公里）"
+],
+"tags": [
+[
+"BMW",
+"BMW（交通工具）"
+],
+[
+"Mercedes-Benz",
+"賓士（交通工具）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Car",
+"汽車（交通工具）"
+],
+[
+"Transportation",
+"交通"
+],
+[
+"Road trip",
+"公路旅行（旅遊觀光）"
+],
+[
+"Camping",
+"露營（戶外活動）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Travel website",
+"旅遊網站（網站）"
+],
+[
+"Airline",
+"航空公司"
+],
+[
+"Hotel",
+"飯店（旅遊觀光）"
+],
+[
+"Japan",
+"日本（旅遊目的地）"
+],
+[
+"Photography",
+"攝影（嗜好和活動）"
+],
+[
+"Golf",
+"高爾夫球（運動）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Cycling",
+"自行車（運動）"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Business",
+"商業（商業與財務）"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Investment",
+"投資（商業與財務）"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "30-65 / 竹南國1 / 交通機能×量販採購",
+"sub": "組合｜A注重機能教育×B在地職業",
+"logic": "A組的交通、百貨，加上B組的量販店、批發，人設是看重生活便利、常跑好市多和大潤發的在地家庭。",
+"lm": [
+"大全聯頭份店（+2 公里）",
+"竹南-國泰夜市（+2 公里）",
+"新竹系統交流道（+4 公里）"
+],
+"tags": [
+[
+"Transportation",
+"交通"
+],
+[
+"Taiwan High Speed Rail",
+"台灣高鐵"
+],
+[
+"Taiwan Railways Administration",
+"台灣鐵路"
+],
+[
+"Car",
+"汽車（交通工具）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"RT-Mart",
+"大潤發"
+],
+[
+"PX Mart",
+"全聯福利中心"
+],
+[
+"Carrefour",
+"家樂福"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Retail",
+"零售業（產業）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"High school",
+"高中（小學和中學教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Tradition",
+"傳統"
+],
+[
+"Insurance",
+"保險（商業與財務）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 竹南科園 / 園藝慢跑×在地傳統",
+"sub": "組合｜C教育生活×B在地職業",
+"logic": "C組的園藝、慢跑，加上B組的傳統、民俗學，人設是在竹南土生土長、喜歡戶外與泡茶的中年在地人，換屋想留在家附近。",
+"lm": [
+"竹南獅山親子公園（+2 公里）",
+"緯度 24.71 經度 120.93 竹南鎮（+4 公里）",
+"國家衛生研究院（+2 公里）"
+],
+"tags": [
+[
+"Gardening",
+"園藝（戶外活動）"
+],
+[
+"Houseplants",
+"室內植物（家居和園藝）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Hiking",
+"健行（戶外活動）"
+],
+[
+"Cycling",
+"自行車（運動）"
+],
+[
+"Fishing",
+"釣魚（戶外活動）"
+],
+[
+"Tea",
+"茶（飲料）"
+],
+[
+"Tradition",
+"傳統"
+],
+[
+"Folklore",
+"民俗學"
+],
+[
+"Temple",
+"寺廟（宗教）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Hypermarket",
+"量販店（食品零售業者）"
+],
+[
+"Wholesale",
+"批發（零售）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Health",
+"健康（健身與保健）"
+],
+[
+"Nutrition",
+"營養（健身與保健）"
+],
+[
+"Toyota",
+"豐田汽車（交通工具）"
+],
+[
+"Sport utility vehicle",
+"運動型多用途車（交通工具）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "30-60 / 竹南 / 私校家長×科技網路",
+"sub": "組合｜A注重機能教育×C教育生活",
+"logic": "A組的私立學校、親子教育，加上C組的網路、工程學院，人設是科技業或理工背景的爸媽。不使用窄的竹科職稱，改用科技興趣來切。",
+"lm": [
+"君毅高中（+2 公里）",
+"廣源科技園區（+2 公里）",
+"竹南獅山親子公園（+2 公里）"
+],
+"tags": [
+[
+"Private school",
+"私立學校（教育）"
+],
+[
+"High school",
+"高中（小學和中學教育）"
+],
+[
+"Primary school",
+"小學（小學和中學教育）"
+],
+[
+"Kindergarten",
+"幼稚園（小學和中學教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Father",
+"父親（兒童和親子教育）"
+],
+[
+"Technology",
+"科技"
+],
+[
+"Internet",
+"網路（電腦運算）"
+],
+[
+"Computers",
+"電腦（電子產品）"
+],
+[
+"Smartphones",
+"智慧型手機（電子產品）"
+],
+[
+"Apple Inc.",
+"蘋果公司（電子產品）"
+],
+[
+"Online community",
+"網路社區"
+],
+[
+"Engineering school",
+"工程和理工學院（教育）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Science",
+"科學"
+],
+[
+"Business model",
+"商業模式（商業和金融業）"
+],
+[
+"Online shopping",
+"網路購物（購物）"
+],
+[
+"Mobile payment",
+"行動支付（貨幣）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"New home",
+"新屋（房地產）"
+]
+]
+},
+{
+"n": "30-65 / 竹南國1 / 商業財務×家長理財",
+"sub": "組合｜A注重機能教育×B在地職業",
+"logic": "A組中的商業、零售業，加上B組的獨資企業，再往理財延伸，人設是有在投資、保險規劃完整的家長，重視資產配置。",
+"lm": [
+"大全聯頭份店（+2 公里）",
+"君毅高中（+2 公里）",
+"新竹系統交流道（+4 公里）"
+],
+"tags": [
+[
+"Business",
+"商業（商業與財務）"
+],
+[
+"Retail",
+"零售業（產業）"
+],
+[
+"Sole proprietorship",
+"獨資企業（商業與財務）"
+],
+[
+"Small business",
+"小型企業（商業與財務）"
+],
+[
+"Investment",
+"投資（商業與財務）"
+],
+[
+"Stock market",
+"股票市場（投資）"
+],
+[
+"Bank",
+"銀行（銀行業）"
+],
+[
+"Insurance",
+"保險（商業與財務）"
+],
+[
+"Accounting",
+"會計（商業與財務）"
+],
+[
+"Personal finance",
+"個人理財"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Business model",
+"商業模式（商業和金融業）"
+],
+[
+"Higher education",
+"高等教育（教育）"
+],
+[
+"Education",
+"教育（社會觀念）"
+],
+[
+"Private school",
+"私立學校（教育）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Father",
+"父親（兒童和親子教育）"
+],
+[
+"Mother",
+"母親（兒童和親子教育）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Lexus",
+"凌志（交通工具）"
+],
+[
+"BMW",
+"BMW（交通工具）"
+],
+[
+"Golf",
+"高爾夫球（運動）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Housing",
+"房屋（房地產）"
+]
+]
+},
+{
+"n": "28-60 / 科園頭份 / 健身咖啡×週末購物",
+"sub": "組合｜C教育生活×A注重機能教育",
+"logic": "C組的慢跑、咖啡廳，加上A組的百貨、電影院、時尚，人設是剛成家、生活節奏比較都會型的年輕夫妻，適合2+1房到3房。",
+"lm": [
+"尚順購物中心（+2 公里）",
+"廣源科技園區（+2 公里）",
+"竹南-國泰夜市（+2 公里）"
+],
+"tags": [
+[
+"Physical fitness",
+"健身（健身與保健）"
+],
+[
+"Yoga",
+"瑜伽（健身與保健）"
+],
+[
+"Jogging",
+"慢跑（跑步）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Coffeehouse",
+"咖啡廳（咖啡）"
+],
+[
+"Bakery",
+"烘焙坊（美食和餐飲）"
+],
+[
+"Desserts",
+"甜點（美食和餐飲）"
+],
+[
+"Restaurants",
+"餐廳（美食和餐飲）"
+],
+[
+"Food",
+"食品（美食和餐飲）"
+],
+[
+"Department store",
+"百貨公司（零售）"
+],
+[
+"Shopping",
+"購物（零售）"
+],
+[
+"Fashion",
+"時尚（流行文化）"
+],
+[
+"Uniqlo",
+"優衣庫"
+],
+[
+"Muji",
+"無印良品"
+],
+[
+"IKEA",
+"宜家家居"
+],
+[
+"Movie theater",
+"電影院（電影）"
+],
+[
+"Netflix",
+"Netflix"
+],
+[
+"Korean drama",
+"韓國電視劇（電視節目）"
+],
+[
+"Beauty",
+"美容（社會觀念）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Hotel",
+"飯店（旅遊觀光）"
+],
+[
+"Online shopping",
+"網路購物（購物）"
+],
+[
+"Supermarket",
+"超市（食品零售業者）"
+],
+[
+"Household supplies",
+"生活用品（家居和園藝用品）"
+],
+[
+"Quality of life",
+"生活品質"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"New home",
+"新屋（房地產）"
+]
+]
+}
+];
+(function(){const g=document.getElementById('main-aud-grid');if(g)g.innerHTML=MAIN_G.map((x,i)=>buildAudCard(x,i)).join('');})();
+</script>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+<script>window.addEventListener('scroll',()=>document.getElementById('btt').classList.toggle('show',window.scrollY>300))</script>
+</body>
+</html>
