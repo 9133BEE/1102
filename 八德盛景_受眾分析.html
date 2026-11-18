@@ -1,0 +1,2637 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>八德盛景｜受眾分析報告</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --accent:#7a5a8a;--accent-dark:#5a3a6a;--accent-light:#ede8f4;--accent-border:#b89fcc;
+  --bg:#f2f3f1;--s:#ffffff;--bd:#e4e5e2;--tx:#2e2c29;--sub:#7d7870;--sub2:#a8a199;
+  --good:#1e6e3f;--goodl:#e6f4ea;--warn:#c05c00;
+  --radius:12px;--shadow-xs:0 1px 3px rgba(0,0,0,.05);--shadow-sm:0 2px 8px rgba(0,0,0,.07);--shadow-card:0 2px 10px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.04);
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft JhengHei','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);font-size:14px;line-height:1.6;min-height:100vh}
+.page-header{background:linear-gradient(180deg,#0d1824 0%,#091218 100%);padding:0 40px;height:56px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:100;box-shadow:0 1px 0 rgba(255,255,255,.04),0 4px 20px rgba(0,0,0,.35);border-bottom:1px solid rgba(255,255,255,.06)}
+.ph-logo{width:30px;height:30px;background:linear-gradient(135deg,#9a7aaa,var(--accent-dark));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#fff;flex-shrink:0}
+.ph-title{font-size:14px;font-weight:700;color:#e8f5ea;letter-spacing:-.2px}
+.ph-sub{font-size:11px;color:#3a5a3e;margin-left:2px}
+.ph-nav{margin-left:auto;display:flex;gap:8px;align-items:center}
+.ph-nav a{font-size:12px;color:#b89fcc;text-decoration:none;padding:5px 13px;border-radius:6px;border:1px solid rgba(122,90,138,.25);background:rgba(122,90,138,.12);font-weight:500}
+.ph-nav a:hover{background:rgba(122,90,138,.22);color:#b8d8be}
+#btt{position:fixed;right:24px;bottom:28px;width:38px;height:38px;border-radius:50%;background:rgba(15,20,15,.75);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);font-size:15px;cursor:pointer;opacity:0;transform:translateY(8px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:150;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,.3);font-family:inherit}
+#btt.show{opacity:1;transform:translateY(0);pointer-events:auto}
+#btt:hover{background:rgba(25,45,25,.9);transform:translateY(-2px)}
+.wrap{max-width:1200px;margin:0 auto;padding:32px 40px 48px}
+.case-header{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:20px 24px;margin-bottom:10px;display:flex;align-items:center;gap:18px;box-shadow:var(--shadow-card)}
+.case-logo{width:44px;height:44px;background:linear-gradient(135deg,#9a7aaa,var(--accent-dark));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff;flex-shrink:0}
+.case-info h2{font-size:17px;font-weight:700;color:var(--tx);letter-spacing:-.3px}
+.case-info p{font-size:12px;color:var(--sub);margin-top:3px;line-height:1.5}
+.case-stats{margin-left:auto;display:flex;gap:28px;flex-shrink:0}
+.stat{text-align:right}
+.stat-n{font-size:24px;font-weight:800;color:var(--accent);line-height:1;letter-spacing:-.5px;font-variant-numeric:tabular-nums}
+.stat-l{font-size:10px;color:var(--sub2);margin-top:3px;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--accent);text-decoration:none;margin-bottom:16px;padding:5px 12px;background:var(--accent-light);border-radius:20px;border:1px solid var(--accent-border);transition:all .15s}
+.back-link:hover{filter:brightness(.95);color:var(--accent-dark)}
+.sec-title{font-size:12px;font-weight:700;color:var(--sub);margin-bottom:14px;display:flex;align-items:center;gap:10px;letter-spacing:.4px;text-transform:uppercase}
+.sec-title::before{content:'';display:inline-block;width:3px;height:14px;background:var(--accent);border-radius:2px;flex-shrink:0}
+.sec-title::after{content:'';flex:1;height:1px;background:var(--bd)}
+.section{margin-bottom:28px}
+.creative-section{margin-bottom:32px}
+/* Profiles */
+.profiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.profile-card{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-xs);transition:box-shadow .2s,transform .2s}
+.profile-card:hover{box-shadow:var(--shadow-sm);transform:translateY(-2px)}
+.profile-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:12px}
+.profile-icon.green{background:var(--accent-light)}
+.profile-icon.amber{background:#fdf0dc}
+.profile-icon.teal{background:#e0eff2}
+.profile-name{font-size:15px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.profile-meta{font-size:12px;color:var(--sub);margin-bottom:10px}
+.profile-tags{font-size:12px;color:#4a5568;margin-bottom:10px;line-height:1.6}
+.profile-behavior{font-size:12px;color:var(--sub);line-height:1.55;margin-bottom:12px}
+.profile-badge{display:inline-block;font-size:11px;font-weight:700;padding:4px 11px;border-radius:20px;margin-top:2px}
+.badge-green{background:var(--accent-light);color:#2a4a2e;border:1px solid var(--accent-border)}
+.badge-amber{background:#fdf0dc;color:#7a5c20;border:1px solid #d4b06a}
+.badge-teal{background:#e0eff2;color:#2f6672;border:1px solid #87b5be}
+/* Tags */
+.tags-row{display:flex;flex-wrap:wrap;gap:8px}
+.core-tag{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:var(--s);border:1.5px solid var(--bd);border-radius:20px;font-size:13px;font-weight:600;color:var(--tx);cursor:pointer;transition:all .15s}
+.core-tag:hover{border-color:var(--accent-border);background:var(--accent-light);color:#2a4a2e}
+.core-tag .arr{font-size:11px;color:var(--accent-border)}
+/* Tips */
+.tips{display:flex;flex-direction:column;gap:10px}
+.tip{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:16px 18px;display:flex;gap:16px;align-items:flex-start;cursor:pointer;transition:border-color .15s,box-shadow .15s;box-shadow:var(--shadow-xs)}
+.tip:hover{border-color:var(--accent-border);box-shadow:var(--shadow-sm)}
+.tip-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0;color:#fff}
+.c1{background:var(--accent)}.c2{background:#6a8a6a}.c3{background:#8a7a4a}.c4{background:#4a6a8a}.c5{background:#7a5a4a}
+.tip-body{flex:1}
+.tip-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:5px;line-height:1.4}
+.tip-desc{font-size:12px;color:var(--sub);line-height:1.65}
+/* Creative timeline */
+.creative-timeline{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.phase-row{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:14px 18px;display:flex;gap:14px;align-items:center;cursor:pointer;transition:box-shadow .15s;box-shadow:var(--shadow-xs)}
+.phase-row:hover{box-shadow:var(--shadow-sm)}
+.phase-label{width:52px;flex-shrink:0;font-size:11px;font-weight:800;text-align:center;padding:6px 4px;border-radius:8px;background:var(--accent-light);color:var(--accent-dark);letter-spacing:-.2px;line-height:1.3}
+.phase-body{flex:1;min-width:0}
+.phase-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px}
+.phase-desc{font-size:12px;color:var(--sub);line-height:1.6}
+.phase-stat{text-align:right;flex-shrink:0;min-width:80px}
+.phase-cpl{font-size:16px;font-weight:800;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.phase-cpl-l{font-size:10px;color:var(--sub2);margin-top:3px;font-weight:600}
+/* Insight */
+.insight-box{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow-xs)}
+.insight-title{font-size:14px;font-weight:700;color:var(--tx);margin-bottom:14px}
+.insight-highlight{background:var(--accent-light);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:13px;color:#1a3a1e;font-weight:600;line-height:1.65}
+.insight-sub{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:10px;margin-top:14px}
+.insight-list{list-style:none;display:flex;flex-direction:column;gap:7px}
+.insight-list li{font-size:13px;color:#4a5568;padding-left:18px;position:relative;line-height:1.6}
+.insight-list li::before{content:'→';position:absolute;left:0;color:var(--accent-border);font-size:12px;top:1px}
+/* ── aud-card 展開系統 ── */
+.aud-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
+@media(max-width:760px){.aud-grid-2{grid-template-columns:1fr}}
+.aud-card{background:var(--s);border:1px solid var(--bd);border-radius:var(--radius);box-shadow:var(--shadow-xs);overflow:hidden}
+.aud-header{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;user-select:none;transition:background .15s}
+.aud-header:hover{background:#f0f7f1}
+.aud-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.aud-info{flex:1;min-width:0}
+.aud-name{font-size:13px;font-weight:700;color:var(--tx);line-height:1.35}
+.aud-sub{font-size:11px;color:var(--sub);margin-top:2px;line-height:1.4}
+.aud-arrow{font-size:11px;color:var(--sub2);transition:transform .2s;flex-shrink:0}
+.aud-card.open .aud-arrow{transform:rotate(90deg)}
+.aud-body{display:none;padding:0 16px 16px;border-top:1px solid var(--bd)}
+.aud-card.open .aud-body{display:block}
+.aud-sl{font-size:10px;font-weight:700;color:var(--sub2);letter-spacing:.5px;text-transform:uppercase;margin:12px 0 6px}
+.aud-logic{font-size:12px;color:var(--sub);line-height:1.7;background:#f4f7f4;border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 6px 6px 0}
+.aud-lm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}
+.aud-lm-tag{font-size:11px;font-weight:600;color:#3a5a3e;background:#e4f0e6;padding:3px 10px;border-radius:10px;border:1px solid #b0d4b8}
+.tag-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+.tag-tbl thead tr{background:#f0f4f0}
+.tag-tbl th{padding:5px 8px;text-align:left;font-size:10px;font-weight:700;color:var(--sub2);border-bottom:1px solid var(--bd)}
+.tag-tbl tbody tr{cursor:pointer;transition:background .12s;border-bottom:1px solid #f0f0f0}
+.tag-tbl tbody tr:hover{background:#e8f3e8}
+.tag-tbl tbody tr.flash{background:#c8e8c8}
+.tag-tbl td{padding:5px 8px;color:var(--tx)}
+.tag-tbl td:first-child{color:var(--sub2);font-size:10px;width:24px}
+.copy-all-row{display:flex;justify-content:flex-end;margin-top:8px}
+.copy-all-btn{font-size:11px;font-weight:600;color:#3a5a3e;background:#e4f0e6;border:1px solid #b0d4b8;border-radius:8px;padding:5px 14px;cursor:pointer;transition:all .15s}
+.copy-all-btn:hover{background:#c8e4cc}
+.copy-all-btn.done{background:#d0ecd8;color:#2a6a3a;border-color:#a8d8b8}
+#copy-toast{position:fixed;bottom:72px;left:50%;transform:translateX(-50%) translateY(8px);background:#162016;color:#80c888;font-size:11px;font-weight:600;padding:7px 16px;border-radius:18px;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s;z-index:300;white-space:nowrap}
+#copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* Ranking */
+.rk-row{background:var(--s);border:1px solid var(--bd);border-left:3px solid var(--bd);border-radius:var(--radius);padding:14px 18px 14px 14px;margin-bottom:6px;display:flex;gap:14px;align-items:center;box-shadow:none;transition:border-left-color .15s,box-shadow .15s,transform .15s;cursor:pointer}
+.rk-row:hover{border-left-color:var(--accent);box-shadow:0 2px 12px rgba(0,0,0,.06);transform:translateX(2px)}
+.rk-row.gold{border-left-color:#e6a820;background:linear-gradient(90deg,#fffef0 0%,#fff 70%)}
+.rk-row.silver{border-left-color:#9aa5b4;background:linear-gradient(90deg,#f5f7fa 0%,#fff 70%)}
+.rk-row.bronze{border-left-color:#c47f3a;background:linear-gradient(90deg,#fdf7f0 0%,#fff 70%)}
+.rk-medal{width:26px;height:26px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.rk-rank{width:32px;height:32px;border-radius:50%;background:var(--accent-light);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--accent);flex-shrink:0}
+.rk-body{flex:1;min-width:0}
+.rk-name{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:4px;line-height:1.35}
+.rk-loc{font-size:11px;color:var(--sub2);line-height:1.4;margin-bottom:7px}
+.rk-tags{display:flex;flex-wrap:wrap;gap:4px}
+.rk-tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;line-height:1.5}
+.t-fam{background:#f3e8ff;color:#5b21b6;border:1px solid #c4b5fd}
+.t-agr{background:#e6f4ea;color:#1e6e3f;border:1px solid #8ecba3}
+.t-ind{background:#eceff1;color:#37474f;border:1px solid #b0bec5}
+.t-loc{background:var(--accent-light);color:var(--accent-dark);border:1px solid var(--accent-border)}
+.t-buy{background:#fef3c7;color:#92400e;border:1px solid #fcd34d}
+.t-tour{background:#e0f7f4;color:#00695c;border:1px solid #7cd6cc}
+.rk-stats{display:flex;gap:20px;flex-shrink:0;align-items:center}
+.rk-stat-block{text-align:right}
+.rk-result{font-size:26px;font-weight:900;color:var(--tx);line-height:1;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.rk-result-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.rk-cpl{font-size:16px;font-weight:800;color:var(--warn);line-height:1;font-variant-numeric:tabular-nums}
+.rk-cpl.good-cpl{color:var(--good)}
+.rk-cpl-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.rk-spend{font-size:13px;font-weight:700;color:#6d6560;line-height:1;font-variant-numeric:tabular-nums}
+.rk-spend-l{font-size:10px;color:var(--sub2);font-weight:600;text-transform:uppercase;letter-spacing:.2px;margin-top:2px}
+.page-footer{text-align:center;font-size:11px;color:var(--sub2);margin-top:12px;padding-bottom:8px}
+/* ── Tab navigation ── */
+.tab-bar{display:flex;gap:6px;margin-bottom:22px;background:var(--s);border:1px solid var(--bd);border-radius:10px;padding:5px;box-shadow:var(--shadow-xs)}
+.tab-btn{flex:1;padding:8px 14px;border-radius:7px;border:none;background:transparent;font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;transition:all .15s;text-align:center}
+.tab-btn.active{background:#7a5a8a;color:#fff;box-shadow:0 2px 6px rgba(122,90,138,.3)}
+.tab-bar .tab-btn:nth-child(2).active{background:#607d96;color:#fff;box-shadow:0 2px 6px rgba(96,125,150,.3)}
+.tab-bar .tab-btn:nth-child(3).active{background:#4a6a5a;color:#fff;box-shadow:0 2px 6px rgba(74,106,90,.3)}
+.tab-btn:hover:not(.active){background:#f0edf5;color:#5a3a6a}
+.tab-pane{display:none}
+.tab-pane.show{display:block}
+
+/* 帳號配色統一（主粉專=紫 #7a5a8a／1510=藍 #607d96，比照富宇玥和） */
+.page-banner,.page-banner.main,.page-banner.main-banner{background:linear-gradient(135deg,#5a3a6a,#7a5a8a)!important;color:#fff}.tab-btn.active{background:#7a5a8a!important;color:#fff!important;box-shadow:0 2px 6px rgba(122,90,138,.3)!important}.tab-btn:hover:not(.active){background:#ede8f4;color:#5a3a6a}
+</style>
+</head>
+<body>
+
+<header class="page-header">
+  <div class="ph-logo">盛</div>
+  <span class="ph-title">八德盛景｜受眾分析</span>
+  <span class="ph-sub">· 苗栗頭份 · 八德二路 2房</span>
+  <nav class="ph-nav"><a href="index.html">標籤資料庫</a><a href="hub.html">← 返回總覽</a></nav>
+</header>
+
+<div class="wrap">
+
+<div class="case-header">
+  <div class="case-logo">盛</div>
+  <div class="case-info">
+    <h2>八德盛景｜苗栗頭份</h2>
+    <p>頭份市永福街×八德二路口 · 君禾建設／掬昌營造 · 1棟地上5層 · 16戶 · 2房20–29坪 · 591報價38.8–40萬/坪 · 總價約780–1,160萬（不含車位，實登待補）· 車位1:0.31（平面5位）· 公設比23.3% · 2028 Q1完工 · 投放 2025-11-20～2026-11-18 · 15組 · 花費 NT$63,669 · 訊息 459 則 · 潛客 67 筆</p>
+  </div>
+  <div class="case-stats">
+    <div class="stat"><div class="stat-n">5</div><div class="stat-l">有效受眾</div></div>
+    <div class="stat"><div class="stat-n">3</div><div class="stat-l">無效受眾</div></div>
+    <div class="stat"><div class="stat-n">20</div><div class="stat-l">建議受眾組</div></div>
+  </div>
+</div>
+
+<a class="back-link" href="hub.html">← 返回案件總覽</a>
+
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('analysis')">成效分析</button>
+  <button class="tab-btn" onclick="switchTab('aud')">建議受眾</button>
+</div>
+
+<div id="tab-analysis" class="tab-pane show">
+<div class="section">
+  <div class="sec-title">三大核心受眾輪廓</div>
+  <div class="profiles">
+    <div class="profile-card">
+      <div class="profile-icon green">🏦</div>
+      <div class="profile-name">竹南頭份在地金融白領</div>
+      <div class="profile-meta">年齡 28–55｜公義路 / 竹南光復路 / 兆豐頭份分行 +3</div>
+      <div class="profile-tags">興趣：銀行業、證券、財務會計、人壽保險、業務開發、儲蓄、零售銀行業務；行業類別：商業與金融、行政服務</div>
+      <div class="profile-behavior">行為：在竹南頭份的銀行、保險公司上班，收入穩定、懂貸款，2房總價800–1,100萬剛好是第一間房。</div>
+      <span class="profile-badge badge-green">有效 · 訊息213則 · 潛客35筆 · 每則約120元</span>
+    </div>
+    <div class="profile-card">
+      <div class="profile-icon amber">🎮</div>
+      <div class="profile-name">竹科竹南科 興趣型工程師</div>
+      <div class="profile-meta">年齡 28–55｜新竹科學園區 / 新竹系統交流道 / 竹南科學園區 +5</div>
+      <div class="profile-tags">興趣：程式語言、開放原始碼、PHP、Java、PlayStation、薩爾達、馬利歐、羽球、馬拉松、收藏玩具</div>
+      <div class="profile-behavior">行為：用嗜好找工程師有效；用3C硬體品牌（羅技、NVIDIA、Razer、DJI）加碩士學歷反而無效。</div>
+      <span class="profile-badge badge-amber">有效 · 訊息88則 · 潛客12筆 · 每則約133元</span>
+    </div>
+    <div class="profile-card">
+      <div class="profile-icon teal">☕</div>
+      <div class="profile-name">科技商務生活享樂族</div>
+      <div class="profile-meta">年齡 28–55｜新竹科學園區 / 新竹系統交流道 / 竹南科學園區 +5</div>
+      <div class="profile-tags">興趣：Podcast、Travel Deals、LifeStyle Food、男裝女裝品牌、早午餐、精釀啤酒、語言教育、專業發展、World Gym</div>
+      <div class="profile-behavior">行為：年輕上班族，下班吃喝、週末出遊、花錢進修。科技商務＋教育享樂兩組合計98則訊息。</div>
+      <span class="profile-badge badge-teal">有效 · 訊息98則 · 潛客11筆 · 每則約127元</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">跨受眾必保留的核心標籤</div>
+  <div class="tags-row">
+    <span class="core-tag">銀行業（金融）<span class="arr">↗</span></span>
+    <span class="core-tag">零售銀行業務（銀行業）<span class="arr">↗</span></span>
+    <span class="core-tag">儲蓄（銀行業）<span class="arr">↗</span></span>
+    <span class="core-tag">程式語言（計算）<span class="arr">↗</span></span>
+    <span class="core-tag">電玩遊戲（遊戲）<span class="arr">↗</span></span>
+    <span class="core-tag">Podcast（音樂和音訊串流）<span class="arr">↗</span></span>
+    <span class="core-tag">Travel Deals<span class="arr">↗</span></span>
+    <span class="core-tag">教育資源（教育）<span class="arr">↗</span></span>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">五大操作建議</div>
+  <div class="tips">
+<div class="tip"><div class="tip-num c1">1</div><div class="tip-body"><div class="tip-title">地標只用兩組有效圈</div><div class="tip-desc">竹南頭份（公義路、竹南光復路、兆豐頭份分行 +3）和竹北竹南科（新竹科學園區、新竹系統交流道、竹南科學園區 +5）。基地本身的頭份八德二路 +5 兩組都只有1則訊息，不建議再用。</div></div></div>
+<div class="tip"><div class="tip-num c2">2</div><div class="tip-body"><div class="tip-title">產品是首購2房，不是換屋</div><div class="tip-desc">16戶、2房20–29坪、591報價38.8–40萬/坪，總價約780–1,160萬，車位只有5個。受眾要找28–45歲首購、單身或小家庭，不是大坪數換屋族。</div></div></div>
+<div class="tip"><div class="tip-num c3">3</div><div class="tip-body"><div class="tip-title">工程師用嗜好切，不用硬體品牌和學歷</div><div class="tip-desc">程式加電玩加運動每則118元；羅技、NVIDIA、Razer、DJI加碩士學歷曝光3,693、0則訊息。</div></div></div>
+<div class="tip"><div class="tip-num c4">4</div><div class="tip-body"><div class="tip-title">育兒不能單打</div><div class="tip-desc">新婚育兒（婚禮、新生兒派對、嬰兒副食品）和親子股票都無效；小家庭組有效是因為親子只是配角，主體是科技、金融、家電。</div></div></div>
+<div class="tip"><div class="tip-num c5">5</div><div class="tip-body"><div class="tip-title">補實價登錄</div><div class="tip-desc">591實登欄位沒顯示數字，樂居擋爬蟲，目前總價以591報價推算。周邊社區實登37.7–45.6萬/坪，本案報價偏低，可當素材賣點。</div></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">關鍵洞見 · 分析日期 2026-11-18</div>
+  <div class="note-bar">15組共花費 NT$63,669，459則訊息、67筆潛客，平均每則訊息 NT$139、每筆潛客 NT$950。銀行保險業一組就佔了213則訊息、35筆潛客，是本案主力。有效受眾都是「職業或嗜好」切角，無效受眾都是「人生事件」切角（新婚、育兒、親子），或3C硬體品牌。10-30重開的程式運動電玩每則訊息從118元漲到210元，原組可能開始疲乏，需要換新組合。</div>
+</div>
+</div>
+
+<div id="tab-aud" class="tab-pane">
+<div class="section">
+  <div class="sec-title">建議嘗試受眾（20組）· 建立 2026-11-18</div>
+  <div class="note-bar">依5組有效受眾延伸（A銀行保險業／B程式運動電玩／C科技商務／D教育享樂／E小家庭科技業公務員）：前12組是單一DNA深化（A 3組、B 3組、C 2組、D 2組、E 2組），後8組是兩兩組合。地標只用竹南頭份（公義路、竹南光復路、兆豐頭份分行 +3）和竹北竹南科（新竹科學園區、新竹系統交流道、竹南科學園區 +5）。避開無效方向：3C硬體品牌＋碩士學歷、婚禮嬰兒、親子＋股票、基地八德二路地標。不放房地產／不動產等通用基礎標籤。</div>
+  <div id="main-aud-grid" class="aud-grid-2"></div>
+</div>
+
+<div class="section">
+  <div class="sec-title">實測成效排行 · 2025-11-20～2026-11-18（依訊息數）</div>
+  <div class="rk-row gold"><div class="rk-medal">🥇</div><div class="rk-body"><div class="rk-name">28-55 / 竹南頭份 / 銀行保險業(0312+興趣)</div><div class="rk-loc">開始 2026-02-03 · 曝光 123,335 · 潛客 29 · 花費 NT$21,522 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">185</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl good">NT$116</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row silver"><div class="rk-medal">🥈</div><div class="rk-body"><div class="rk-name">28-55 / 竹北竹南科 / 程式運動電玩(0306+興趣)</div><div class="rk-loc">開始 2026-01-13 · 曝光 64,440 · 潛客 11 · 花費 NT$8,752 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">74</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl good">NT$118</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">🥉</div><div class="rk-body"><div class="rk-name">28-55 / 竹北竹南科 / 科技商務(1224+興趣)</div><div class="rk-loc">開始 2025-12-03 · 曝光 34,368 · 潛客 5 · 花費 NT$6,659 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">57</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl good">NT$117</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">4</div><div class="rk-body"><div class="rk-name">28-55 / 竹北竹南科 / 教育享樂</div><div class="rk-loc">開始 2025-12-04 · 曝光 31,250 · 潛客 6 · 花費 NT$5,777 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">41</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl good">NT$141</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">5</div><div class="rk-body"><div class="rk-name">28-55/竹南頭份/銀行保險業</div><div class="rk-loc">開始 2026-10-30 · 曝光 16,582 · 潛客 6 · 花費 NT$3,976 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">28</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl good">NT$142</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">6</div><div class="rk-body"><div class="rk-name">28-55/竹南頭份/小家庭/科技業/公務員</div><div class="rk-loc">開始 2026-06-03 · 曝光 11,469 · 潛客 1 · 花費 NT$3,515 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">24</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl good">NT$146</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">7</div><div class="rk-body"><div class="rk-name">28-55 / 竹南頭份 / 教師公務員</div><div class="rk-loc">開始 2026-03-12 · 曝光 18,547 · 潛客 4 · 花費 NT$2,717 · —</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">14</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$194</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">8</div><div class="rk-body"><div class="rk-name">28-55/竹北竹南科/程式運動電玩</div><div class="rk-loc">開始 2026-10-30 · 曝光 11,864 · 潛客 1 · 花費 NT$2,935 · 有效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">14</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$210</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">9</div><div class="rk-body"><div class="rk-name">30-55 / 竹科 / 電玩戶外運動</div><div class="rk-loc">開始 2026-03-25 · 曝光 14,457 · 潛客 3 · 花費 NT$2,117 · —</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">12</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$176</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">10</div><div class="rk-body"><div class="rk-name">28-55 / 頭份竹南 / 教職員理財</div><div class="rk-loc">開始 2026-01-23 · 曝光 10,284 · 潛客 1 · 花費 NT$1,664 · —</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">5</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$333</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row faded"><div class="rk-medal">11</div><div class="rk-body"><div class="rk-name">28-55 / 竹北竹南科 / 親子股票(1203微調)</div><div class="rk-loc">開始 2025-11-26 · 曝光 6,117 · 潛客 0 · 花費 NT$1,239 · 無效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">2</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$620</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row faded"><div class="rk-medal">12</div><div class="rk-body"><div class="rk-name">28-55 / 頭份 / 新婚育兒(1125擴大)</div><div class="rk-loc">開始 2025-11-20 · 曝光 5,262 · 潛客 0 · 花費 NT$654 · 無效</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">1</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$654</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">13</div><div class="rk-body"><div class="rk-name">28-55 / 頭份 / 房地產(1125擴大)</div><div class="rk-loc">開始 2025-11-20 · 曝光 6,153 · 潛客 0 · 花費 NT$735 · —</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">1</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$735</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row"><div class="rk-medal">14</div><div class="rk-body"><div class="rk-name">28-55 / 竹北竹南科 / 傳產/自營/工程師/軍警</div><div class="rk-loc">開始 2025-11-30 · 曝光 3,380 · 潛客 0 · 花費 NT$740 · 曝光<5000樣本不足</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">1</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">NT$740</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+  <div class="rk-row faded"><div class="rk-medal">15</div><div class="rk-body"><div class="rk-name">28-55 / 竹北竹南科 / 工程師興趣</div><div class="rk-loc">開始 2025-11-26 · 曝光 3,693 · 潛客 0 · 花費 NT$667 · 無效・曝光<5000樣本不足</div></div><div class="rk-stats"><div class="rk-stat-block"><div class="rk-result">0</div><div class="rk-result-l">訊息</div></div><div class="rk-stat-block"><div class="rk-cpl">—</div><div class="rk-cpl-l">每則訊息</div></div></div></div>
+</div>
+</div>
+
+<div class="page-footer">資料來源：八德盛景受眾-1118.csv、用戶標記有效／無效受眾、591新建案（實價登錄待補）· 八德盛景 苗栗頭份 · 最後更新 2026-11-18</div>
+
+</div>
+
+<div id="toast" style="position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(20px);background:#2e2c29;color:#fff;font-size:12.5px;padding:10px 20px;border-radius:24px;opacity:0;transition:all .25s;pointer-events:none;z-index:999;white-space:nowrap">📋 已複製 → 貼至 Claude 對話</div>
+<script>
+function switchTab(name){document.querySelectorAll('.tab-btn').forEach((b,i)=>{const names=['analysis','aud'];b.classList.toggle('active',names[i]===name)});document.querySelectorAll('.tab-pane').forEach(p=>{p.classList.remove('show')});document.getElementById('tab-'+name).classList.add('show');window.scrollTo({top:0,behavior:'smooth'})}
+const PROJECT = '八德盛景（苗栗頭份・八德二路・2房20–29坪・591報價38.8–40萬/坪・總價約780–1,160萬・16戶首購）';
+function showToast(){const t=document.getElementById('toast');t.style.opacity='1';t.style.transform='translateX(-50%) translateY(0)';setTimeout(()=>{t.style.opacity='0';t.style.transform='translateX(-50%) translateY(20px)'},2200)}
+function copyPrompt(text){navigator.clipboard.writeText(text).then(showToast).catch(()=>{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast()})}
+document.querySelectorAll('.core-tag').forEach(el=>{el.addEventListener('click',()=>{const tag=el.textContent.replace('↗','').trim();copyPrompt(`針對${PROJECT}，請深入分析「${tag}」這個興趣標籤：\n1. 在本案受眾中代表什麼輪廓？\n2. 搭配哪些標籤組合效果最好？\n3. 素材訴求應該怎麼寫？`)})});
+document.querySelectorAll('.tip').forEach(el=>{el.addEventListener('click',()=>{const title=el.querySelector('.tip-title').textContent.trim();const desc=el.querySelector('.tip-desc').textContent.trim();copyPrompt(`針對${PROJECT}，關於這項操作建議：\n「${title}」\n背景：${desc}\n\n請幫我制定具體執行方案，包含受眾設定細節和素材方向。`)})});
+document.querySelectorAll('.phase-row').forEach(el=>{el.style.cursor='pointer';el.addEventListener('click',()=>{const name=el.querySelector('.phase-title');const desc=el.querySelector('.phase-desc');if(!name)return;copyPrompt(`針對${PROJECT}，關於素材方向「${name.textContent.trim()}」：\n${desc?desc.textContent.trim():''}\n\n請幫我製作具體素材文案和視覺建議。`)})});
+document.querySelectorAll('.rk-row').forEach(el=>{el.addEventListener('click',()=>{const name=el.querySelector('.rk-name');if(name)copyPrompt(`針對${PROJECT}，請分析受眾「${name.textContent.trim()}」，給我深度策略建議。`)})});
+/* ── aud-card 系統 ── */
+function showCopyToast(msg){let t=document.getElementById('copy-toast');if(!t){t=document.createElement('div');t.id='copy-toast';document.body.appendChild(t);}t.textContent=msg;t.classList.add('show');clearTimeout(audToastT);audToastT=setTimeout(()=>t.classList.remove('show'),1400);}
+function copyTxt(txt){return navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject();}
+function initAudCard(card){if(card.dataset.cb)return;card.dataset.cb='1';card.querySelectorAll('.tag-tbl tbody tr').forEach(row=>{const en=row.cells[1]?.textContent.trim();if(!en)return;row.addEventListener('click',()=>{copyTxt(en).then(()=>{row.classList.add('flash');setTimeout(()=>row.classList.remove('flash'),600);showCopyToast('已複製：'+en);});});});card.querySelectorAll('.tag-tbl').forEach(tbl=>{const wrap=document.createElement('div');wrap.className='copy-all-row';const btn=document.createElement('button');btn.className='copy-all-btn';btn.innerHTML='⎘ 複製全部30個標籤';btn.addEventListener('click',e=>{e.stopPropagation();const tags=Array.from(tbl.querySelectorAll('tbody tr')).map(r=>r.cells[1]?.textContent.trim()).filter(Boolean).join('\n');copyTxt(tags).then(()=>{btn.classList.add('done');btn.textContent='✓ 已複製30個';showCopyToast('已複製全部30個標籤');setTimeout(()=>{btn.classList.remove('done');btn.innerHTML='⎘ 複製全部30個標籤';},2000);});});wrap.appendChild(btn);tbl.after(wrap);});}
+function toggleAud(id){const c=document.getElementById(id);c.classList.toggle('open');if(c.classList.contains('open'))initAudCard(c);}
+function buildAudCard(g,idx){const id='bd1118_'+(idx+1);const rows=g.tags.map((t,i)=>`<tr><td>${i+1}</td><td>${t[0]}</td><td>${t[1]}</td></tr>`).join('');const lmTags=g.lm.map(l=>`<span class="aud-lm-tag">${l}</span>`).join('');return `<div class="aud-card" id="${id}"><div class="aud-header" onclick="toggleAud('${id}')"><div class="aud-num">${idx+1}</div><div class="aud-info"><div class="aud-name">${g.n}</div><div class="aud-sub">${g.sub}</div></div><div class="aud-arrow">▶</div></div><div class="aud-body"><div class="aud-sl">評估邏輯</div><div class="aud-logic">${g.logic}</div><div class="aud-sl">地標定位</div><div class="aud-lm">${lmTags}</div><div class="aud-sl">興趣標籤（點擊列複製單個）</div><table class="tag-tbl"><thead><tr><th>#</th><th>English</th><th>中文</th></tr></thead><tbody>${rows}</tbody></table></div></div>`;}
+const MAIN_G=[
+{
+"n": "28-50 / 竹南頭份 / 銀行理專×業務開發",
+"sub": "A銀行保險業深化・行業類別：商業與金融、行政服務（後台另選）",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "銀行保險業是本案最好的受眾，185則訊息、29筆潛客，每則訊息約116元。原組裡有業務開發、開發潛在顧客、Business networking，代表找到的是跑業務的理專和保險業務。這組把業務、行銷、人脈經營拉高比重，找在竹南頭份分行上班、收入穩定、準備買第一間房的人。",
+"tags": [
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Securities",
+"證券（金融）"
+],
+[
+"Financial services",
+"金融服務（商業與財務）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Business development",
+"業務開發（商業活動）"
+],
+[
+"Lead generation",
+"開發潛在顧客（行銷）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Sales",
+"銷售"
+],
+[
+"Marketing",
+"行銷"
+],
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Travel insurance",
+"旅遊平安保險"
+],
+[
+"Certified Financial Planner",
+"認證理財規劃顧問"
+],
+[
+"Credit cards",
+"信用卡（借貸）"
+],
+[
+"Credit services",
+"信貸服務和組織（信貸和借貸）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Foreign exchange market",
+"外匯市場（貨幣）"
+],
+[
+"Investment banking",
+"投資銀行業（銀行業）"
+],
+[
+"Online banking",
+"網路銀行"
+],
+[
+"Financial technology",
+"金融科技"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Dividend",
+"股利"
+],
+[
+"Economics",
+"經濟學"
+],
+[
+"Business news",
+"商業新聞"
+]
+]
+},
+{
+"n": "28-45 / 竹南頭份 / 保險業務×儲蓄首購",
+"sub": "A銀行保險業深化・偏年輕首購・行業類別：商業與金融、行政服務（後台另選）",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "本案是2房20–29坪、總價約800–1,160萬，最適合首購。銀行保險組裡有儲蓄、個人理財、財務規劃，這組把「存錢買房」的訊號放大：儲蓄、預算規劃、首次購房、591，加上保險業務本身的標籤。",
+"tags": [
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Travel insurance",
+"旅遊平安保險"
+],
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Budget",
+"預算規劃"
+],
+[
+"First-time buyer",
+"首次購房者"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Dividend",
+"股利"
+],
+[
+"Cashback",
+"現金回饋"
+],
+[
+"Credit cards",
+"信用卡（借貸）"
+],
+[
+"Mobile payment",
+"行動支付"
+],
+[
+"Business development",
+"業務開發（商業活動）"
+],
+[
+"Lead generation",
+"開發潛在顧客（行銷）"
+],
+[
+"Sales",
+"銷售"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Financial services",
+"金融服務（商業與財務）"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Coupons",
+"優惠券"
+],
+[
+"Renting",
+"租屋"
+],
+[
+"Moving company",
+"搬家公司"
+]
+]
+},
+{
+"n": "28-50 / 竹南頭份 / 證券會計×ETF存股",
+"sub": "A銀行保險業的「證券、財務會計」深化・行業類別：商業與金融、行政服務（後台另選）",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "銀行保險組裡的證券、財務會計、外匯是比較專業的金融職能。小家庭組也有指數股票型基金、證券交易所、儲蓄。這組找會計、證券從業、自己在存股的人。注意：親子股票組（親子＋股票＋納斯達克）無效，所以這組不放親子教育，股票只配金融職業。",
+"tags": [
+[
+"Securities",
+"證券（金融）"
+],
+[
+"Stock exchange",
+"證券交易所（投資）"
+],
+[
+"Financial accounting",
+"財務會計（商業與財務）"
+],
+[
+"Accounting",
+"會計"
+],
+[
+"Certified Public Accountant",
+"註冊會計師"
+],
+[
+"Tax",
+"稅務"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Dividend",
+"股利"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Financial services",
+"金融服務（商業與財務）"
+],
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Foreign exchange market",
+"外匯市場（貨幣）"
+],
+[
+"Gold",
+"黃金"
+],
+[
+"Investment banking",
+"投資銀行業（銀行業）"
+],
+[
+"Economics",
+"經濟學"
+],
+[
+"Business news",
+"商業新聞"
+],
+[
+"Microsoft Excel",
+"Microsoft Excel"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Financial technology",
+"金融科技"
+],
+[
+"Budget",
+"預算規劃"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 程式語言×主機電玩",
+"sub": "B程式運動電玩深化・電玩主機",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "程式運動電玩74則訊息、11筆潛客，每則約118元。這組用工程師的嗜好來找人，不用職稱：程式語言、開放原始碼、PHP、Java，加上PlayStation、Switch、薩爾達、馬利歐。工程師興趣組用羅技、NVIDIA、Razer、DJI這些3C品牌加碩士學歷，結果無效，所以這組不放硬體品牌和學歷。",
+"tags": [
+[
+"Component-based software engineering",
+"基於組件的軟體工程"
+],
+[
+"Programming language",
+"程式語言（計算）"
+],
+[
+"Open-source software",
+"開放原始碼軟體"
+],
+[
+"PHP",
+"PHP"
+],
+[
+"Java",
+"Java"
+],
+[
+"Python",
+"Python"
+],
+[
+"JavaScript",
+"JavaScript"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Technical communication",
+"科技傳播學"
+],
+[
+"Video games",
+"電玩遊戲（遊戲）"
+],
+[
+"PlayStation",
+"PlayStation（遊戲機）"
+],
+[
+"Nintendo Switch",
+"Nintendo Switch"
+],
+[
+"Super Mario",
+"超級馬利歐系列"
+],
+[
+"The Legend of Zelda",
+"薩爾達傳說"
+],
+[
+"Video game online media",
+"電玩遊戲網路媒體（電玩遊戲）"
+],
+[
+"Role-playing video game",
+"角色扮演遊戲"
+],
+[
+"Steam (service)",
+"Steam"
+],
+[
+"Collectible toys",
+"收藏用玩具（玩具）"
+],
+[
+"Mobile game",
+"手機遊戲（電玩遊戲）"
+],
+[
+"Fast & Furious",
+"玩命關頭"
+],
+[
+"Anime",
+"動畫"
+],
+[
+"Physical fitness",
+"健身（體育運動）"
+],
+[
+"Badminton",
+"羽球（球拍類運動）"
+],
+[
+"Aerobic exercise",
+"有氧運動（健身）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 程式語言×羽球路跑",
+"sub": "B程式運動電玩深化・運動",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "程式運動電玩組的另一半是運動：有氧、健身、羽球、馬拉松。竹科工程師下班常打羽球、跑步。這組保留程式語言當工程師識別，運動標籤加重，電玩只留一兩個。",
+"tags": [
+[
+"Component-based software engineering",
+"基於組件的軟體工程"
+],
+[
+"Programming language",
+"程式語言（計算）"
+],
+[
+"Open-source software",
+"開放原始碼軟體"
+],
+[
+"PHP",
+"PHP"
+],
+[
+"Java",
+"Java"
+],
+[
+"Python",
+"Python"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Aerobic exercise",
+"有氧運動（健身）"
+],
+[
+"Physical fitness",
+"健身（體育運動）"
+],
+[
+"Badminton",
+"羽球（球拍類運動）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Running",
+"跑步"
+],
+[
+"Swimming",
+"游泳"
+],
+[
+"Cycling",
+"自行車"
+],
+[
+"Basketball",
+"籃球"
+],
+[
+"World Gym",
+"World Gym"
+],
+[
+"Fitness and wellness",
+"健身和保健（健身）"
+],
+[
+"Yoga",
+"瑜珈"
+],
+[
+"Hiking",
+"健行"
+],
+[
+"Video games",
+"電玩遊戲（遊戲）"
+],
+[
+"Mobile game",
+"手機遊戲（電玩遊戲）"
+],
+[
+"Sneakers",
+"球鞋"
+],
+[
+"Headphones",
+"耳機"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Smartphones",
+"智慧型手機"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+]
+]
+},
+{
+"n": "28-42 / 竹北竹南科 / 手遊×收藏公仔",
+"sub": "B程式運動電玩深化・收藏玩具",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "程式運動電玩組有收藏用玩具、手機遊戲、玩命關頭，代表年輕工程師也有收藏、追動漫的習慣。10-30重開的程式運動電玩每則訊息漲到210元，原組可能開始疲乏，這組換成手遊、公仔、動漫來找同一群人。",
+"tags": [
+[
+"Mobile game",
+"手機遊戲（電玩遊戲）"
+],
+[
+"Video games",
+"電玩遊戲（遊戲）"
+],
+[
+"Collectible toys",
+"收藏用玩具（玩具）"
+],
+[
+"Action figure",
+"公仔"
+],
+[
+"Anime",
+"動畫"
+],
+[
+"Manga",
+"漫畫"
+],
+[
+"Board games",
+"桌上遊戲"
+],
+[
+"Video game online media",
+"電玩遊戲網路媒體（電玩遊戲）"
+],
+[
+"Fast & Furious",
+"玩命關頭"
+],
+[
+"Movies",
+"電影"
+],
+[
+"Netflix",
+"Netflix"
+],
+[
+"Super Mario",
+"超級馬利歐系列"
+],
+[
+"The Legend of Zelda",
+"薩爾達傳說"
+],
+[
+"Nintendo Switch",
+"Nintendo Switch"
+],
+[
+"PlayStation",
+"PlayStation（遊戲機）"
+],
+[
+"Esports",
+"電子競技"
+],
+[
+"Programming language",
+"程式語言（計算）"
+],
+[
+"Open-source software",
+"開放原始碼軟體"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Java",
+"Java"
+],
+[
+"PHP",
+"PHP"
+],
+[
+"Physical fitness",
+"健身（體育運動）"
+],
+[
+"Badminton",
+"羽球（球拍類運動）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Smartphones",
+"智慧型手機"
+]
+]
+},
+{
+"n": "28-50 / 竹北竹南科 / 科技商務×3C媒體",
+"sub": "C科技商務深化・消費電子",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "科技商務57則訊息、5筆潛客，每則約117元。原組有消費電子產品媒體、行動應用程式、數位媒體、消費電子產品零售商。這組把3C這一塊拉高，找看開箱、追新手機、會研究App的科技上班族。",
+"tags": [
+[
+"Consumer electronics media",
+"消費電子產品媒體和內容（電腦和電子產品）"
+],
+[
+"Consumer electronics retailers",
+"消費電子產品零售商（零售）"
+],
+[
+"Digital media",
+"數位媒體（電腦和電子產品）"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Productivity",
+"生產率"
+],
+[
+"iPhone",
+"iPhone"
+],
+[
+"Apple Inc.",
+"蘋果公司"
+],
+[
+"Smartphones",
+"智慧型手機"
+],
+[
+"Laptops",
+"筆記型電腦"
+],
+[
+"Headphones",
+"耳機"
+],
+[
+"Gadgets",
+"小工具（電子產品）"
+],
+[
+"Apple Music",
+"Apple Music"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Credit services",
+"信貸服務和組織（信貸和借貸）"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Men's clothing brands",
+"男裝品牌（服飾）"
+],
+[
+"Women's clothing brands",
+"女裝品牌（服飾）"
+],
+[
+"Educational resources",
+"教育資源（教育）"
+],
+[
+"Fitness and wellness",
+"健身和保健（健身）"
+],
+[
+"Cloud computing",
+"雲端運算"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 科技商務×穿搭休閒餐廳",
+"sub": "C科技商務深化・生活消費",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "科技商務組除了科技，還有男裝女裝品牌、休閒餐廳、LifeStyle Food、Travel Deals，代表這群人下班會吃、會買、會出去玩。這組把生活消費的標籤放大，素材可講頭份竹南的生活機能。",
+"tags": [
+[
+"Men's clothing brands",
+"男裝品牌（服飾）"
+],
+[
+"Women's clothing brands",
+"女裝品牌（服飾）"
+],
+[
+"Fashion",
+"時尚"
+],
+[
+"Uniqlo",
+"Uniqlo"
+],
+[
+"Sneakers",
+"球鞋"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Japanese cuisine",
+"日本料理"
+],
+[
+"Korean cuisine",
+"韓國料理"
+],
+[
+"Hot pot",
+"火鍋"
+],
+[
+"Dessert",
+"甜點"
+],
+[
+"Coffeehouse",
+"咖啡廳"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Apple Music",
+"Apple Music"
+],
+[
+"Spotify",
+"Spotify"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Digital media",
+"數位媒體（電腦和電子產品）"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Credit services",
+"信貸服務和組織（信貸和借貸）"
+],
+[
+"Fitness and wellness",
+"健身和保健（健身）"
+],
+[
+"Productivity",
+"生產率"
+],
+[
+"Consumer electronics media",
+"消費電子產品媒體和內容（電腦和電子產品）"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 早午餐×精釀啤酒",
+"sub": "D教育享樂深化・美食飲酒",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "教育享樂41則訊息、6筆潛客，每則約141元。原組裡有精釀啤酒、派對策劃、早午餐、英式早餐，這是很明確的週末生活圈。這組把美食、聚會的部分拉出來，保留Podcast、World Gym和進修標籤。",
+"tags": [
+[
+"Brunch",
+"早午餐（美食和餐飲）"
+],
+[
+"Full breakfast",
+"英式早餐"
+],
+[
+"Craft Beer and Brewing",
+"Craft Beer and Brewing（精釀啤酒）"
+],
+[
+"Party planning",
+"派對策劃（特殊場合和活動）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"Coffeehouse",
+"咖啡廳"
+],
+[
+"Dessert",
+"甜點"
+],
+[
+"Japanese cuisine",
+"日本料理"
+],
+[
+"Korean cuisine",
+"韓國料理"
+],
+[
+"Hot pot",
+"火鍋"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"World Gym",
+"World Gym"
+],
+[
+"Men's clothing brands",
+"男裝品牌（服飾）"
+],
+[
+"Women's clothing brands",
+"女裝品牌（服飾）"
+],
+[
+"Educational resources",
+"教育資源（教育）"
+],
+[
+"Professional development",
+"專業發展（職業訓練）"
+],
+[
+"Contemporary art",
+"當代藝術（視覺藝術）"
+],
+[
+"Digital art",
+"數字藝術"
+],
+[
+"Music festival",
+"音樂節"
+],
+[
+"Concerts",
+"演唱會"
+],
+[
+"Spotify",
+"Spotify"
+],
+[
+"Backpacking (travel)",
+"自助旅行（旅遊）"
+],
+[
+"Photography",
+"攝影"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 語言進修×自助旅行",
+"sub": "D教育享樂深化・學習旅遊",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "教育享樂組有語言教育、成人教育、專業發展、自助旅行。這是會花錢學英文日文、存錢出國自助旅行的年輕上班族，跟首購族群的年紀和收入相近。",
+"tags": [
+[
+"Language education",
+"語言教育"
+],
+[
+"Adult education",
+"成人教育（職業訓練）"
+],
+[
+"Professional development",
+"專業發展（職業訓練）"
+],
+[
+"Educational resources",
+"教育資源（教育）"
+],
+[
+"English language",
+"英語"
+],
+[
+"Japanese language",
+"日語"
+],
+[
+"TOEIC",
+"多益"
+],
+[
+"IELTS",
+"IELTS（雅思）"
+],
+[
+"E-learning",
+"線上學習"
+],
+[
+"Self-improvement",
+"自我提升"
+],
+[
+"TED (conference)",
+"TED演講"
+],
+[
+"Backpacking (travel)",
+"自助旅行（旅遊）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Travel",
+"旅遊（旅遊觀光）"
+],
+[
+"Low-cost airline",
+"廉價航空"
+],
+[
+"Tourism in Japan",
+"日本旅遊"
+],
+[
+"Airbnb",
+"Airbnb"
+],
+[
+"Agoda",
+"Agoda"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Brunch",
+"早午餐（美食和餐飲）"
+],
+[
+"Craft Beer and Brewing",
+"Craft Beer and Brewing（精釀啤酒）"
+],
+[
+"World Gym",
+"World Gym"
+],
+[
+"Contemporary art",
+"當代藝術（視覺藝術）"
+],
+[
+"Reading",
+"閱讀"
+],
+[
+"Books",
+"書籍"
+],
+[
+"Photography",
+"攝影"
+]
+]
+},
+{
+"n": "28-50 / 竹南頭份 / 小家庭×家電智慧家庭",
+"sub": "E小家庭科技業公務員深化・家電・行為：科技早期採用者（後台另選）",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "小家庭組24則訊息、每則146元，標籤是親子加科技加金融的混搭。新婚育兒組只放婚禮、嬰兒標籤就無效，所以這組不單打育兒，改用小家庭組裡的家電、家庭自動化、食譜，找要把小房子布置好的年輕家庭。親子只留兩個當輔助。",
+"tags": [
+[
+"Home appliances",
+"家電（消費電子產品）"
+],
+[
+"Home automation",
+"家庭自動化（消費電子產品）"
+],
+[
+"Smart home",
+"智慧家庭"
+],
+[
+"Robotic vacuum cleaner",
+"掃地機器人"
+],
+[
+"Dyson",
+"Dyson"
+],
+[
+"IKEA",
+"IKEA"
+],
+[
+"Furniture",
+"傢俱"
+],
+[
+"Interior design",
+"室內設計（設計）"
+],
+[
+"Minimalism",
+"極簡主義"
+],
+[
+"Home storage",
+"收納"
+],
+[
+"Recipes",
+"食譜（美食和餐飲）"
+],
+[
+"Cooking",
+"烹飪"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"Supermarket",
+"超市"
+],
+[
+"Emerging technologies",
+"新興技術（科學）"
+],
+[
+"Automation",
+"自動化技術"
+],
+[
+"Computer memory",
+"電腦記憶體（電腦硬體）"
+],
+[
+"Energy",
+"能源（科學）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Parenting styles",
+"教養方式（兒童和親子教育）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Budget",
+"預算規劃"
+]
+]
+},
+{
+"n": "28-55 / 竹南頭份 / 教師公務員×時事",
+"sub": "E的「政府機關、時事」＋教師公務員實測（4潛客）",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "教師公務員組14則訊息、4筆潛客，小家庭組裡也有政府機關概念和時事。公教收入穩定、可貸款成數高，很適合買2房首購。這組用教育、學習、公共服務、時事，加上儲蓄、ETF的穩健理財。",
+"tags": [
+[
+"Government agency concepts",
+"政府機關概念和作法（法律和政府）"
+],
+[
+"Current events",
+"時事（政治）"
+],
+[
+"Public service",
+"公共服務"
+],
+[
+"Education",
+"教育"
+],
+[
+"Teacher",
+"教師"
+],
+[
+"Learning",
+"學習（教育）"
+],
+[
+"Educational technology",
+"教育技術學"
+],
+[
+"Educational resources",
+"教育資源（教育）"
+],
+[
+"Professional development",
+"專業發展（職業訓練）"
+],
+[
+"Adult education",
+"成人教育（職業訓練）"
+],
+[
+"Reading",
+"閱讀"
+],
+[
+"Books",
+"書籍"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"Budget",
+"預算規劃"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Parenting styles",
+"教養方式（兒童和親子教育）"
+],
+[
+"Recipes",
+"食譜（美食和餐飲）"
+],
+[
+"Home appliances",
+"家電（消費電子產品）"
+],
+[
+"Home automation",
+"家庭自動化（消費電子產品）"
+]
+]
+},
+{
+"n": "28-50 / 竹南頭份 / 金融從業×科技商務Podcast",
+"sub": "A銀行保險 × C科技商務",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "銀行保險組和科技商務組都有Business networking、Professional services、財務規劃。這組把金融職業放在竹南頭份，再加上科技商務的Podcast、行動應用程式、生產率，找會用App理財、聽Podcast的年輕金融從業人員。",
+"tags": [
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Securities",
+"證券（金融）"
+],
+[
+"Financial services",
+"金融服務（商業與財務）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Business development",
+"業務開發（商業活動）"
+],
+[
+"Lead generation",
+"開發潛在顧客（行銷）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Productivity",
+"生產率"
+],
+[
+"Digital media",
+"數位媒體（電腦和電子產品）"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Consumer electronics media",
+"消費電子產品媒體和內容（電腦和電子產品）"
+],
+[
+"Credit services",
+"信貸服務和組織（信貸和借貸）"
+],
+[
+"Financial technology",
+"金融科技"
+],
+[
+"Online banking",
+"網路銀行"
+],
+[
+"Mobile payment",
+"行動支付"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Men's clothing brands",
+"男裝品牌（服飾）"
+]
+]
+},
+{
+"n": "28-45 / 竹南頭份 / 銀行保險×生活享樂",
+"sub": "A銀行保險 × D教育享樂",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "保險和銀行業務需要經營人際關係，下班常聚餐。這組把金融職業和教育享樂組的早午餐、精釀啤酒、派對、自助旅行放在一起，找年輕、社交活躍的金融業務。",
+"tags": [
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Travel insurance",
+"旅遊平安保險"
+],
+[
+"Financial services",
+"金融服務（商業與財務）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Business development",
+"業務開發（商業活動）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Sales",
+"銷售"
+],
+[
+"Brunch",
+"早午餐（美食和餐飲）"
+],
+[
+"Craft Beer and Brewing",
+"Craft Beer and Brewing（精釀啤酒）"
+],
+[
+"Party planning",
+"派對策劃（特殊場合和活動）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"Coffeehouse",
+"咖啡廳"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Backpacking (travel)",
+"自助旅行（旅遊）"
+],
+[
+"World Gym",
+"World Gym"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Women's clothing brands",
+"女裝品牌（服飾）"
+],
+[
+"Men's clothing brands",
+"男裝品牌（服飾）"
+],
+[
+"Professional development",
+"專業發展（職業訓練）"
+],
+[
+"Language education",
+"語言教育"
+]
+]
+},
+{
+"n": "28-50 / 竹南頭份 / 銀行保險×小家庭理財",
+"sub": "A銀行保險 × E小家庭（同為竹南頭份地標）",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "銀行保險和小家庭兩組用的是同一組竹南頭份地標，都有銀行業、零售銀行業務、儲蓄。這組找已經成家、自己在金融業上班的人，加上家電和食譜這些小家庭生活標籤，不單打育兒。",
+"tags": [
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Stock exchange",
+"證券交易所（投資）"
+],
+[
+"Financial services",
+"金融服務（商業與財務）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Life insurance",
+"人壽保險（保險）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Business development",
+"業務開發（商業活動）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Home appliances",
+"家電（消費電子產品）"
+],
+[
+"Home automation",
+"家庭自動化（消費電子產品）"
+],
+[
+"Recipes",
+"食譜（美食和餐飲）"
+],
+[
+"Cooking",
+"烹飪"
+],
+[
+"Costco",
+"好市多"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Parenting styles",
+"教養方式（兒童和親子教育）"
+],
+[
+"Emerging technologies",
+"新興技術（科學）"
+],
+[
+"IKEA",
+"IKEA"
+],
+[
+"Furniture",
+"傢俱"
+],
+[
+"Budget",
+"預算規劃"
+],
+[
+"First-time buyer",
+"首次購房者"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 程式電玩×早午餐精釀",
+"sub": "B程式運動電玩 × D教育享樂",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "兩組都在竹科竹南科有效，B是工程師的嗜好，D是週末生活。這組把程式語言、電玩、羽球，和早午餐、精釀啤酒、派對放在一起，找有在社交的年輕工程師。",
+"tags": [
+[
+"Programming language",
+"程式語言（計算）"
+],
+[
+"Open-source software",
+"開放原始碼軟體"
+],
+[
+"PHP",
+"PHP"
+],
+[
+"Java",
+"Java"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Video games",
+"電玩遊戲（遊戲）"
+],
+[
+"PlayStation",
+"PlayStation（遊戲機）"
+],
+[
+"Nintendo Switch",
+"Nintendo Switch"
+],
+[
+"Mobile game",
+"手機遊戲（電玩遊戲）"
+],
+[
+"Badminton",
+"羽球（球拍類運動）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Physical fitness",
+"健身（體育運動）"
+],
+[
+"Aerobic exercise",
+"有氧運動（健身）"
+],
+[
+"Brunch",
+"早午餐（美食和餐飲）"
+],
+[
+"Craft Beer and Brewing",
+"Craft Beer and Brewing（精釀啤酒）"
+],
+[
+"Party planning",
+"派對策劃（特殊場合和活動）"
+],
+[
+"Full breakfast",
+"英式早餐"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"World Gym",
+"World Gym"
+],
+[
+"Backpacking (travel)",
+"自助旅行（旅遊）"
+],
+[
+"Collectible toys",
+"收藏用玩具（玩具）"
+],
+[
+"The Legend of Zelda",
+"薩爾達傳說"
+],
+[
+"Super Mario",
+"超級馬利歐系列"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 程式工程×生產力工具",
+"sub": "B程式運動電玩 × C科技商務",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "科技商務組有生產率、行動應用程式、科技新聞，程式組有程式語言、開放原始碼。這組找會研究效率工具、會自學新技術的工程師，加上兩組都有的健身運動。",
+"tags": [
+[
+"Component-based software engineering",
+"基於組件的軟體工程"
+],
+[
+"Programming language",
+"程式語言（計算）"
+],
+[
+"Open-source software",
+"開放原始碼軟體"
+],
+[
+"PHP",
+"PHP"
+],
+[
+"Java",
+"Java"
+],
+[
+"Python",
+"Python"
+],
+[
+"JavaScript",
+"JavaScript"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Technical communication",
+"科技傳播學"
+],
+[
+"Productivity",
+"生產率"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Notion (productivity software)",
+"Notion"
+],
+[
+"Time management",
+"時間管理"
+],
+[
+"Cloud computing",
+"雲端運算"
+],
+[
+"Artificial intelligence",
+"人工智慧（計算）"
+],
+[
+"Digital media",
+"數位媒體（電腦和電子產品）"
+],
+[
+"Consumer electronics media",
+"消費電子產品媒體和內容（電腦和電子產品）"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Laptops",
+"筆記型電腦"
+],
+[
+"iPhone",
+"iPhone"
+],
+[
+"Physical fitness",
+"健身（體育運動）"
+],
+[
+"Badminton",
+"羽球（球拍類運動）"
+],
+[
+"Marathon",
+"馬拉松（跑步）"
+],
+[
+"Fitness and wellness",
+"健身和保健（健身）"
+],
+[
+"Video games",
+"電玩遊戲（遊戲）"
+],
+[
+"Self-improvement",
+"自我提升"
+]
+]
+},
+{
+"n": "28-45 / 竹北竹南科 / 科技商務×在職進修",
+"sub": "C科技商務 × D教育享樂（兩組都有教育資源、Podcast）",
+"lm": [
+"新竹科學園區（+5 公里）",
+"新竹系統交流道（+5 公里）",
+"竹南科學園區（+5 公里）"
+],
+"logic": "科技商務和教育享樂兩組重疊的標籤最多：Podcast、Travel Deals、LifeStyle Food、男裝女裝、教育資源。這組以進修為主軸，用專業發展、成人教育、語言教育，加上科技商務的Business networking和財務規劃。",
+"tags": [
+[
+"Educational resources",
+"教育資源（教育）"
+],
+[
+"Professional development",
+"專業發展（職業訓練）"
+],
+[
+"Adult education",
+"成人教育（職業訓練）"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"E-learning",
+"線上學習"
+],
+[
+"Self-improvement",
+"自我提升"
+],
+[
+"TED (conference)",
+"TED演講"
+],
+[
+"English language",
+"英語"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Men's clothing brands",
+"男裝品牌（服飾）"
+],
+[
+"Women's clothing brands",
+"女裝品牌（服飾）"
+],
+[
+"Business networking",
+"Business networking（商務人脈）"
+],
+[
+"Professional services",
+"Professional services（專業服務）"
+],
+[
+"Financial planning",
+"財務規劃（投資）"
+],
+[
+"Productivity",
+"生產率"
+],
+[
+"Mobile apps",
+"行動應用程式（軟體）"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Digital media",
+"數位媒體（電腦和電子產品）"
+],
+[
+"Casual dining",
+"休閒餐廳（餐廳）"
+],
+[
+"Brunch",
+"早午餐（美食和餐飲）"
+],
+[
+"World Gym",
+"World Gym"
+],
+[
+"Reading",
+"閱讀"
+],
+[
+"Books",
+"書籍"
+],
+[
+"Time management",
+"時間管理"
+]
+]
+},
+{
+"n": "28-45 / 竹南頭份 / 小家庭科技業×電玩",
+"sub": "E小家庭科技業 × B程式運動電玩",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "小家庭組有電腦記憶體、自動化技術、新興技術，代表有不少是竹南科學園區的工程師，住在竹南頭份。這組在竹南頭份用工程師的嗜好（電玩、程式、羽球）配上小家庭的家電和儲蓄。",
+"tags": [
+[
+"Computer memory",
+"電腦記憶體（電腦硬體）"
+],
+[
+"Automation",
+"自動化技術"
+],
+[
+"Emerging technologies",
+"新興技術（科學）"
+],
+[
+"Energy",
+"能源（科學）"
+],
+[
+"Home automation",
+"家庭自動化（消費電子產品）"
+],
+[
+"Programming language",
+"程式語言（計算）"
+],
+[
+"Open-source software",
+"開放原始碼軟體"
+],
+[
+"Technology news",
+"科技新聞（新聞服務）"
+],
+[
+"Video games",
+"電玩遊戲（遊戲）"
+],
+[
+"PlayStation",
+"PlayStation（遊戲機）"
+],
+[
+"Nintendo Switch",
+"Nintendo Switch"
+],
+[
+"Mobile game",
+"手機遊戲（電玩遊戲）"
+],
+[
+"Badminton",
+"羽球（球拍類運動）"
+],
+[
+"Physical fitness",
+"健身（體育運動）"
+],
+[
+"Home appliances",
+"家電（消費電子產品）"
+],
+[
+"Robotic vacuum cleaner",
+"掃地機器人"
+],
+[
+"Smart home",
+"智慧家庭"
+],
+[
+"Recipes",
+"食譜（美食和餐飲）"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Banking",
+"銀行業（金融）"
+],
+[
+"Parenting",
+"親子教育（兒童和親子教育）"
+],
+[
+"Budget",
+"預算規劃"
+],
+[
+"First-time buyer",
+"首次購房者"
+],
+[
+"591房屋交易網",
+"591房屋交易網"
+]
+]
+},
+{
+"n": "28-50 / 竹南頭份 / 公教×語言進修旅遊",
+"sub": "E教師公務員 × D教育享樂",
+"lm": [
+"公義路，竹南鎮（+3 公里）",
+"竹南光復路（+3 公里）",
+"兆豐國際商業銀行-頭份分行（+3 公里）"
+],
+"logic": "教師公務員有寒暑假，喜歡進修、出國。這組在竹南頭份用公教的政府機關、教育、學習，加上教育享樂組的語言教育、自助旅行、早午餐，找生活規律、收入穩定的公教首購族。",
+"tags": [
+[
+"Government agency concepts",
+"政府機關概念和作法（法律和政府）"
+],
+[
+"Public service",
+"公共服務"
+],
+[
+"Education",
+"教育"
+],
+[
+"Teacher",
+"教師"
+],
+[
+"Learning",
+"學習（教育）"
+],
+[
+"Educational technology",
+"教育技術學"
+],
+[
+"Professional development",
+"專業發展（職業訓練）"
+],
+[
+"Adult education",
+"成人教育（職業訓練）"
+],
+[
+"Language education",
+"語言教育"
+],
+[
+"English language",
+"英語"
+],
+[
+"Japanese language",
+"日語"
+],
+[
+"Backpacking (travel)",
+"自助旅行（旅遊）"
+],
+[
+"Travel Deals",
+"Travel Deals（旅遊優惠）"
+],
+[
+"Tourism in Japan",
+"日本旅遊"
+],
+[
+"Low-cost airline",
+"廉價航空"
+],
+[
+"Brunch",
+"早午餐（美食和餐飲）"
+],
+[
+"LifeStyle Food",
+"LifeStyle Food（生活美食）"
+],
+[
+"Podcasts",
+"Podcast（音樂和音訊串流）"
+],
+[
+"Reading",
+"閱讀"
+],
+[
+"Books",
+"書籍"
+],
+[
+"Savings",
+"儲蓄（銀行業）"
+],
+[
+"Retail banking",
+"零售銀行業務（銀行業）"
+],
+[
+"Exchange-traded fund",
+"指數股票型基金（投資）"
+],
+[
+"Personal finance",
+"個人理財（銀行業）"
+],
+[
+"General insurance",
+"一般保險（保險）"
+],
+[
+"Current events",
+"時事（政治）"
+]
+]
+}
+];
+(function(){const g=document.getElementById('main-aud-grid');if(g)g.innerHTML=MAIN_G.map((x,i)=>buildAudCard(x,i)).join('');})();
+</script>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+<script>window.addEventListener('scroll',()=>document.getElementById('btt').classList.toggle('show',window.scrollY>300))</script>
+</body>
+</html>
