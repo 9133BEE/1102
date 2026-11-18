@@ -98,6 +98,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft Jheng
 
 /* 帳號配色統一（主粉專=紫 #7a5a8a／1510=藍 #607d96，比照富宇玥和） */
 .page-banner,.page-banner.main,.page-banner.main-banner{background:linear-gradient(135deg,#5a3a6a,#7a5a8a)!important;color:#fff}.tab-btn.active{background:#7a5a8a!important;color:#fff!important;box-shadow:0 2px 6px rgba(122,90,138,.3)!important}.tab-btn:hover:not(.active){background:#ede8f4;color:#5a3a6a}
+
+/* 2026-11-18 成效分析區 */
+.vi-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vi-card{background:var(--s,#fff);border:1px solid var(--bd,#e5e1da);border-radius:10px;padding:14px 16px}
+.vi-card h4{font-size:13px;margin-bottom:8px}
+.vi-card ul{padding-left:18px;font-size:12.5px;line-height:1.75;color:var(--tx,#2e2c29)}
+.vi-card.ok{border-left:4px solid #2e7d32}.vi-card.ng{border-left:4px solid #c0392b}
+.dir-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.dir-card{background:var(--s,#fff);border:1px solid var(--bd,#e5e1da);border-left:4px solid var(--accent);border-radius:10px;padding:14px 16px}
+.dir-card .t{font-size:13.5px;font-weight:700;margin-bottom:6px}
+.dir-card .d{font-size:12.5px;line-height:1.7;color:var(--sub,#6d6560)}
+@media(max-width:760px){.vi-grid,.dir-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -123,7 +135,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft Jheng
   </div>
   <div class="case-stats">
     <div class="stat"><div class="stat-n">28組</div><div class="stat-l">新建議受眾</div></div>
-    <div class="stat"><div class="stat-n">132</div><div class="stat-l">已測總潛客</div></div>
+    <div class="stat"><div class="stat-n">133</div><div class="stat-l">已測總潛客</div></div>
     <div class="stat"><div class="stat-n">1</div><div class="stat-l">廣告帳號</div></div>
   </div>
 </div>
@@ -132,16 +144,378 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft Jheng
   <div class="banner-icon">名單</div>
   <div>
     <div class="banner-title">LUCE VIVA｜名單開發</div>
-    <div class="banner-sub">2025/12/29 起 · 31組已測 · 資料截至 2026-07-22</div>
+    <div class="banner-sub">2025/12/29 起 · 49組已測 · 資料截至 2026-11-18</div>
   </div>
   <div class="banner-stats">
-    <div class="bs"><div class="bs-n">132</div><div class="bs-l">潛在顧客</div></div>
-    <div class="bs"><div class="bs-n">NT$64,072</div><div class="bs-l">總花費</div></div>
-    <div class="bs"><div class="bs-n">NT$284</div><div class="bs-l">新主力組CPA</div></div>
+    <div class="bs"><div class="bs-n">133</div><div class="bs-l">潛在顧客</div></div>
+    <div class="bs"><div class="bs-n">NT$85,037</div><div class="bs-l">總花費</div></div>
+    <div class="bs"><div class="bs-n">NT$639</div><div class="bs-l">平均CPL</div></div>
   </div>
 </div>
 
 <div class="note-bar">📌 2026-07-22更新：依竹科/竹北最新0722數據比對，本案新增一波（07/09-08/01期間）擴量測試，「竹北 新竹市/科技走廊置產族(0515調整)」單組狂出26潛客、CPA NT$321，是全案史上最大量級組，核心邏輯僅「科技走廊地緣＋置產核心意圖」極簡交叉，未疊加職業細分反而轉換率最高，驗證地緣寬受眾比窄產業標籤更有效。同期「傳統製造業」14潛客・CPA284（近期最佳）、「自營商批發零售成家」11潛客・CPA436、「生活機能美食咖啡族」6潛客・CPA424 三組同步驗證有效，延續舊有「小家庭+房地產」（16潛客・CPA230）的家庭/地緣寬受眾邏輯。累計已測31組、132潛客、花費NT$64,072。本輪新增8組延伸這四個新驗證方向，並排除已測過的窄職業標籤（貿易口譯/司法警政/農業漁產/食品工業研發等成效不佳主題）。</div>
+
+<div class="section">
+  <div class="sec-title">成效分析（2025-12-29 至 2026-11-18）· 分析日期 2026-11-18</div>
+  <div class="note-bar">本帳號CSV共49組，總花費NT$85,037、潛客133筆、平均CPL NT$639。有出潛客的組別共34組，0潛客15組，其中14組曝光不到5,000，算樣本不足，不當成受眾方向失敗。11月新開的組：工程師（3筆／NT$821）、家庭換屋（0筆／曝光2,066）、AI晶片設計（5筆／NT$405）、業務（3筆／NT$652）、傳統（0筆／曝光1,620）、工程師汽車（2筆／NT$342）。</div>
+  <div class="rk-grid">
+    <div class="rk-row gold">
+      <div class="rk-medal">🥇</div>
+      <div class="rk-body">
+        <div class="rk-name">30-64 / 基地+6K / 小家庭+房地產(0108擴大+興趣)</div>
+        <div class="rk-loc">開始 2025-12-29｜曝光 22,016｜CTR 5.45%・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">16</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$230</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$3,682</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row silver">
+      <div class="rk-medal">🥈</div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 基地+6K / 軍公教(0109擴大)</div>
+        <div class="rk-loc">開始 2026-01-05｜曝光 28,375｜CTR 3.68%・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">11</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$668</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$7,344</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal">🥉</div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 北區南寮 / 漁業自營商</div>
+        <div class="rk-loc">開始 2026-07-28｜曝光 12,208｜CTR 3.74%・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">10</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$468</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$4,676</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">4</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-50 / 東區竹北 / 工程師汽車(0127+興趣)</div>
+        <div class="rk-loc">開始 2026-01-13｜曝光 20,884｜CTR 2.95%・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">9</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$585</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$5,262</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">5</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 竹科竹北 / 新婚首購</div>
+        <div class="rk-loc">開始 2026-07-22｜曝光 16,905｜CTR 4.09%・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">9</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$630</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$5,672</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">6</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-50 / 北區 / 業務性質(0717擴大)</div>
+        <div class="rk-loc">開始 2026-07-14｜曝光 16,227｜CTR 3.24%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">6</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$648</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$3,885</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">7</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-55 / 北區東區 / 科技業 / 股票 / AI(0722+興趣+竹北)</div>
+        <div class="rk-loc">開始 2026-07-17｜曝光 5,579｜CTR 3.66%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">5</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$361</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$1,804</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">8</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 北區東區 / AI晶片設計</div>
+        <div class="rk-loc">開始 2026-11-10｜曝光 4,897｜CTR 3.57%・投放中・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">5</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$405</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,026</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">9</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-50 / 北區竹北 / 司法警政(0127+地點興趣)</div>
+        <div class="rk-loc">開始 2026-01-22｜曝光 12,256｜CTR 2.72%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">5</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$477</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,384</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">10</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-50 / 北區 / 業務性質</div>
+        <div class="rk-loc">開始 2026-01-27｜曝光 3,314｜CTR 2.29%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">4</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$179</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$715</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">11</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 基地+6K / 投資理財房產(0109擴大)</div>
+        <div class="rk-loc">開始 2026-01-05｜曝光 5,631｜CTR 4.78%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">4</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$324</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$1,298</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">12</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 北區東區 / 服務業 / 上班族</div>
+        <div class="rk-loc">開始 2026-08-04｜曝光 5,851｜CTR 3.14%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">4</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$514</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,054</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">13</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-55 / 東區 / 食品工業研發</div>
+        <div class="rk-loc">開始 2026-01-23｜曝光 9,505｜CTR 2.59%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">4</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$534</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,135</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">14</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-50 / 北區 / 金融會計</div>
+        <div class="rk-loc">開始 2026-01-15｜曝光 9,455｜CTR 3.00%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">4</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$554</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,217</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">15</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-60 / 基地+6K / 純房產</div>
+        <div class="rk-loc">開始 2026-01-09｜曝光 5,119｜CTR 4.43%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">3</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$440</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$1,320</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">16</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 北區東區 / 金融 / 保險 / 業務</div>
+        <div class="rk-loc">開始 2026-11-10｜曝光 5,739｜CTR 3.59%・投放中</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">3</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$652</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$1,957</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">17</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-50 / 東區竹北 / 教育生活相關</div>
+        <div class="rk-loc">開始 2026-01-12｜曝光 9,094｜CTR 2.90%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">3</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$715</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,145</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">18</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-64 / 基地+6K / 小家庭+房地產</div>
+        <div class="rk-loc">開始 2026-07-23｜曝光 6,560｜CTR 4.02%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">3</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$772</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,316</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">19</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-60 / 東區 / 商業自營商(0120改地點)</div>
+        <div class="rk-loc">開始 2026-01-12｜曝光 9,565｜CTR 3.20%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">3</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$808</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,425</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">20</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-55 / 東區北區 / 科技業 / 投資 / 工程師</div>
+        <div class="rk-loc">開始 2026-11-06｜曝光 6,572｜CTR 3.58%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">3</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$821</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,463</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">21</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-45 / 北區 / 家庭育兒</div>
+        <div class="rk-loc">開始 2026-01-27｜曝光 3,473｜CTR 2.36%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">2</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$338</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$676</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">22</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-55 / 東區 / 工程師汽車</div>
+        <div class="rk-loc">開始 2026-11-10｜曝光 1,881｜CTR 3.88%・投放中・<b style="color:#2e7d32">用戶標記有效</b></div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">2</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl good">NT$342</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$684</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">23</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-50 / 竹科 / 金融房產投資(0112+興趣)</div>
+        <div class="rk-loc">開始 2026-01-09｜曝光 5,141｜CTR 4.18%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">2</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$664</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$1,329</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">24</span></div>
+      <div class="rk-body">
+        <div class="rk-name">28-60 / 巨城+6 / 科技銀行(0727改地點)</div>
+        <div class="rk-loc">開始 2026-07-22｜曝光 6,139｜CTR 3.23%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">2</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$754</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$1,507</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+    <div class="rk-row">
+      <div class="rk-medal"><span style="font-size:11px;font-weight:800;color:var(--sub2)">25</span></div>
+      <div class="rk-body">
+        <div class="rk-name">30-60 / 北區東區 / 管理 / 領導 / 精品</div>
+        <div class="rk-loc">開始 2026-07-23｜曝光 8,220｜CTR 3.13%</div>
+      </div>
+      <div class="rk-stats">
+        <div class="rk-stat-block"><div class="rk-result">2</div><div class="rk-result-l">潛在顧客</div></div>
+        <div class="rk-stat-block"><div class="rk-cpl">NT$1,091</div><div class="rk-cpl-l">CPL</div></div>
+        <div class="rk-stat-block"><div class="rk-spend">NT$2,182</div><div class="rk-spend-l">花費</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">有效 / 無效受眾判讀 · 2026-11-18</div>
+  <div class="vi-grid">
+    <div class="vi-card ok"><h4>有效（用戶標記，6組）</h4><ul>
+      <li>30-64／基地+6K／小家庭+房地產：16筆，CPL NT$230，全案最低成本。用「家長（子女年齡分段）」人口統計，搭配房屋、傢俱、家電、嬰幼兒用品店</li>
+      <li>30-60／基地+6K／軍公教：11筆，CPL NT$668。有效的關鍵是用「行業類別」選保護服務、教育圖書館、軍事、政府員工，而不是用時事、政治這類興趣</li>
+      <li>30-60／北區南寮／漁業自營商：10筆，CPL NT$468。批發、海鮮、釣魚、養殖，加上「小型企業主」行為與「農林漁業」行業</li>
+      <li>30-60／竹科竹北／新婚首購：9筆，CPL NT$630。新婚、首購、搬家、居家裝修、宜家、嬰兒用品</li>
+      <li>28-50／東區竹北／工程師汽車：9筆，CPL NT$585；11-10新開的同主題組，2筆CPL NT$342。標籤是程式語言、軟體開發，搭配汽車美容、鍍膜、保養、電動車</li>
+      <li>30-60／北區東區／AI晶片設計：11-10開始，5筆，CPL NT$405，目前投放中。AI、半導體，搭配591、股票、馬拉松、商務艙，再加上研究領域與行業類別</li>
+    </ul></div>
+    <div class="vi-card ng"><h4>無效（用戶標記，4組）</h4><ul>
+      <li>30-65／北區香山／農業漁產：1筆，CPL NT$1,048。地標是漁港、農科院，標籤是農機、肥料、溫室這類生產端興趣</li>
+      <li>28-50／北區／行政公務員：曝光6,217，0筆。地標是市政府，標籤是時事、政治、立法、地方政府</li>
+      <li>28-55／東區／育兒美食：曝光4,348，0筆。早午餐、宮崎駿、樂高、氣泡酒、美食家，屬於生活娛樂型的育兒</li>
+      <li>35-60／東區竹北／戶外活動：曝光2,922，0筆。登山、露營、釣魚裝備、休旅車營地</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">關鍵洞見 · 2026-11-18</div>
+  <div class="vi-grid">
+    <div class="vi-card"><h4>同一個主題，有效或無效看的是「怎麼切」</h4><ul>
+      <li>軍公教：用行業類別（保護服務、教育、軍事、政府員工）有效；用政治、時事興趣去抓行政公務員無效</li>
+      <li>漁業：抓「做漁產生意的自營商」（批發、海鮮、小型企業主）有效；抓「生產端」的農漁產（漁港、農機、溫室）無效</li>
+      <li>育兒：綁購屋需求（房屋、家電、傢俱、子女年齡分段）有效；綁美食娛樂（早午餐、宮崎駿、氣泡酒）無效</li>
+    </ul></div>
+    <div class="vi-card"><h4>科技族要用興趣切，不用職稱</h4><ul>
+      <li>科技投資、科技走廊置產族、科技新貴旅遊、高知識財經都是0筆，不過曝光大多不到5,000，只能算「沒跑起來」</li>
+      <li>工程師汽車和AI晶片設計都有出筆數，共同點是用具體的技術興趣（Python、C語言、深度學習），再搭配生活消費（汽車美容、馬拉松、591、股票）</li>
+      <li>這修正了「新竹不要打科技業」的看法：要避開的是空泛的科技新貴頭銜，具體的技術興趣加生活消費是可以用的</li>
+    </ul></div>
+    <div class="vi-card"><h4>戶外、運動、娛樂型一直偏弱</h4><ul>
+      <li>戶外活動0筆、釣魚／年輕運動1筆（NT$1,744）、健身運動族1筆（NT$1,240）、醫學公益旅遊1筆（NT$1,395）</li>
+      <li>這案3房38–43坪、總價約1,400–1,800萬，買方是「實際成家需求」驅動，不是生活風格驅動</li>
+    </ul></div>
+    <div class="vi-card"><h4>業務、金融類成本也不錯</h4><ul>
+      <li>北區業務性質4筆，CPL NT$179（全案最低）；0717擴大後6筆，NT$648</li>
+      <li>投資理財房產4筆NT$325、司法警政5筆NT$477、服務業上班族4筆NT$514、食品工業研發4筆NT$534、金融會計4筆NT$554</li>
+      <li>11-10新開的金融保險業務3筆，NT$652，延續這條線</li>
+    </ul></div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="sec-title">建議新測受眾方向 · 2026-11-18</div>
+  <div class="dir-grid">
+    <div class="dir-card"><div class="t">1. 小家庭+房地產擴版</div><div class="d">全案CPL最低的組。保留「家長子女年齡分段＋房屋＋家電＋傢俱」，地標從基地+6K往北區東區、竹北各複製一組，看是不是地標限制了量。不加美食娛樂標籤。</div></div>
+    <div class="dir-card"><div class="t">2. 行業類別鎖定的職業組</div><div class="d">延續軍公教的做法：用行業類別直接鎖職業（醫療保健、金融保險、銷售），興趣只放生活與購屋需求。司法警政、業務性質、金融會計都已經證明這條路走得通。</div></div>
+    <div class="dir-card"><div class="t">3. 工程師技術興趣×愛車／理財</div><div class="d">工程師汽車和AI晶片設計都有效。可以延伸成「嵌入式／資料科學×電動車」、「半導體×ETF股票」，地標維持台元、竹科、北大路，避開科技新貴、置產族這類頭銜。</div></div>
+    <div class="dir-card"><div class="t">4. 南寮在地自營商延伸</div><div class="d">漁業自營商有效。可以往南寮、北區其他在地生意人延伸，例如海鮮餐廳、進口批發、物流貨運，保留「小型企業主」行為；不要再用生產端的農漁產或香山漁港。</div></div>
+  </div>
+</div>
 
 <div class="section">
   <div class="sec-title">已測受眾排行（2025-12-29 至 2026-07-22）</div>
@@ -297,7 +671,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'PingFang TC','Microsoft Jheng
   <div id="aud-grid-5" class="aud-grid-2"></div>
 </div>
 
-<div class="page-footer">LUCE VIVA 受眾分析報告 · 更新 2026-08-04 · 9133 廣告操作團隊</div>
+<div class="page-footer">LUCE VIVA 受眾分析報告 · 更新 2026-11-18 · 9133 廣告操作團隊</div>
 </div>
 
 <script>
